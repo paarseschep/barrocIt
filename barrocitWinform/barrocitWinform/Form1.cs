@@ -16,5 +16,10 @@ namespace barrocitWinform
         {
             InitializeComponent();
         }
+
+        private void BtLogin_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You wanted to login ha! Well, you aint gonna.");
+        }
     }
 }
