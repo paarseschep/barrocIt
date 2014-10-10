@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace barrocitWinform
 {
-    public partial class Form1 : Form
+    public partial class AdminPanel : DepartmentPanel
     {
-        public Form1()
+        public AdminPanel(Form LoginPanel, string userName)
         {
             InitializeComponent();
+            this.LoginPanel = LoginPanel;
+            this.userName = userName;
+            lblGreeting.Text += userName + "!";
         }
 
-        private void BtLogin_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You wanted to login ha! Well, you aint gonna.");
+            this.Close();
         }
     }
 }
