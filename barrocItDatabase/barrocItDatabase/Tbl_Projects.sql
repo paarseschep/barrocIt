@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Tbl_Projects]
 (
 	[Project_id] INT NOT NULL PRIMARY KEY,
-	[Customer_id] int FOREIGN KEY REFERENCES Tbl_Customers(customer_id) NOT NULL,
+	[Customer_Id] int FOREIGN KEY REFERENCES Tbl_Customers(Customer_Id) NOT NULL,
     [name] NCHAR(30) NOT NULL, 
     [description] NCHAR(100) NOT NULL,
 	[active]bit not null DEFAULT 0, 

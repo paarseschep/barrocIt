@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[tbl_invoices]
 (
 	[Id] INT NOT NULL PRIMARY KEY,
-	[Project_id] int FOREIGN KEY REFERENCES tbl_Projects(Project_id) NOT NULL,
+	[Project_id] int FOREIGN KEY REFERENCES Tbl_Projects(Project_id) NOT NULL,
 	[factuurBedrag] int not null,
 	[invoiceDate] date not null,
 	[grootboekrekeningnummer] int not null,
