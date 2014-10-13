@@ -10,27 +10,43 @@ namespace barrocitWinform
 {
     static class SqlConnector
     {
-        public static SqlConnection connection; 
+        public static SqlConnection connection;
+        static public bool Connect()
+        {
+            bool gotConnected = false;
+            try
+            {
+                SqlConnector.connection.Open();
+                gotConnected = true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Failed to connect to server.");
+            }
+            return gotConnected;
+        }
 
         static public int Login(string userName, string password)
         {
-            int department;
+            int department = -1;
             try
             {
                 SqlDataReader dataReader;
                 SqlCommand loginCommand = new SqlCommand(
-                    "SELECT * FROM Tbl_Users" +
-                    "WHERE Username = " + userName +
-                    " AND Password = " + password,
+                    @"SELECT * FROM Tbl_Users " +
+                    @"WHERE username= '" + userName +
+                    @"'AND password= '" + password + "'",
                     connection);
 
                 dataReader = loginCommand.ExecuteReader();
-                department = (int)dataReader["department_id"];
+                while (dataReader.Read())
+                {
+                    department = (int)dataReader["department_id"];
+                }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Failed to connect to server.");
-                department = -1;
             }
             return department;
         }

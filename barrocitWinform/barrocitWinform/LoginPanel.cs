@@ -26,7 +26,7 @@ namespace barrocitWinform
 
         private void BtLogin_Click(object sender, EventArgs e)
         {
-            switch (Connect())
+            switch (SqlConnector.Connect())
             {
                 case true:
                     {
@@ -41,41 +41,8 @@ namespace barrocitWinform
                         break;
                     }
             }
-            
-            
-
+            SqlConnector.connection.Close();
         }
-        public bool Connect()
-        {
-            bool gotConnected = false;
-            try
-            {
-                SqlConnector.connection.Open();
-                gotConnected = true;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "Failed to connect to server.");
-            }
-            return gotConnected;
-        }
-
-        private void Login()
-        {
-
-            if (tbUsername.Text != "" && tbPassword.Text != "")
-            {
-                int departmentNumber = 0;
-                string userName = "TestUserName";
-                OpenUserPanel(departmentNumber, userName);
-            }
-            else
-            {
-
-            }
-        }
-
-
 
         private void OpenUserPanel(int departmentNumber, string userName)
         {
