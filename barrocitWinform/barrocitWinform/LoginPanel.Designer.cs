@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.TbPassword = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.LbUsername = new System.Windows.Forms.Label();
             this.LbPassword = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbUsername
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(119, 90);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbUsername.Location = new System.Drawing.Point(119, 90);
+            this.tbUsername.Multiline = true;
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(175, 20);
+            this.tbUsername.TabIndex = 1;
             // 
             // btnLogin
             // 
@@ -57,15 +57,15 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtLogin_Click);
             // 
-            // TbPassword
+            // tbPassword
             // 
-            this.TbPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbPassword.Location = new System.Drawing.Point(119, 155);
-            this.TbPassword.Name = "TbPassword";
-            this.TbPassword.PasswordChar = '♥';
-            this.TbPassword.Size = new System.Drawing.Size(175, 20);
-            this.TbPassword.TabIndex = 3;
+            this.tbPassword.Location = new System.Drawing.Point(119, 155);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '♥';
+            this.tbPassword.Size = new System.Drawing.Size(175, 20);
+            this.tbPassword.TabIndex = 3;
             // 
             // LbUsername
             // 
@@ -108,9 +108,9 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.LbPassword);
             this.Controls.Add(this.LbUsername);
-            this.Controls.Add(this.TbPassword);
+            this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "LoginPanel";
@@ -123,9 +123,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox TbPassword;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label LbUsername;
         private System.Windows.Forms.Label LbPassword;
         private System.Windows.Forms.Button btnClose;

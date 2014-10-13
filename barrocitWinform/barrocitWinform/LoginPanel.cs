@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace barrocitWinform
 {
     public partial class LoginPanel : Form
     {
+        SqlConnection connection;
+
         public LoginPanel()
         {
             InitializeComponent();
@@ -20,12 +23,23 @@ namespace barrocitWinform
         private void BtLogin_Click(object sender, EventArgs e)
         {
             //Login check stuff here
-            int departmentNumber = 0;
-            string userName = "TestUserName";
-            Login(departmentNumber, userName);
+            connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Drace\Documents\GitHub\barrocIt\barrocitWinform\barrocitWinform\Database.mdf;Integrated Security=True;Connect Timeout=30");
+            if (tbUsername.Text != "" && tbPassword.Text != "")
+            {
+                
+                int departmentNumber = 0;
+                string userName = "TestUserName";
+                OpenUserPanel(departmentNumber, userName);
+            }
+            else
+            {
+
+            }
         }
 
-        private void Login(int departmentNumber, string userName)
+
+
+        private void OpenUserPanel(int departmentNumber, string userName)
         {
             switch(departmentNumber)
             {
