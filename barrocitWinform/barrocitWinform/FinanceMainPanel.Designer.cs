@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnAddProject = new System.Windows.Forms.Button();
-            this.btnViewProjects = new System.Windows.Forms.Button();
-            this.btnDeleteProjects = new System.Windows.Forms.Button();
             this.btnDeleteInvoice = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAddInvoice = new System.Windows.Forms.Button();
+            this.btnAddProject = new System.Windows.Forms.Button();
+            this.btnViewProjects = new System.Windows.Forms.Button();
+            this.btnDeleteProjects = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -46,36 +46,6 @@
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // btnAddProject
-            // 
-            this.btnAddProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddProject.Location = new System.Drawing.Point(105, 98);
-            this.btnAddProject.Name = "btnAddProject";
-            this.btnAddProject.Size = new System.Drawing.Size(134, 47);
-            this.btnAddProject.TabIndex = 3;
-            this.btnAddProject.Text = "Add project";
-            this.btnAddProject.UseVisualStyleBackColor = true;
-            // 
-            // btnViewProjects
-            // 
-            this.btnViewProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewProjects.Location = new System.Drawing.Point(105, 151);
-            this.btnViewProjects.Name = "btnViewProjects";
-            this.btnViewProjects.Size = new System.Drawing.Size(134, 47);
-            this.btnViewProjects.TabIndex = 4;
-            this.btnViewProjects.Text = "View projects";
-            this.btnViewProjects.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteProjects
-            // 
-            this.btnDeleteProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteProjects.Location = new System.Drawing.Point(105, 204);
-            this.btnDeleteProjects.Name = "btnDeleteProjects";
-            this.btnDeleteProjects.Size = new System.Drawing.Size(134, 47);
-            this.btnDeleteProjects.TabIndex = 5;
-            this.btnDeleteProjects.Text = "Delete projects";
-            this.btnDeleteProjects.UseVisualStyleBackColor = true;
             // 
             // btnDeleteInvoice
             // 
@@ -107,6 +77,36 @@
             this.btnAddInvoice.Text = "Add invoice";
             this.btnAddInvoice.UseVisualStyleBackColor = true;
             // 
+            // btnAddProject
+            // 
+            this.btnAddProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddProject.Location = new System.Drawing.Point(105, 98);
+            this.btnAddProject.Name = "btnAddProject";
+            this.btnAddProject.Size = new System.Drawing.Size(134, 47);
+            this.btnAddProject.TabIndex = 3;
+            this.btnAddProject.Text = "Add project";
+            this.btnAddProject.UseVisualStyleBackColor = true;
+            // 
+            // btnViewProjects
+            // 
+            this.btnViewProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewProjects.Location = new System.Drawing.Point(105, 151);
+            this.btnViewProjects.Name = "btnViewProjects";
+            this.btnViewProjects.Size = new System.Drawing.Size(134, 47);
+            this.btnViewProjects.TabIndex = 4;
+            this.btnViewProjects.Text = "View projects";
+            this.btnViewProjects.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteProjects
+            // 
+            this.btnDeleteProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteProjects.Location = new System.Drawing.Point(105, 204);
+            this.btnDeleteProjects.Name = "btnDeleteProjects";
+            this.btnDeleteProjects.Size = new System.Drawing.Size(134, 47);
+            this.btnDeleteProjects.TabIndex = 5;
+            this.btnDeleteProjects.Text = "Delete projects";
+            this.btnDeleteProjects.UseVisualStyleBackColor = true;
+            // 
             // FinanceMainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,12 +135,12 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnAddProject;
-        private System.Windows.Forms.Button btnViewProjects;
-        private System.Windows.Forms.Button btnDeleteProjects;
         private System.Windows.Forms.Button btnDeleteInvoice;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAddInvoice;
+        private System.Windows.Forms.Button btnAddProject;
+        private System.Windows.Forms.Button btnViewProjects;
+        private System.Windows.Forms.Button btnDeleteProjects;
 
     }
 }

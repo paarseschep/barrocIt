@@ -47,7 +47,9 @@ namespace barrocitWinform
                                 this.Hide();
                                 break;
                             case 3:
-                                //sales form
+                                SalesMainPanelcs salesPanel = new SalesMainPanelcs(this, tbUsername.Text);
+                                salesPanel.Show();
+                                this.Hide();
                                 break;
                             default:
                                 MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?", 
