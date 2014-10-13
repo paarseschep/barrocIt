@@ -38,6 +38,17 @@ namespace barrocitWinform
                                 adminPanel.Show();
                                 this.Hide();
                                 break;
+                            case 1:
+                                //development form
+                                break;
+                            case 2:
+                                FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text);
+                                financePanel.Show();
+                                this.Hide();
+                                break;
+                            case 3:
+                                //sales form
+                                break;
                             default:
                                 MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?", 
                                                 "Error logging in.");

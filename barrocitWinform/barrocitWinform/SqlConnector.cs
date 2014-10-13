@@ -39,6 +39,7 @@ namespace barrocitWinform
                     connection);
 
                 dataReader = loginCommand.ExecuteReader();
+
                 while (dataReader.Read())
                 {
                     department = (int)dataReader["department_id"];

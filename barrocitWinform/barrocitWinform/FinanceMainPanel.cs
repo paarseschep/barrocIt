@@ -12,9 +12,11 @@ namespace barrocitWinform
 {
     public partial class FinanceMainPanel : DepartmentPanel
     {
-        public FinanceMainPanel()
+        public FinanceMainPanel(Form LoginPanel, string userNam)
         {
             InitializeComponent();
+            this.LoginPanel = LoginPanel;
+            this.userName = userName;
         }
     }
 }
