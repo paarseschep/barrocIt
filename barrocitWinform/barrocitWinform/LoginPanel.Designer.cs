@@ -44,7 +44,7 @@
             this.tbUsername.Multiline = true;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(175, 20);
-            this.tbUsername.TabIndex = 1;
+            this.tbUsername.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -52,7 +52,7 @@
             this.btnLogin.Location = new System.Drawing.Point(292, 275);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(108, 29);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtLogin_Click);
@@ -65,7 +65,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '♥';
             this.tbPassword.Size = new System.Drawing.Size(175, 20);
-            this.tbPassword.TabIndex = 3;
+            this.tbPassword.TabIndex = 1;
             // 
             // LbUsername
             // 
@@ -95,7 +95,7 @@
             this.btnClose.Location = new System.Drawing.Point(12, 275);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(108, 29);
-            this.btnClose.TabIndex = 6;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
