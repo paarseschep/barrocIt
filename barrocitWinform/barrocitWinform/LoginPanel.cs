@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace barrocitWinform
             InitializeComponent();
 
             SqlConnector.connection = new SqlConnection (   @"Data Source=(LocalDB)\v11.0;
-                                                            AttachDbFilename=C:\Users\Drace\Documents\GitHub\barrocIt\barrocitWinform\barrocitWinform\Database.mdf;
+                                                            AttachDbFilename="+ Directory.GetCurrentDirectory() + @"\Database.mdf;
                                                             Integrated Security=True;
                                                             Connect Timeout=30");
         }
@@ -36,6 +37,10 @@ namespace barrocitWinform
                                 AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
                                 adminPanel.Show();
                                 this.Hide();
+                                break;
+                            default:
+                                MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?", 
+                                                "Error logging in.");
                                 break;
                         }
                         break;
@@ -55,12 +60,17 @@ namespace barrocitWinform
             }
             this.Visible = false;
         }
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LoginPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to close this form?", "Confirmation", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (dialogResult == DialogResult.No)
             {
-                this.Close();
+                e.Cancel = true;
             }
         }
     }

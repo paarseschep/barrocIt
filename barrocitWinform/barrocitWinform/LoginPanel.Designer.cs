@@ -98,7 +98,7 @@
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // LoginPanel
             // 
@@ -116,6 +116,7 @@
             this.Name = "LoginPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login panel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginPanel_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
