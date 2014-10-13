@@ -67,7 +67,7 @@ namespace barrocitWinform
 
         private void LoginPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to close this form?", "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to close this window?", "Confirmation", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No)
             {
                 e.Cancel = true;

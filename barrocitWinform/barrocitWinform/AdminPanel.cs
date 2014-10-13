@@ -17,6 +17,7 @@ namespace barrocitWinform
             InitializeComponent();
             this.LoginPanel = LoginPanel;
             this.userName = userName;
+            lblGreeting.Location = new Point(10, this.Width);
             lblGreeting.Text += userName + "!";
         }
 

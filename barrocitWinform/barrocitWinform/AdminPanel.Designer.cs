@@ -34,14 +34,13 @@
             this.btnSales = new System.Windows.Forms.Button();
             this.btnDevelopment = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.lblGreeting = new System.Windows.Forms.Label();
             this.pnOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(492, 298);
+            this.btnLogout.Location = new System.Drawing.Point(496, 301);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 1;
@@ -62,7 +61,7 @@
             this.pnOptions.Controls.Add(this.btnLogout);
             this.pnOptions.Location = new System.Drawing.Point(0, 25);
             this.pnOptions.Name = "pnOptions";
-            this.pnOptions.Size = new System.Drawing.Size(580, 334);
+            this.pnOptions.Size = new System.Drawing.Size(584, 337);
             this.pnOptions.TabIndex = 3;
             // 
             // btnFinances
@@ -101,28 +100,17 @@
             this.btnUsers.Text = "Edit users";
             this.btnUsers.UseVisualStyleBackColor = true;
             // 
-            // lblGreeting
-            // 
-            this.lblGreeting.AutoSize = true;
-            this.lblGreeting.Location = new System.Drawing.Point(258, 9);
-            this.lblGreeting.Name = "lblGreeting";
-            this.lblGreeting.Size = new System.Drawing.Size(58, 13);
-            this.lblGreeting.TabIndex = 4;
-            this.lblGreeting.Text = "Welcome, ";
-            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 359);
-            this.Controls.Add(this.lblGreeting);
+            this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.pnOptions);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
             this.Controls.SetChildIndex(this.pnOptions, 0);
-            this.Controls.SetChildIndex(this.lblGreeting, 0);
             this.pnOptions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,7 +124,6 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnDevelopment;
         private System.Windows.Forms.Button btnSales;
-        private System.Windows.Forms.Label lblGreeting;
         private System.Windows.Forms.Button btnFinances;
 
     }

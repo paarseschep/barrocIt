@@ -40,7 +40,7 @@
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(474, 343);
+            this.btnLogout.Location = new System.Drawing.Point(493, 327);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(79, 23);
             this.btnLogout.TabIndex = 2;
@@ -50,7 +50,7 @@
             // btnAddProject
             // 
             this.btnAddProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddProject.Location = new System.Drawing.Point(86, 114);
+            this.btnAddProject.Location = new System.Drawing.Point(105, 98);
             this.btnAddProject.Name = "btnAddProject";
             this.btnAddProject.Size = new System.Drawing.Size(134, 47);
             this.btnAddProject.TabIndex = 3;
@@ -60,7 +60,7 @@
             // btnViewProjects
             // 
             this.btnViewProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewProjects.Location = new System.Drawing.Point(86, 167);
+            this.btnViewProjects.Location = new System.Drawing.Point(105, 151);
             this.btnViewProjects.Name = "btnViewProjects";
             this.btnViewProjects.Size = new System.Drawing.Size(134, 47);
             this.btnViewProjects.TabIndex = 4;
@@ -70,7 +70,7 @@
             // btnDeleteProjects
             // 
             this.btnDeleteProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteProjects.Location = new System.Drawing.Point(86, 220);
+            this.btnDeleteProjects.Location = new System.Drawing.Point(105, 204);
             this.btnDeleteProjects.Name = "btnDeleteProjects";
             this.btnDeleteProjects.Size = new System.Drawing.Size(134, 47);
             this.btnDeleteProjects.TabIndex = 5;
@@ -80,7 +80,7 @@
             // btnDeleteInvoice
             // 
             this.btnDeleteInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteInvoice.Location = new System.Drawing.Point(313, 220);
+            this.btnDeleteInvoice.Location = new System.Drawing.Point(332, 204);
             this.btnDeleteInvoice.Name = "btnDeleteInvoice";
             this.btnDeleteInvoice.Size = new System.Drawing.Size(134, 47);
             this.btnDeleteInvoice.TabIndex = 8;
@@ -90,7 +90,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(313, 167);
+            this.button2.Location = new System.Drawing.Point(332, 151);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 47);
             this.button2.TabIndex = 7;
@@ -100,7 +100,7 @@
             // btnAddInvoice
             // 
             this.btnAddInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddInvoice.Location = new System.Drawing.Point(313, 114);
+            this.btnAddInvoice.Location = new System.Drawing.Point(332, 98);
             this.btnAddInvoice.Name = "btnAddInvoice";
             this.btnAddInvoice.Size = new System.Drawing.Size(134, 47);
             this.btnAddInvoice.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 378);
+            this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.btnDeleteInvoice);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAddInvoice);
