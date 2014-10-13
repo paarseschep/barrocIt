@@ -15,8 +15,7 @@ namespace barrocitWinform
         public FinanceMainPanel(Form LoginPanel, string userNam)
         {
             InitializeComponent();
-            this.LoginPanel = LoginPanel;
-            this.userName = userName;
+            this.loginPanel = LoginPanel;
         }
     }
 }

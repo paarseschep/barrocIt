@@ -12,22 +12,11 @@ namespace barrocitWinform
 {
     public partial class AdminPanel : DepartmentPanel
     {
-        public AdminPanel(Form LoginPanel, string userName)
+        public AdminPanel(Form loginPanel, string userName)
         {
             InitializeComponent();
-            this.LoginPanel = LoginPanel;
-            this.userName = userName;
-            lblGreeting.Location = new Point(10, this.Width);
-            lblGreeting.Text += userName + "!";
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            this.loginPanel = loginPanel;
+            this.UpdateGreeting(userName);
         }
     }
 }
