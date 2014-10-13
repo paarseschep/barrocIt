@@ -12,18 +12,15 @@ namespace barrocitWinform
 {
      public partial class DepartmentPanel : Form
     {
-        protected Form LoginPanel;
-        protected string userName;
-        protected Label lblGreeting;
+        protected Form loginPanel;
         public DepartmentPanel()
         {
             InitializeComponent();
-            lblGreeting = new Label();
         }
 
-        private void DepartmentPanel_FormClosed(object sender, FormClosedEventArgs e)
+        protected void UpdateGreeting(string userName)
         {
-            LoginPanel.Visible = true;
+            lblGreeting.Text += userName + "!";
         }
 
         private void clockUpdater_Tick(object sender, EventArgs e)
@@ -32,17 +29,20 @@ namespace barrocitWinform
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            this.Close();
         }
 
         private void DepartmentPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
-
+        private void DepartmentPanel_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            loginPanel.Visible = true;
+        }
     }
 }

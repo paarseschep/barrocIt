@@ -28,41 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.pnOptions = new System.Windows.Forms.Panel();
             this.btnFinances = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnDevelopment = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.pnOptions.SuspendLayout();
+            this.btnEditUsers = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(496, 301);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // pnOptions
-            // 
-            this.pnOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnOptions.Controls.Add(this.btnFinances);
-            this.pnOptions.Controls.Add(this.btnSales);
-            this.pnOptions.Controls.Add(this.btnDevelopment);
-            this.pnOptions.Controls.Add(this.btnUsers);
-            this.pnOptions.Controls.Add(this.btnLogout);
-            this.pnOptions.Location = new System.Drawing.Point(0, 25);
-            this.pnOptions.Name = "pnOptions";
-            this.pnOptions.Size = new System.Drawing.Size(584, 337);
-            this.pnOptions.TabIndex = 3;
             // 
             // btnFinances
             // 
@@ -100,18 +74,63 @@
             this.btnUsers.Text = "Edit users";
             this.btnUsers.UseVisualStyleBackColor = true;
             // 
+            // btnEditUsers
+            // 
+            this.btnEditUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditUsers.Location = new System.Drawing.Point(12, 112);
+            this.btnEditUsers.Name = "btnEditUsers";
+            this.btnEditUsers.Size = new System.Drawing.Size(134, 47);
+            this.btnEditUsers.TabIndex = 8;
+            this.btnEditUsers.Text = "Edit users";
+            this.btnEditUsers.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(12, 196);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 47);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Development\r\ndepartment";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(222, 196);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(134, 47);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Finance\r\ndepartment";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(438, 196);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(134, 47);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Sales\r\ndepartment";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 362);
-            this.Controls.Add(this.pnOptions);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEditUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
-            this.Controls.SetChildIndex(this.pnOptions, 0);
-            this.pnOptions.ResumeLayout(false);
+            this.Controls.SetChildIndex(this.btnEditUsers, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.button3, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,12 +138,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Panel pnOptions;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnDevelopment;
         private System.Windows.Forms.Button btnSales;
         private System.Windows.Forms.Button btnFinances;
+        private System.Windows.Forms.Button btnEditUsers;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
 
     }
 }
