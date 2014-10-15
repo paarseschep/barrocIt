@@ -38,6 +38,7 @@
             // clockUpdater
             // 
             this.clockUpdater.Enabled = true;
+            this.clockUpdater.Interval = 1000;
             this.clockUpdater.Tick += new System.EventHandler(this.clockUpdater_Tick);
             // 
             // lblClock

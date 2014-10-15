@@ -15,7 +15,7 @@ namespace barrocitWinform
         public AdminPanel(Form loginPanel, string userName)
         {
             InitializeComponent();
-            this.loginPanel = loginPanel;
+            this.lastPanel = loginPanel;
             this.UpdateGreeting(userName);
         }
     }

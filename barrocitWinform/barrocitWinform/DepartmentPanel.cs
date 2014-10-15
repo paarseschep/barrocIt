@@ -12,7 +12,7 @@ namespace barrocitWinform
 {
      public partial class DepartmentPanel : Form
     {
-        protected Form loginPanel;
+        protected Form lastPanel;
         public DepartmentPanel()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace barrocitWinform
         }
         private void DepartmentPanel_FormClosed(object sender, FormClosedEventArgs e)
         {
-            loginPanel.Visible = true;
+            lastPanel.Visible = true;
         }
 
     }

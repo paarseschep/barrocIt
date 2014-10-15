@@ -31,31 +31,7 @@ namespace barrocitWinform
             {
                 case true:
                     {
-                        switch (SqlConnector.Login(tbUsername.Text, tbPassword.Text))
-                        {
-                            case 0:
-                                AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
-                                adminPanel.Show();
-                                this.Hide();
-                                break;
-                            case 1:
-                                //development form
-                                break;
-                            case 2:
-                                FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text);
-                                financePanel.Show();
-                                this.Hide();
-                                break;
-                            case 3:
-                                SalesMainPanelcs salesPanel = new SalesMainPanelcs(this, tbUsername.Text);
-                                salesPanel.Show();
-                                this.Hide();
-                                break;
-                            default:
-                                MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?", 
-                                                "Error logging in.");
-                                break;
-                        }
+                        OpenUserPanel(SqlConnector.Login(tbUsername.Text, tbPassword.Text), tbPassword.Text);
                         break;
                     }
             }
@@ -67,11 +43,32 @@ namespace barrocitWinform
             switch(departmentNumber)
             {
                 case 0:
-                    AdminPanel adminPanel = new AdminPanel(this, userName);
-                    adminPanel.Visible = true;
+                    AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
+                    adminPanel.Show();
+                    this.Hide();
+                    break;
+                case 1:
+                    //development form
+                    break;
+                case 2:
+                    FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text);
+                    financePanel.Show();
+                    this.Hide();
+                    break;
+                case 3:
+                    SalesMainPanelcs salesPanel = new SalesMainPanelcs(this, tbUsername.Text);
+                    salesPanel.Show();
+                    this.Hide();
+                    break;
+                case -1:
+                    MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?",
+                                    "Error logging in.");
+                    break;
+                default:
+                    MessageBox.Show("The user you logged in as has an unused department number. This could be filled in incorrectly.",
+                                    "Error logging in.");
                     break;
             }
-            this.Visible = false;
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
