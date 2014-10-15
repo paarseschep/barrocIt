@@ -18,7 +18,8 @@ namespace barrocitWinform
         public LoginPanel()
         {
             InitializeComponent();
-
+            NewCustomerPanel t = new NewCustomerPanel(this, "Test");
+            t.Show();
             SqlConnector.connection = new SqlConnection (   @"Data Source=(LocalDB)\v11.0;
                                                             AttachDbFilename="+ Directory.GetCurrentDirectory() + @"\Database.mdf;
                                                             Integrated Security=True;
@@ -42,6 +43,7 @@ namespace barrocitWinform
         {
             switch(departmentNumber)
             {
+                    
                 case 0:
                     AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
                     adminPanel.Show();

@@ -74,14 +74,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 388);
+            this.ClientSize = new System.Drawing.Size(593, 382);
             this.Controls.Add(this.btnManageProjects);
             this.Controls.Add(this.btnDeactivateCustomers);
             this.Controls.Add(this.btnMaganeCustomers);
             this.Controls.Add(this.btnCreateCustomer);
             this.Name = "SalesMainPanelcs";
             this.Text = "SalesMainPanelcs";
+            this.Controls.SetChildIndex(this.btnCreateCustomer, 0);
+            this.Controls.SetChildIndex(this.btnMaganeCustomers, 0);
+            this.Controls.SetChildIndex(this.btnDeactivateCustomers, 0);
+            this.Controls.SetChildIndex(this.btnManageProjects, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
