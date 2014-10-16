@@ -33,6 +33,10 @@
             this.btnAddInvoice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(497, 327);
+            // 
             // btnDeleteInvoice
             // 
             this.btnDeleteInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -72,6 +76,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAddInvoice);
             this.Name = "FinanceMainPanel";
+            this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.btnAddInvoice, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.btnDeleteInvoice, 0);

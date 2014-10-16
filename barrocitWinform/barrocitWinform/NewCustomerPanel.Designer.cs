@@ -53,6 +53,12 @@
             this.btnApply = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // lblClock
+            // 
+            this.lblClock.Location = new System.Drawing.Point(557, 9);
+            this.lblClock.Size = new System.Drawing.Size(49, 13);
+            this.lblClock.Text = "09:59:52";
+            // 
             // lblFirstname
             // 
             this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -279,6 +285,8 @@
             this.Controls.Add(this.lblFirstname);
             this.Name = "NewCustomerPanel";
             this.Text = "NewCustomerPanel";
+            this.Controls.SetChildIndex(this.lblClock, 0);
+            this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.lblFirstname, 0);
             this.Controls.SetChildIndex(this.tbFirstname, 0);
             this.Controls.SetChildIndex(this.lblLastname, 0);
