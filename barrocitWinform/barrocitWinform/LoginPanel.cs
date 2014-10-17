@@ -18,12 +18,14 @@ namespace barrocitWinform
         public LoginPanel()
         {
             InitializeComponent();
+            SqlConnector.connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\anthony\Documents\GitHub\barrocIt\barrocitWinform\barrocitWinform\Database.mdf;Integrated Security=True;Connect Timeout=30");
+                                                            //Data Source=(LocalDB)\v11.0;
+                                                            //AttachDbFilename=" + Directory.GetCurrentDirectory() + @"\Database.mdf;
+                                                            //Integrated Security=True;        connection string temp
+                                                            //Connect Timeout=30
             NewCustomerPanel t = new NewCustomerPanel(this, "Test");
             t.Show();
-            SqlConnector.connection = new SqlConnection (   @"Data Source=(LocalDB)\v11.0;
-                                                            AttachDbFilename="+ Directory.GetCurrentDirectory() + @"\Database.mdf;
-                                                            Integrated Security=True;
-                                                            Connect Timeout=30");
+       
         }
 
         private void BtLogin_Click(object sender, EventArgs e)
@@ -84,6 +86,11 @@ namespace barrocitWinform
             {
                 e.Cancel = true;
             }
+        }
+
+        private void LoginPanel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

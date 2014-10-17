@@ -36,19 +36,19 @@
             this.lbEmail = new System.Windows.Forms.Label();
             this.tbPhone = new System.Windows.Forms.TextBox();
             this.lbPhone = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbStreetnumber = new System.Windows.Forms.TextBox();
             this.lbStreetnumber = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbPostalcode = new System.Windows.Forms.TextBox();
             this.lbPostalcode = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbCity = new System.Windows.Forms.TextBox();
             this.lbCity = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbProvince = new System.Windows.Forms.TextBox();
             this.lbProvince = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbCompany = new System.Windows.Forms.TextBox();
             this.lbCompany = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbCompanyEmail = new System.Windows.Forms.TextBox();
             this.lbCompanyMail = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbCompanyPhone = new System.Windows.Forms.TextBox();
             this.lbCompanyPhone = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             // lblLastname
             // 
             this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastname.Location = new System.Drawing.Point(94, 88);
+            this.lblLastname.Location = new System.Drawing.Point(94, 84);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(101, 20);
             this.lblLastname.TabIndex = 9;
@@ -111,6 +111,7 @@
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(105, 20);
             this.tbPhone.TabIndex = 5;
+            this.tbPhone.TextChanged += new System.EventHandler(this.tbPhone_TextChanged);
             // 
             // lbPhone
             // 
@@ -121,13 +122,13 @@
             this.lbPhone.TabIndex = 13;
             this.lbPhone.Text = "Phone:";
             // 
-            // textBox4
+            // tbStreetnumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(201, 201);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(105, 20);
-            this.textBox4.TabIndex = 6;
+            this.tbStreetnumber.Location = new System.Drawing.Point(201, 201);
+            this.tbStreetnumber.Multiline = true;
+            this.tbStreetnumber.Name = "tbStreetnumber";
+            this.tbStreetnumber.Size = new System.Drawing.Size(105, 20);
+            this.tbStreetnumber.TabIndex = 6;
             // 
             // lbStreetnumber
             // 
@@ -138,13 +139,13 @@
             this.lbStreetnumber.TabIndex = 15;
             this.lbStreetnumber.Text = "Streetnr:";
             // 
-            // textBox1
+            // tbPostalcode
             // 
-            this.textBox1.Location = new System.Drawing.Point(201, 227);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
-            this.textBox1.TabIndex = 7;
+            this.tbPostalcode.Location = new System.Drawing.Point(201, 227);
+            this.tbPostalcode.Multiline = true;
+            this.tbPostalcode.Name = "tbPostalcode";
+            this.tbPostalcode.Size = new System.Drawing.Size(105, 20);
+            this.tbPostalcode.TabIndex = 7;
             // 
             // lbPostalcode
             // 
@@ -155,13 +156,13 @@
             this.lbPostalcode.TabIndex = 17;
             this.lbPostalcode.Text = "Postalcode:";
             // 
-            // textBox2
+            // tbCity
             // 
-            this.textBox2.Location = new System.Drawing.Point(201, 253);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(105, 20);
-            this.textBox2.TabIndex = 8;
+            this.tbCity.Location = new System.Drawing.Point(201, 253);
+            this.tbCity.Multiline = true;
+            this.tbCity.Name = "tbCity";
+            this.tbCity.Size = new System.Drawing.Size(105, 20);
+            this.tbCity.TabIndex = 8;
             // 
             // lbCity
             // 
@@ -172,13 +173,13 @@
             this.lbCity.TabIndex = 19;
             this.lbCity.Text = "City:";
             // 
-            // textBox3
+            // tbProvince
             // 
-            this.textBox3.Location = new System.Drawing.Point(201, 279);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(105, 20);
-            this.textBox3.TabIndex = 9;
+            this.tbProvince.Location = new System.Drawing.Point(201, 279);
+            this.tbProvince.Multiline = true;
+            this.tbProvince.Name = "tbProvince";
+            this.tbProvince.Size = new System.Drawing.Size(105, 20);
+            this.tbProvince.TabIndex = 9;
             // 
             // lbProvince
             // 
@@ -189,13 +190,13 @@
             this.lbProvince.TabIndex = 21;
             this.lbProvince.Text = "Province:";
             // 
-            // textBox5
+            // tbCompany
             // 
-            this.textBox5.Location = new System.Drawing.Point(452, 62);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(105, 20);
-            this.textBox5.TabIndex = 10;
+            this.tbCompany.Location = new System.Drawing.Point(452, 62);
+            this.tbCompany.Multiline = true;
+            this.tbCompany.Name = "tbCompany";
+            this.tbCompany.Size = new System.Drawing.Size(105, 20);
+            this.tbCompany.TabIndex = 10;
             // 
             // lbCompany
             // 
@@ -206,13 +207,13 @@
             this.lbCompany.TabIndex = 23;
             this.lbCompany.Text = "Company:";
             // 
-            // textBox6
+            // tbCompanyEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(452, 88);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(105, 20);
-            this.textBox6.TabIndex = 11;
+            this.tbCompanyEmail.Location = new System.Drawing.Point(452, 88);
+            this.tbCompanyEmail.Multiline = true;
+            this.tbCompanyEmail.Name = "tbCompanyEmail";
+            this.tbCompanyEmail.Size = new System.Drawing.Size(105, 20);
+            this.tbCompanyEmail.TabIndex = 11;
             // 
             // lbCompanyMail
             // 
@@ -223,13 +224,13 @@
             this.lbCompanyMail.TabIndex = 25;
             this.lbCompanyMail.Text = "E-mail:";
             // 
-            // textBox7
+            // tbCompanyPhone
             // 
-            this.textBox7.Location = new System.Drawing.Point(452, 114);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(105, 20);
-            this.textBox7.TabIndex = 12;
+            this.tbCompanyPhone.Location = new System.Drawing.Point(452, 114);
+            this.tbCompanyPhone.Multiline = true;
+            this.tbCompanyPhone.Name = "tbCompanyPhone";
+            this.tbCompanyPhone.Size = new System.Drawing.Size(105, 20);
+            this.tbCompanyPhone.TabIndex = 12;
             // 
             // lbCompanyPhone
             // 
@@ -248,26 +249,27 @@
             this.btnApply.TabIndex = 28;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // NewCustomerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 365);
+            this.ClientSize = new System.Drawing.Size(621, 358);
             this.Controls.Add(this.btnApply);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tbCompanyPhone);
             this.Controls.Add(this.lbCompanyPhone);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbCompanyEmail);
             this.Controls.Add(this.lbCompanyMail);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbCompany);
             this.Controls.Add(this.lbCompany);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbProvince);
             this.Controls.Add(this.lbProvince);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbCity);
             this.Controls.Add(this.lbCity);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPostalcode);
             this.Controls.Add(this.lbPostalcode);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbStreetnumber);
             this.Controls.Add(this.lbStreetnumber);
             this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.lbPhone);
@@ -288,19 +290,19 @@
             this.Controls.SetChildIndex(this.lbPhone, 0);
             this.Controls.SetChildIndex(this.tbPhone, 0);
             this.Controls.SetChildIndex(this.lbStreetnumber, 0);
-            this.Controls.SetChildIndex(this.textBox4, 0);
+            this.Controls.SetChildIndex(this.tbStreetnumber, 0);
             this.Controls.SetChildIndex(this.lbPostalcode, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.tbPostalcode, 0);
             this.Controls.SetChildIndex(this.lbCity, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.tbCity, 0);
             this.Controls.SetChildIndex(this.lbProvince, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
+            this.Controls.SetChildIndex(this.tbProvince, 0);
             this.Controls.SetChildIndex(this.lbCompany, 0);
-            this.Controls.SetChildIndex(this.textBox5, 0);
+            this.Controls.SetChildIndex(this.tbCompany, 0);
             this.Controls.SetChildIndex(this.lbCompanyMail, 0);
-            this.Controls.SetChildIndex(this.textBox6, 0);
+            this.Controls.SetChildIndex(this.tbCompanyEmail, 0);
             this.Controls.SetChildIndex(this.lbCompanyPhone, 0);
-            this.Controls.SetChildIndex(this.textBox7, 0);
+            this.Controls.SetChildIndex(this.tbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.btnApply, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -317,19 +319,19 @@
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.Label lbPhone;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbStreetnumber;
         private System.Windows.Forms.Label lbStreetnumber;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPostalcode;
         private System.Windows.Forms.Label lbPostalcode;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbCity;
         private System.Windows.Forms.Label lbCity;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbProvince;
         private System.Windows.Forms.Label lbProvince;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbCompany;
         private System.Windows.Forms.Label lbCompany;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbCompanyEmail;
         private System.Windows.Forms.Label lbCompanyMail;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbCompanyPhone;
         private System.Windows.Forms.Label lbCompanyPhone;
         private System.Windows.Forms.Button btnApply;
     }
