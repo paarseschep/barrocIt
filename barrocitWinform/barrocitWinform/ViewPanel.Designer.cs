@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.dataTables = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet1 = new barrocitWinform.DatabaseDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.dataTables)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -42,7 +40,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(737, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "11:22:10";
+            this.lblClock.Text = "11:32:59";
             // 
             // dataTables
             // 
@@ -54,11 +52,6 @@
             this.dataTables.Name = "dataTables";
             this.dataTables.Size = new System.Drawing.Size(772, 296);
             this.dataTables.TabIndex = 9;
-            // 
-            // databaseDataSet1
-            // 
-            this.databaseDataSet1.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ViewPanel
             // 
@@ -72,7 +65,6 @@
             this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.dataTables, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataTables)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,7 +74,6 @@
 
         private DatabaseDataSet databaseDataSet;
         private System.Windows.Forms.DataGridView dataTables;
-        private DatabaseDataSet databaseDataSet1;
 
 
     }
