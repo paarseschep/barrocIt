@@ -117,7 +117,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login panel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginPanel_FormClosing);
-            //this.Load += new System.EventHandler(this.LoginPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
