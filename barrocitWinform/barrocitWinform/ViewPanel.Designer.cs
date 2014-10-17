@@ -36,13 +36,13 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(711, 327);
+            this.btnBack.Location = new System.Drawing.Point(709, 327);
             // 
             // lblClock
             // 
             this.lblClock.Location = new System.Drawing.Point(737, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "09:51:41";
+            this.lblClock.Text = "11:22:10";
             // 
             // dataTables
             // 
