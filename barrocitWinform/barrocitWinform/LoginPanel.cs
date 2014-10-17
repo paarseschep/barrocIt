@@ -18,9 +18,11 @@ namespace barrocitWinform
         public LoginPanel()
         {
             InitializeComponent();
-            DatabaseDataSet test = new DatabaseDataSet();
-            ViewPanel t = new ViewPanel(this, "Test", test.Tbl_Projects);
-            t.Show();
+            
+            //ViewPanel t = new ViewPanel(this, "Test", test.Tbl_Projects);
+            //t.Show();
+            NewCustomerPanel temp = new NewCustomerPanel(this, "Test");
+            temp.Show();
             SqlConnector.connection = new SqlConnection (   @"Data Source=(LocalDB)\v11.0;
                                                             AttachDbFilename="+ Directory.GetCurrentDirectory() + @"\Database.mdf;
                                                             Integrated Security=True;
