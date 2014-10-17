@@ -18,6 +18,7 @@ namespace barrocitWinform
             this.lastPanel = loginPanel;
             this.UpdateGreeting(userName);
             this.userName = userName;
+            btnBack.Text = "Logout";
         }
 
         private void btnDevelopment_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace barrocitWinform
 
         private void OpenUserPanel (int departmentNumber)
         {
-            string closeMessage = "Are you sure you want to close this window?";
+            string closeMessage = "Are you sure you want to go back?";
             switch (departmentNumber)
             {
                 case 1:
@@ -46,13 +47,13 @@ namespace barrocitWinform
                 case 2:
                     FinanceMainPanel financePanel = new FinanceMainPanel(this, userName);
                     financePanel.Show();
-                    financePanel.SetCloseMessage("Close", closeMessage);
+                    financePanel.SetCloseMessage("Back", closeMessage);
                     this.Hide();
                     break;
                 case 3:
                     SalesMainPanelcs salesPanel = new SalesMainPanelcs(this, userName);
                     salesPanel.Show();
-                    salesPanel.SetCloseMessage("Close", closeMessage);
+                    salesPanel.SetCloseMessage("Back", closeMessage);
                     this.Hide();
                     break;
             }

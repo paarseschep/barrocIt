@@ -34,6 +34,16 @@
             this.btnManageProjects = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(483, 347);
+            // 
+            // lblClock
+            // 
+            this.lblClock.Location = new System.Drawing.Point(509, 9);
+            this.lblClock.Size = new System.Drawing.Size(49, 13);
+            this.lblClock.Text = "09:59:59";
+            // 
             // btnCreateCustomer
             // 
             this.btnCreateCustomer.Location = new System.Drawing.Point(120, 117);
@@ -74,13 +84,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 382);
+            this.ClientSize = new System.Drawing.Size(570, 382);
             this.Controls.Add(this.btnManageProjects);
             this.Controls.Add(this.btnDeactivateCustomers);
             this.Controls.Add(this.btnMaganeCustomers);
             this.Controls.Add(this.btnCreateCustomer);
             this.Name = "SalesMainPanelcs";
             this.Text = "SalesMainPanelcs";
+            this.Controls.SetChildIndex(this.lblClock, 0);
+            this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.btnCreateCustomer, 0);
             this.Controls.SetChildIndex(this.btnMaganeCustomers, 0);
             this.Controls.SetChildIndex(this.btnDeactivateCustomers, 0);

@@ -34,6 +34,10 @@
             this.btnSales = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(497, 327);
+            // 
             // btnEditUsers
             // 
             this.btnEditUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -90,6 +94,7 @@
             this.MaximizeBox = false;
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
+            this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.btnEditUsers, 0);
             this.Controls.SetChildIndex(this.btnDevelopment, 0);
             this.Controls.SetChildIndex(this.btnFinance, 0);

@@ -15,10 +15,25 @@ namespace barrocitWinform
         public string closeMessage;
         protected string userName;
         protected Form lastPanel;
+        protected Button btnBack;
+        protected Label lblClock;
         public DepartmentPanel()
         {
             InitializeComponent();
             closeMessage = "Are you sure you want to log out?";
+            btnBack = new Button();
+            btnBack.Text = "Back";
+            btnBack.Anchor = AnchorStyles.None;
+            btnBack.Anchor = (AnchorStyles.Right | AnchorStyles.Bottom);
+            btnBack.Location = new Point(this.Width - btnBack.Width, this.Height - btnBack.Height * 3);
+            btnBack.Click += btnBack_Click;
+            lblClock = new Label();
+            lblClock.Location = new Point(this.Width - btnBack.Width, btnBack.Height / 2);
+            lblClock.Anchor = AnchorStyles.None;
+            lblClock.Anchor = (AnchorStyles.Right | AnchorStyles.Top);
+            lblClock.AutoSize = true;
+            this.Controls.Add(btnBack);
+            this.Controls.Add(lblClock);
         }
 
         protected void UpdateGreeting(string userName)
@@ -30,7 +45,7 @@ namespace barrocitWinform
         {
             lblClock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -49,7 +64,7 @@ namespace barrocitWinform
         }
         public void SetCloseMessage(string closeButtonText, string closeMessage)
         {
-            this.btnLogout.Text = closeButtonText;
+            this.btnBack.Text = closeButtonText;
             this.closeMessage = closeMessage;
         }
     }
