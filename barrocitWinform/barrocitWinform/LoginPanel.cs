@@ -21,8 +21,9 @@ namespace barrocitWinform
             DatabaseDataSet test = new DatabaseDataSet();
             ViewPanel t = new ViewPanel(this, "Test", test.Tbl_Projects);
             t.Show();
+            //Temporary connection string for debugging
             SqlConnector.connection = new SqlConnection (   @"Data Source=(LocalDB)\v11.0;
-                                                            AttachDbFilename="+ Directory.GetCurrentDirectory() + @"\Database.mdf;
+                                                            AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
                                                             Integrated Security=True;
                                                             Connect Timeout=30");
         }
