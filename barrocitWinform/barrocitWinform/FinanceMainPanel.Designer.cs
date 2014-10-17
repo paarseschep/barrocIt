@@ -29,13 +29,18 @@
         private void InitializeComponent()
         {
             this.btnDeleteInvoice = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnViewInvoice = new System.Windows.Forms.Button();
             this.btnAddInvoice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(497, 327);
+            // 
+            // lblClock
+            // 
+            this.lblClock.Size = new System.Drawing.Size(49, 13);
+            this.lblClock.Text = "10:45:47";
             // 
             // btnDeleteInvoice
             // 
@@ -47,15 +52,16 @@
             this.btnDeleteInvoice.Text = "Delete invoice";
             this.btnDeleteInvoice.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnViewInvoice
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(215, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 47);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "View invoices";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnViewInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewInvoice.Location = new System.Drawing.Point(215, 148);
+            this.btnViewInvoice.Name = "btnViewInvoice";
+            this.btnViewInvoice.Size = new System.Drawing.Size(134, 47);
+            this.btnViewInvoice.TabIndex = 7;
+            this.btnViewInvoice.Text = "View invoices";
+            this.btnViewInvoice.UseVisualStyleBackColor = true;
+            this.btnViewInvoice.Click += new System.EventHandler(this.btnViewInvoice_Click);
             // 
             // btnAddInvoice
             // 
@@ -73,12 +79,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.btnDeleteInvoice);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnViewInvoice);
             this.Controls.Add(this.btnAddInvoice);
             this.Name = "FinanceMainPanel";
+            this.Text = "Finance window";
+            this.Controls.SetChildIndex(this.lblClock, 0);
             this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.btnAddInvoice, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.btnViewInvoice, 0);
             this.Controls.SetChildIndex(this.btnDeleteInvoice, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -88,7 +96,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnDeleteInvoice;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnViewInvoice;
         private System.Windows.Forms.Button btnAddInvoice;
 
     }

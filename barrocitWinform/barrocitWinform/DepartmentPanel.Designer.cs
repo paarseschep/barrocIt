@@ -41,6 +41,9 @@
             // 
             // lblGreeting
             // 
+            this.lblGreeting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGreeting.AutoSize = true;
             this.lblGreeting.Location = new System.Drawing.Point(241, 9);
             this.lblGreeting.Name = "lblGreeting";

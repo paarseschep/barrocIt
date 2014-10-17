@@ -10,18 +10,15 @@ using System.Windows.Forms;
 
 namespace barrocitWinform
 {
-    public partial class FinanceMainPanel : DepartmentPanel
+    public partial class ViewPanel : DepartmentPanel
     {
-        public FinanceMainPanel(Form loginPanel, string userName)
+        Form financePanel;
+        public ViewPanel(Form financePanel, string userName, object data)
         {
             InitializeComponent();
-            this.lastPanel = loginPanel;
-            UpdateGreeting(userName);
-        }
-
-        private void btnViewInvoice_Click(object sender, EventArgs e)
-        {
-
+            this.financePanel = financePanel;
+            dataTables.DataSource = data;
+            dataTables.ReadOnly = true;
         }
     }
 }
