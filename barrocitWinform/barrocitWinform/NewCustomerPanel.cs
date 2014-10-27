@@ -16,7 +16,8 @@ namespace barrocitWinform
         {
             InitializeComponent();
             this.lastPanel = loginPanel;
-            UpdateGreeting(userName);
+            this.userName = userName;
+            UpdateGreeting();
         }
 
         private void btnApply_Click(object sender, EventArgs e)

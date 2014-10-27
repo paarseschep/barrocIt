@@ -136,9 +136,6 @@
     <EmbeddedResource Include="SalesMainPanelcs.resx">
       <DependentUpon>SalesMainPanelcs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewPanel.resx">
-      <DependentUpon>ViewPanel.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>

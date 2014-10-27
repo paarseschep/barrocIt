@@ -17,6 +17,8 @@ namespace barrocitWinform
         {
             InitializeComponent();
             this.financePanel = financePanel;
+            this.userName = userName;
+            UpdateGreeting();
             dataTables.DataSource = data;
             dataTables.ReadOnly = true;
         }
