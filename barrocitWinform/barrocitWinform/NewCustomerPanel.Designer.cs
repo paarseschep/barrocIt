@@ -63,7 +63,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(557, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "15:02:01";
+            this.lblClock.Text = "16:16:21";
             // 
             // lblFirstname
             // 
@@ -265,7 +265,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(201, 53);
+            this.label1.Location = new System.Drawing.Point(346, 256);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 25);
             this.label1.TabIndex = 29;
