@@ -43,7 +43,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(509, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:58:59";
+            this.lblClock.Text = "14:12:45";
             // 
             // btnCreateCustomer
             // 
@@ -53,6 +53,7 @@
             this.btnCreateCustomer.TabIndex = 0;
             this.btnCreateCustomer.Text = "Create customers";
             this.btnCreateCustomer.UseVisualStyleBackColor = true;
+            this.btnCreateCustomer.Click += new System.EventHandler(this.btnCreateCustomer_Click);
             // 
             // btnMaganeCustomers
             // 

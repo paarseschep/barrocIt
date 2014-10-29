@@ -51,6 +51,7 @@
             this.tbCompanyPhone = new System.Windows.Forms.TextBox();
             this.lbCompanyPhone = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.databaseset)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(557, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:43:40";
+            this.lblClock.Text = "15:02:01";
             // 
             // lblFirstname
             // 
@@ -76,7 +77,7 @@
             // 
             // tbFirstname
             // 
-            this.tbFirstname.Location = new System.Drawing.Point(201, 60);
+            this.tbFirstname.Location = new System.Drawing.Point(201, 58);
             this.tbFirstname.Multiline = true;
             this.tbFirstname.Name = "tbFirstname";
             this.tbFirstname.Size = new System.Drawing.Size(105, 20);
@@ -263,11 +264,20 @@
             this.btnApply.UseVisualStyleBackColor = true;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(201, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 25);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "label1";
+            // 
             // NewCustomerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 358);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.tbCompanyPhone);
             this.Controls.Add(this.lbCompanyPhone);
@@ -318,6 +328,7 @@
             this.Controls.SetChildIndex(this.lbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.tbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.btnApply, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.databaseset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -349,5 +360,6 @@
         private System.Windows.Forms.TextBox tbCompanyPhone;
         private System.Windows.Forms.Label lbCompanyPhone;
         private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.Label label1;
     }
 }

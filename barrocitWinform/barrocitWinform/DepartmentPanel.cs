@@ -37,7 +37,7 @@ namespace barrocitWinform
             this.Controls.Add(lblClock);
         }
 
-        protected void UpdateGreeting(string userName)
+        protected void UpdateGreeting()
         {
             lblGreeting.Text += userName + "!";
         }

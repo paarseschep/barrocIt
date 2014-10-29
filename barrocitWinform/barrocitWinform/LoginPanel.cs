@@ -23,7 +23,8 @@ namespace barrocitWinform
             //t.Show();
             //NewCustomerPanel temp = new NewCustomerPanel(this, "test");
             //temp.Show();
-            ////Temporary connection string for debugging
+
+            //Temporary connection string for debugging
             SqlConnector.connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;
                                                         AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
                                                         Integrated Security=True;

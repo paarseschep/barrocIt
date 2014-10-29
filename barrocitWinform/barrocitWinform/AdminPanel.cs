@@ -16,7 +16,8 @@ namespace barrocitWinform
         {
             InitializeComponent();
             this.lastPanel = loginPanel;
-            this.UpdateGreeting(userName);
+            this.userName = userName;
+            UpdateGreeting();
             this.userName = userName;
             btnBack.Text = "Logout";
         }

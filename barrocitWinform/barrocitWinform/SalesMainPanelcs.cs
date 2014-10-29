@@ -16,13 +16,20 @@ namespace barrocitWinform
         {
             InitializeComponent();
             this.lastPanel = loginPanel;
-            UpdateGreeting(userName);
+            this.userName = userName;
+            UpdateGreeting();
         }
 
         private void btnManageProjects_Click(object sender, EventArgs e)
         {
             ViewPanel manageProject = new ViewPanel(this, userName, "Tbl_Projects", false);
             manageProject.Show();
+        }
+
+        private void btnCreateCustomer_Click(object sender, EventArgs e)
+        {
+            NewCustomerPanel newcustomerpanel = new NewCustomerPanel(this, userName);
+            newcustomerpanel.Show();
         }
     }
 }
