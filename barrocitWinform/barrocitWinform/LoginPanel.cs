@@ -18,12 +18,6 @@ namespace barrocitWinform
         public LoginPanel()
         {
             InitializeComponent();
-            //DatabaseDataSet test = new DatabaseDataSet();
-            //ViewPanel t = new ViewPanel(this, "Test", test.Tbl_Projects,true);
-            //t.Show();
-            //NewCustomerPanel temp = new NewCustomerPanel(this, "test");
-            //temp.Show();
-
             //Temporary connection string for debugging
             SqlConnector.connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;
                                                         AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
@@ -41,45 +35,41 @@ namespace barrocitWinform
                         break;
                     }
             }
-            SqlConnector.connection.Close();
         }
 
         private void OpenUserPanel(int departmentNumber, string userName)
         {
-            switch(departmentNumber)
+            switch (departmentNumber)
             {
-                    
+
                 case 0:
                     AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
                     adminPanel.Show();
                     this.Hide();
+                    NewProjectPanel t = new NewProjectPanel(this, tbUsername.Text);
+                    t.Show();
                     break;
                 case 1:
                     //development form
                     break;
                 case 2:
-                    FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text);
+                    FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text, true);
                     financePanel.Show();
                     this.Hide();
                     break;
                 case 3:
-                    SalesMainPanelcs salesPanel = new SalesMainPanelcs(this, tbUsername.Text);
+                    SalesMainPanelcs salesPanel = new SalesMainPanelcs(this, tbUsername.Text, true);
                     salesPanel.Show();
                     this.Hide();
                     break;
-                case -1:
-                    MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?",
-                                    "Error logging in.");
-                    break;
                 default:
-                    MessageBox.Show("The user you logged in as has an unused department number. This could be filled in incorrectly.",
+                    MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?",
                                     "Error logging in.");
                     break;
             }
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            SqlConnector.connection.Close();
             this.Close();
         }
 

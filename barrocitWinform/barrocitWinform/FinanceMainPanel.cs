@@ -12,12 +12,13 @@ namespace barrocitWinform
 {
     public partial class FinanceMainPanel : DepartmentPanel
     {
-        public FinanceMainPanel(Form loginPanel, string userName)
+        public FinanceMainPanel(Form loginPanel, string userName, bool logoutWhenClose)
         {
             InitializeComponent();
             this.lastPanel = loginPanel;
             this.userName = userName;
             UpdateGreeting();
+            SetBackButtonType(logoutWhenClose);
         }
 
         private void btnViewInvoice_Click(object sender, EventArgs e)

@@ -65,6 +65,13 @@
     <Compile Include="AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="BackButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatabaseDataSet.cs">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +100,12 @@
     </Compile>
     <Compile Include="NewCustomerPanel.Designer.cs">
       <DependentUpon>NewCustomerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewProjectPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProjectPanel.Designer.cs">
+      <DependentUpon>NewProjectPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,6 +137,9 @@
     <EmbeddedResource Include="NewCustomerPanel.resx">
       <DependentUpon>NewCustomerPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewProjectPanel.resx">
+      <DependentUpon>NewProjectPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,6 +151,9 @@
     </Compile>
     <EmbeddedResource Include="SalesMainPanelcs.resx">
       <DependentUpon>SalesMainPanelcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPanel.resx">
+      <DependentUpon>ViewPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
