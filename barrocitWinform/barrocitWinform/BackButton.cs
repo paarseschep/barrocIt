@@ -18,7 +18,6 @@ namespace barrocitWinform
             this.Click += BackButton_Click;
         }
 
-
         public void SetText(string buttonText, string closeMessage)
         {
             this.Text = buttonText;

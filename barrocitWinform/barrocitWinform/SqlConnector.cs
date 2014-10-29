@@ -46,6 +46,7 @@ namespace barrocitWinform
                 {
                     department = (int)dataReader["department_id"];
                 }
+                dataReader.Close();
             }
             catch (Exception e)
             {
