@@ -18,8 +18,6 @@ namespace barrocitWinform
         public LoginPanel()
         {
             InitializeComponent();
-            NewProjectPanel t = new NewProjectPanel();
-            t.Show();
             //Temporary connection string for debugging
             SqlConnector.connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;
                                                         AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
@@ -48,6 +46,8 @@ namespace barrocitWinform
                     AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
                     adminPanel.Show();
                     this.Hide();
+                    NewProjectPanel t = new NewProjectPanel(this, tbUsername.Text);
+                    t.Show();
                     break;
                 case 1:
                     //development form

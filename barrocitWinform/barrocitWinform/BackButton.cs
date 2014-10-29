@@ -24,22 +24,11 @@ namespace barrocitWinform
             this.Text = buttonText;
             this.closeMessage = closeMessage;
         }
-        public void SetLogoutEvent(bool enabled)
-        {
-            if (enabled)
-                this.Click += Logout;
-            else
-                this.Click -= Logout;
-        }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
             parentPanel.Close();
         }
 
-        private void Logout(object sender, EventArgs e)
-        {
-            SqlConnector.connection.Close();
-        }
     }
 }

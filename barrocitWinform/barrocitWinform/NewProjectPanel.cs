@@ -12,9 +12,14 @@ namespace barrocitWinform
 {
     public partial class NewProjectPanel : DepartmentPanel
     {
-        public NewProjectPanel()
+        public NewProjectPanel(Form loginPanel, string userName)
         {
             InitializeComponent();
+            this.lastPanel = loginPanel;
+            this.userName = userName;
+            UpdateGreeting();
+            this.userName = userName;
+            SetBackButtonType(true);
         }
     }
 }

@@ -20,6 +20,7 @@ namespace barrocitWinform
         {
             InitializeComponent();
             btnBack = new BackButton(this);
+            SetBackButtonType(false);
             lblClock = new Label();
             lblClock.Location = new Point(this.Width - btnBack.Width, btnBack.Height / 2);
             lblClock.Anchor = AnchorStyles.None;
@@ -51,6 +52,12 @@ namespace barrocitWinform
                 e.Cancel = true;
             }
         }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            SqlConnector.connection.Close();
+        }
+
         private void DepartmentPanel_FormClosed(object sender, FormClosedEventArgs e)
         {
             lastPanel.Visible = true;
@@ -61,13 +68,14 @@ namespace barrocitWinform
             {
                 case true:
                     btnBack.SetText("Logout", "Are you sure you want to logout?");
-                    btnBack.SetLogoutEvent(true);
+                    this.FormClosed += Logout;
                     break;
                 case false:
                     btnBack.SetText("Back", "Are you sure you want to go close this window?");
-                    btnBack.SetLogoutEvent(false);
+                    this.FormClosed -= Logout;
                     break;
             }
         }
+
     }
 }

@@ -19,7 +19,6 @@ namespace barrocitWinform
             this.userName = userName;
             UpdateGreeting();
             this.userName = userName;
-            btnBack.SetText("Logout", "Are you sure you want to go back?");
             SetBackButtonType(true);
             
         }
