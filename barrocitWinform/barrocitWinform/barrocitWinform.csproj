@@ -143,9 +143,9 @@
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="DatabaseDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="DatabaseDataSet.xss">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>

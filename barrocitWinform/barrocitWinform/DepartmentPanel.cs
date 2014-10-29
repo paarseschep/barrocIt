@@ -13,6 +13,7 @@ namespace barrocitWinform
     public partial class DepartmentPanel : Form
     {
         public string closeMessage;
+        public DatabaseDataSet databaseset = new DatabaseDataSet();
         protected string userName;
         protected Form lastPanel;
         protected Button btnBack;

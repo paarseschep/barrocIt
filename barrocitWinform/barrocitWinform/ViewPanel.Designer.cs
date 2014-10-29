@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataTables = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTables)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(737, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "11:32:59";
+            this.lblClock.Text = "12:29:11";
             // 
             // dataTables
             // 
@@ -64,6 +65,7 @@
             this.Controls.SetChildIndex(this.lblClock, 0);
             this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.dataTables, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTables)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -51,13 +51,19 @@
             this.tbCompanyPhone = new System.Windows.Forms.TextBox();
             this.lbCompanyPhone = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(531, 323);
+            this.btnBack.Size = new System.Drawing.Size(78, 23);
             // 
             // lblClock
             // 
             this.lblClock.Location = new System.Drawing.Point(557, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "09:59:52";
+            this.lblClock.Text = "13:43:40";
             // 
             // lblFirstname
             // 
@@ -312,6 +318,7 @@
             this.Controls.SetChildIndex(this.lbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.tbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.btnApply, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

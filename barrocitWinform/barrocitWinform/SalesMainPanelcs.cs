@@ -18,5 +18,11 @@ namespace barrocitWinform
             this.lastPanel = loginPanel;
             UpdateGreeting(userName);
         }
+
+        private void btnManageProjects_Click(object sender, EventArgs e)
+        {
+            ViewPanel manageProject = new ViewPanel(this, userName, "Tbl_Projects", false);
+            manageProject.Show();
+        }
     }
 }

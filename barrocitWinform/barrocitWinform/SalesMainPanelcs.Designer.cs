@@ -32,6 +32,7 @@
             this.btnMaganeCustomers = new System.Windows.Forms.Button();
             this.btnDeactivateCustomers = new System.Windows.Forms.Button();
             this.btnManageProjects = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -42,7 +43,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(509, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "09:59:59";
+            this.lblClock.Text = "13:58:59";
             // 
             // btnCreateCustomer
             // 
@@ -79,6 +80,7 @@
             this.btnManageProjects.TabIndex = 3;
             this.btnManageProjects.Text = "Manage projects";
             this.btnManageProjects.UseVisualStyleBackColor = true;
+            this.btnManageProjects.Click += new System.EventHandler(this.btnManageProjects_Click);
             // 
             // SalesMainPanelcs
             // 
@@ -97,6 +99,7 @@
             this.Controls.SetChildIndex(this.btnMaganeCustomers, 0);
             this.Controls.SetChildIndex(this.btnDeactivateCustomers, 0);
             this.Controls.SetChildIndex(this.btnManageProjects, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

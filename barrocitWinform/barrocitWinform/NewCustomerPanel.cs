@@ -27,6 +27,7 @@ namespace barrocitWinform
             
         }
 
+
         private void tbPhone_TextChanged(object sender, EventArgs e)
         {
 
