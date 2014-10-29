@@ -52,7 +52,6 @@
             this.lbCompanyPhone = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -329,7 +328,6 @@
             this.Controls.SetChildIndex(this.tbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.btnApply, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

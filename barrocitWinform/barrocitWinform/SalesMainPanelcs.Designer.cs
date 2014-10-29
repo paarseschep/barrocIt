@@ -32,7 +32,6 @@
             this.btnMaganeCustomers = new System.Windows.Forms.Button();
             this.btnDeactivateCustomers = new System.Windows.Forms.Button();
             this.btnManageProjects = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -100,7 +99,6 @@
             this.Controls.SetChildIndex(this.btnMaganeCustomers, 0);
             this.Controls.SetChildIndex(this.btnDeactivateCustomers, 0);
             this.Controls.SetChildIndex(this.btnManageProjects, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.databaseset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
