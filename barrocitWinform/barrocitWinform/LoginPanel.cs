@@ -18,14 +18,13 @@ namespace barrocitWinform
         public LoginPanel()
         {
             InitializeComponent();
-            DatabaseDataSet test = new DatabaseDataSet();
-            ViewPanel t = new ViewPanel(this, "Test", test.Tbl_Projects);
+            NewProjectPanel t = new NewProjectPanel();
             t.Show();
             //Temporary connection string for debugging
-            SqlConnector.connection = new SqlConnection (   @"Data Source=(LocalDB)\v11.0;
-                                                            AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
-                                                            Integrated Security=True;
-                                                            Connect Timeout=30");
+            SqlConnector.connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;
+                                                        AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
+                                                        Integrated Security=True;
+                                                        Connect Timeout=30");
         }
 
         private void BtLogin_Click(object sender, EventArgs e)
@@ -38,14 +37,13 @@ namespace barrocitWinform
                         break;
                     }
             }
-            SqlConnector.connection.Close();
         }
 
         private void OpenUserPanel(int departmentNumber, string userName)
         {
-            switch(departmentNumber)
+            switch (departmentNumber)
             {
-                    
+
                 case 0:
                     AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
                     adminPanel.Show();
@@ -55,21 +53,17 @@ namespace barrocitWinform
                     //development form
                     break;
                 case 2:
-                    FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text);
+                    FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text, true);
                     financePanel.Show();
                     this.Hide();
                     break;
                 case 3:
-                    SalesMainPanelcs salesPanel = new SalesMainPanelcs(this, tbUsername.Text);
+                    SalesMainPanelcs salesPanel = new SalesMainPanelcs(this, tbUsername.Text, true);
                     salesPanel.Show();
                     this.Hide();
                     break;
-                case -1:
-                    MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?",
-                                    "Error logging in.");
-                    break;
                 default:
-                    MessageBox.Show("The user you logged in as has an unused department number. This could be filled in incorrectly.",
+                    MessageBox.Show("Failed to log in. Are you sure all fields are filled in correctly?",
                                     "Error logging in.");
                     break;
             }

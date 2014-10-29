@@ -12,12 +12,13 @@ namespace barrocitWinform
 {
     public partial class SalesMainPanelcs : DepartmentPanel
     {
-        public SalesMainPanelcs(Form loginPanel, string userName)
+        public SalesMainPanelcs(Form loginPanel, string userName, bool logoutWhenClose)
         {
             InitializeComponent();
             this.lastPanel = loginPanel;
             this.userName = userName;
             UpdateGreeting();
+            SetBackButtonType(logoutWhenClose);
         }
     }
 }

@@ -12,21 +12,14 @@ namespace barrocitWinform
 {
     public partial class DepartmentPanel : Form
     {
-        public string closeMessage;
         protected string userName;
         protected Form lastPanel;
-        protected Button btnBack;
+        protected BackButton btnBack;
         protected Label lblClock;
         public DepartmentPanel()
         {
             InitializeComponent();
-            closeMessage = "Are you sure you want to log out?";
-            btnBack = new Button();
-            btnBack.Text = "Back";
-            btnBack.Anchor = AnchorStyles.None;
-            btnBack.Anchor = (AnchorStyles.Right | AnchorStyles.Bottom);
-            btnBack.Location = new Point(this.Width - btnBack.Width, this.Height - btnBack.Height * 3);
-            btnBack.Click += btnBack_Click;
+            btnBack = new BackButton(this);
             lblClock = new Label();
             lblClock.Location = new Point(this.Width - btnBack.Width, btnBack.Height / 2);
             lblClock.Anchor = AnchorStyles.None;
@@ -52,7 +45,7 @@ namespace barrocitWinform
 
         private void DepartmentPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show(closeMessage, "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show(btnBack.closeMessage, "Confirmation", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No)
             {
                 e.Cancel = true;
@@ -62,10 +55,19 @@ namespace barrocitWinform
         {
             lastPanel.Visible = true;
         }
-        public void SetCloseMessage(string closeButtonText, string closeMessage)
+        public void SetBackButtonType(bool isLogoutButton)
         {
-            this.btnBack.Text = closeButtonText;
-            this.closeMessage = closeMessage;
+            switch (isLogoutButton)
+            {
+                case true:
+                    btnBack.SetText("Logout", "Are you sure you want to logout?");
+                    btnBack.SetLogoutEvent(true);
+                    break;
+                case false:
+                    btnBack.SetText("Back", "Are you sure you want to go close this window?");
+                    btnBack.SetLogoutEvent(false);
+                    break;
+            }
         }
     }
 }

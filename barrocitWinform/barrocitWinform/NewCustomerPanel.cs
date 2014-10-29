@@ -12,10 +12,10 @@ namespace barrocitWinform
 {
     public partial class NewCustomerPanel : DepartmentPanel
     {
-        public NewCustomerPanel(Form loginPanel, string userName)
+        public NewCustomerPanel(Form lastPanel, string userName)
         {
             InitializeComponent();
-            this.lastPanel = loginPanel;
+            this.lastPanel = lastPanel;
             this.userName = userName;
             UpdateGreeting();
         }

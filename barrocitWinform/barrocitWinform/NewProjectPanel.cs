@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace barrocitWinform
 {
-    public partial class ViewPanel : DepartmentPanel
+    public partial class NewProjectPanel : DepartmentPanel
     {
-        Form financePanel;
-        public ViewPanel(Form financePanel, string userName, object data)
+        public NewProjectPanel()
         {
             InitializeComponent();
-            this.financePanel = financePanel;
-            this.userName = userName;
-            UpdateGreeting();
         }
     }
 }

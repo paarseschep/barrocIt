@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataTables = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTables)).BeginInit();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -40,31 +40,31 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(737, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "11:32:59";
+            this.lblClock.Text = "15:31:22";
             // 
-            // dataTables
+            // dataGridView
             // 
-            this.dataTables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTables.Location = new System.Drawing.Point(12, 25);
-            this.dataTables.Name = "dataTables";
-            this.dataTables.Size = new System.Drawing.Size(772, 296);
-            this.dataTables.TabIndex = 9;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 25);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(772, 296);
+            this.dataGridView.TabIndex = 9;
             // 
             // ViewPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 362);
-            this.Controls.Add(this.dataTables);
+            this.Controls.Add(this.dataGridView);
             this.Name = "ViewPanel";
             this.Text = "ViewWindow";
             this.Controls.SetChildIndex(this.lblClock, 0);
             this.Controls.SetChildIndex(this.btnBack, 0);
-            this.Controls.SetChildIndex(this.dataTables, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTables)).EndInit();
+            this.Controls.SetChildIndex(this.dataGridView, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,7 +73,7 @@
         #endregion
 
         private DatabaseDataSet databaseDataSet;
-        private System.Windows.Forms.DataGridView dataTables;
+        private System.Windows.Forms.DataGridView dataGridView;
 
 
     }
