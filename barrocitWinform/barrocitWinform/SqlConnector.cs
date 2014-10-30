@@ -89,7 +89,6 @@ namespace barrocitWinform
                     
                     i++;
                 }
-                connection.Open();
                 cmd.ExecuteNonQuery();
             }
         }

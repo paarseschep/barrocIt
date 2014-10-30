@@ -23,8 +23,6 @@ namespace barrocitWinform
                                                         AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
                                                         Integrated Security=True;
                                                         Connect Timeout=30");
-            NewCustomerPanel newcustomer = new NewCustomerPanel(this,"test");
-            newcustomer.Show();
         }
 
         private void BtLogin_Click(object sender, EventArgs e)
