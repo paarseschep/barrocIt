@@ -54,7 +54,7 @@ namespace barrocitWinform
             }
             return department;
         }
-        static public void InsertDataIntoDatabase(string[] data, string colums, string table)
+        static public void InsertDataIntoDatabase(List<string> data, string colums, string table)
         {
             List<string> extracteTable = new List<string>();
 
@@ -66,7 +66,6 @@ namespace barrocitWinform
 
             string[] tableArray = extracteTable.ToArray();
             string tableStringExtracted = "";
-
             foreach (string oneTable in tableArray)
             {
                 tableStringExtracted += oneTable;
