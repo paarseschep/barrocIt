@@ -51,7 +51,6 @@
             this.tbCompanyPhone = new System.Windows.Forms.TextBox();
             this.lbCompanyPhone = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBack
@@ -63,24 +62,25 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(557, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "16:16:21";
+            this.lblClock.Text = "09:53:50";
             // 
             // lblFirstname
             // 
             this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstname.Location = new System.Drawing.Point(94, 58);
             this.lblFirstname.Name = "lblFirstname";
-            this.lblFirstname.Size = new System.Drawing.Size(101, 20);
+            this.lblFirstname.Size = new System.Drawing.Size(89, 25);
             this.lblFirstname.TabIndex = 7;
             this.lblFirstname.Text = "First name:";
             // 
             // tbFirstname
             // 
-            this.tbFirstname.Location = new System.Drawing.Point(201, 58);
+            this.tbFirstname.Location = new System.Drawing.Point(201, 60);
             this.tbFirstname.Multiline = true;
             this.tbFirstname.Name = "tbFirstname";
             this.tbFirstname.Size = new System.Drawing.Size(105, 20);
             this.tbFirstname.TabIndex = 2;
+            this.tbFirstname.Click += new System.EventHandler(this.tb_Click);
             // 
             // tbLastname
             // 
@@ -89,6 +89,7 @@
             this.tbLastname.Name = "tbLastname";
             this.tbLastname.Size = new System.Drawing.Size(105, 20);
             this.tbLastname.TabIndex = 3;
+            this.tbLastname.Click += new System.EventHandler(this.tb_Click);
             // 
             // lblLastname
             // 
@@ -106,6 +107,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(105, 20);
             this.tbEmail.TabIndex = 4;
+            this.tbEmail.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbEmail
             // 
@@ -123,7 +125,7 @@
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(105, 20);
             this.tbPhone.TabIndex = 5;
-            this.tbPhone.TextChanged += new System.EventHandler(this.tbPhone_TextChanged);
+            this.tbPhone.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbPhone
             // 
@@ -141,6 +143,7 @@
             this.tbStreetnumber.Name = "tbStreetnumber";
             this.tbStreetnumber.Size = new System.Drawing.Size(105, 20);
             this.tbStreetnumber.TabIndex = 6;
+            this.tbStreetnumber.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbStreetnumber
             // 
@@ -158,6 +161,7 @@
             this.tbPostalcode.Name = "tbPostalcode";
             this.tbPostalcode.Size = new System.Drawing.Size(105, 20);
             this.tbPostalcode.TabIndex = 7;
+            this.tbPostalcode.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbPostalcode
             // 
@@ -175,6 +179,7 @@
             this.tbCity.Name = "tbCity";
             this.tbCity.Size = new System.Drawing.Size(105, 20);
             this.tbCity.TabIndex = 8;
+            this.tbCity.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbCity
             // 
@@ -192,6 +197,7 @@
             this.tbProvince.Name = "tbProvince";
             this.tbProvince.Size = new System.Drawing.Size(105, 20);
             this.tbProvince.TabIndex = 9;
+            this.tbProvince.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbProvince
             // 
@@ -209,6 +215,7 @@
             this.tbCompany.Name = "tbCompany";
             this.tbCompany.Size = new System.Drawing.Size(105, 20);
             this.tbCompany.TabIndex = 10;
+            this.tbCompany.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbCompany
             // 
@@ -226,6 +233,7 @@
             this.tbCompanyEmail.Name = "tbCompanyEmail";
             this.tbCompanyEmail.Size = new System.Drawing.Size(105, 20);
             this.tbCompanyEmail.TabIndex = 11;
+            this.tbCompanyEmail.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbCompanyMail
             // 
@@ -243,6 +251,7 @@
             this.tbCompanyPhone.Name = "tbCompanyPhone";
             this.tbCompanyPhone.Size = new System.Drawing.Size(105, 20);
             this.tbCompanyPhone.TabIndex = 12;
+            this.tbCompanyPhone.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbCompanyPhone
             // 
@@ -263,20 +272,11 @@
             this.btnApply.UseVisualStyleBackColor = true;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(346, 256);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 25);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "label1";
-            // 
             // NewCustomerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 358);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.tbCompanyPhone);
             this.Controls.Add(this.lbCompanyPhone);
@@ -327,7 +327,6 @@
             this.Controls.SetChildIndex(this.lbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.tbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.btnApply, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,6 +357,5 @@
         private System.Windows.Forms.TextBox tbCompanyPhone;
         private System.Windows.Forms.Label lbCompanyPhone;
         private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.Label label1;
     }
 }
