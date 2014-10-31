@@ -19,10 +19,10 @@ namespace barrocitWinform
         {
             InitializeComponent();
             //Temporary connection string for debugging
-            SqlConnector.connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;
+            SqlConnector.connectionString = @"Data Source=(LocalDB)\v11.0;
                                                         AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
                                                         Integrated Security=True;
-                                                        Connect Timeout=30");
+                                                        Connect Timeout=30";
         }
 
         private void BtLogin_Click(object sender, EventArgs e)

@@ -42,7 +42,7 @@ namespace barrocitWinform
 
         private void SaveProject(object sender, EventArgs e)
         {
-            if (lstbCustomers.SelectedItem != null && CheckFilledTextBoxes())
+            if (lstbCustomers.SelectedIndex != 0 && lstbCustomers.SelectedItem != null && isInt(tbPrice.Text) && CheckFilledTextBoxes())
             {
                 int findId = lstbCustomers.SelectedItem.ToString().IndexOf(" ");
                 string idString = "";
@@ -53,16 +53,27 @@ namespace barrocitWinform
                 }
 
                 int customerId = Convert.ToInt32(idString);
+                List<string> dataList = AddToList(customerId.ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
 
+                string colums = " Customer_id, name, description, price";
 
-                List<string> dataList = AddToList(customerId.ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text, datePicker.Text);
+                if (cbDeadLine.Checked)
+                {
+                    dataList.Add(datePicker.Text);
+                    colums += ", deadline";
+                }
 
-                //SqlConnector.InsertDataIntoDatabase(dataList, " Customer_id, name, description, price, deadline", "Tbl_Projects");
-
+                if (SqlConnector.InsertDataIntoDatabase(dataList, colums, "Tbl_Projects"))
+                {
+                    MessageBox.Show("The project has been succesfully submitted to the server.",
+                                    "Successfully saved the project.");
+                    SqlConnector.Connect();
+                    Close();
+                }
             }
             else
             {
-                MessageBox.Show("Unable to save project. Are you sure all fields are filled in and are you sure you selected a customer?",
+                MessageBox.Show("Unable to save project. Are you sure all fields are filled in correctly and are you sure you selected a customer?",
                                 "Error saving Project");
             }
         }
@@ -86,9 +97,20 @@ namespace barrocitWinform
             }
             return isTbFilled;
         }
-        public List<string> AddToList(params string[] dataList)
+        private List<string> AddToList(params string[] dataList)
         {
             return dataList.ToList();
+        }
+
+        private bool isInt(string input)
+        {
+            int x;
+            return int.TryParse(input, out x);
+        }
+
+        private void cbDeadLine_CheckedChanged(object sender, EventArgs e)
+        {
+            datePicker.Enabled = !datePicker.Enabled;
         }
     }
 }

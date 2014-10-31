@@ -35,11 +35,11 @@
             this.tbDescription = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.tbPrice = new System.Windows.Forms.TextBox();
-            this.lblDeadline = new System.Windows.Forms.Label();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.lstbCustomers = new System.Windows.Forms.ListBox();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
+            this.cbDeadLine = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnBack
@@ -50,7 +50,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(509, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "11:06:49";
+            this.lblClock.Text = "10:01:50";
             // 
             // tbProjectName
             // 
@@ -114,19 +114,10 @@
             this.tbPrice.Size = new System.Drawing.Size(235, 20);
             this.tbPrice.TabIndex = 4;
             // 
-            // lblDeadline
-            // 
-            this.lblDeadline.AutoSize = true;
-            this.lblDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeadline.Location = new System.Drawing.Point(231, 184);
-            this.lblDeadline.Name = "lblDeadline";
-            this.lblDeadline.Size = new System.Drawing.Size(63, 16);
-            this.lblDeadline.TabIndex = 19;
-            this.lblDeadline.Text = "Deadline";
-            // 
             // datePicker
             // 
             this.datePicker.CustomFormat = "yyyy-MM-dd";
+            this.datePicker.Enabled = false;
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datePicker.Location = new System.Drawing.Point(323, 184);
             this.datePicker.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
@@ -163,16 +154,28 @@
             this.btnApply.UseVisualStyleBackColor = true;
             this.btnApply.Click += new System.EventHandler(this.SaveProject);
             // 
+            // cbDeadLine
+            // 
+            this.cbDeadLine.AutoSize = true;
+            this.cbDeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cbDeadLine.Location = new System.Drawing.Point(234, 184);
+            this.cbDeadLine.Name = "cbDeadLine";
+            this.cbDeadLine.Size = new System.Drawing.Size(82, 20);
+            this.cbDeadLine.TabIndex = 23;
+            this.cbDeadLine.Text = "Deadline";
+            this.cbDeadLine.UseVisualStyleBackColor = true;
+            this.cbDeadLine.CheckedChanged += new System.EventHandler(this.cbDeadLine_CheckedChanged);
+            // 
             // NewProjectPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 277);
+            this.Controls.Add(this.cbDeadLine);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.lblCustomer);
             this.Controls.Add(this.lstbCustomers);
             this.Controls.Add(this.datePicker);
-            this.Controls.Add(this.lblDeadline);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.lblDescription);
@@ -191,11 +194,11 @@
             this.Controls.SetChildIndex(this.lblDescription, 0);
             this.Controls.SetChildIndex(this.tbPrice, 0);
             this.Controls.SetChildIndex(this.lblPrice, 0);
-            this.Controls.SetChildIndex(this.lblDeadline, 0);
             this.Controls.SetChildIndex(this.datePicker, 0);
             this.Controls.SetChildIndex(this.lstbCustomers, 0);
             this.Controls.SetChildIndex(this.lblCustomer, 0);
             this.Controls.SetChildIndex(this.btnApply, 0);
+            this.Controls.SetChildIndex(this.cbDeadLine, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,11 +213,11 @@
         private System.Windows.Forms.TextBox tbDescription;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox tbPrice;
-        private System.Windows.Forms.Label lblDeadline;
         private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.ListBox lstbCustomers;
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.CheckBox cbDeadLine;
 
 
 
