@@ -46,11 +46,11 @@ namespace barrocitWinform
                     AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
                     adminPanel.Show();
                     this.Hide();
-                    NewProjectPanel t = new NewProjectPanel(this, tbUsername.Text);
-                    t.Show();
                     break;
                 case 1:
-                    //development form
+                    DevelopmentMainPanel developmentPanel = new DevelopmentMainPanel(this, tbUsername.Text, true);
+                    developmentPanel.Show();
+                    this.Hide();
                     break;
                 case 2:
                     FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text, true);

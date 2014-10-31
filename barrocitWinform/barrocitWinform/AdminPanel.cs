@@ -43,7 +43,10 @@ namespace barrocitWinform
             switch (departmentNumber)
             {
                 case 1:
-                    //development form
+                    DevelopmentMainPanel developmentPanel = new DevelopmentMainPanel(this, userName, false);
+                    developmentPanel.Show();
+                    this.Hide();
+                    break;
                     break;
                 case 2:
                     FinanceMainPanel financePanel = new FinanceMainPanel(this, userName, false);
