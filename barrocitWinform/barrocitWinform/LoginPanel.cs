@@ -35,6 +35,7 @@ namespace barrocitWinform
                         break;
                     }
             }
+            tbPassword.Text = "";
         }
 
         private void OpenUserPanel(int departmentNumber, string userName)
