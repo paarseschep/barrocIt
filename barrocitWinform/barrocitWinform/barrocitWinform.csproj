@@ -68,6 +68,9 @@
     <Compile Include="BackButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomerBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DepartmentPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,15 +82,6 @@
     </Compile>
     <Compile Include="FinanceMainPanel.Designer.cs">
       <DependentUpon>FinanceMainPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="listbox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ListboxPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListboxPanel.Designer.cs">
-      <DependentUpon>ListboxPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPanel.cs">
       <SubType>Form</SubType>
@@ -130,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FinanceMainPanel.resx">
       <DependentUpon>FinanceMainPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListboxPanel.resx">
-      <DependentUpon>ListboxPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
