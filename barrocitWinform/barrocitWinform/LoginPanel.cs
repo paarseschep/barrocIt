@@ -23,8 +23,6 @@ namespace barrocitWinform
                                                         AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
                                                         Integrated Security=True;
                                                         Connect Timeout=30");
-            NewCustomerPanel newcustomer = new NewCustomerPanel(this, "test");
-            newcustomer.Show();
         }
 
         private void BtLogin_Click(object sender, EventArgs e)
@@ -49,8 +47,8 @@ namespace barrocitWinform
                     AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
                     adminPanel.Show();
                     this.Hide();
-                    NewProjectPanel t = new NewProjectPanel(this, tbUsername.Text);
-                    t.Show();
+                    //NewProjectPanel t = new NewProjectPanel(this, tbUsername.Text);
+                    //t.Show();
                     break;
                 case 1:
                     //development form
@@ -75,7 +73,7 @@ namespace barrocitWinform
         {
             this.Close();
         }
-
+    
         private void LoginPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to close this window?", "Confirmation", MessageBoxButtons.YesNo);

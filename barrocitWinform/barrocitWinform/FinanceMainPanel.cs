@@ -34,5 +34,10 @@ namespace barrocitWinform
             viewpanel.Controls.Add(myBut);
             viewpanel.Show();
         }
+
+        private void btnDeleteInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

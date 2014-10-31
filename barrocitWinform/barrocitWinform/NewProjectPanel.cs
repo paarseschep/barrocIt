@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace barrocitWinform
 {
-    public partial class NewProjectPanel : DepartmentPanel
+    public partial class NewProjectPanel : ListboxPanel
     {
         public NewProjectPanel(Form loginPanel, string userName)
         {
@@ -31,9 +31,9 @@ namespace barrocitWinform
             {
                 while (reader.Read())
                 {
-                    for (int i = 0; i < reader.FieldCount; i+=2)
+                    for (int i = 0; i < reader.FieldCount; i += 2)
                     {
-                        lstbCustomers.Items.Add(reader.GetValue(i).ToString() + reader.GetValue(i+1).ToString());
+                        lstbCustomers.Items.Add(reader.GetValue(i).ToString() + reader.GetValue(i + 1).ToString());
                     }
                 }
             }

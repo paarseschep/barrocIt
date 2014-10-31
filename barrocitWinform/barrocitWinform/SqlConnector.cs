@@ -80,13 +80,13 @@ namespace barrocitWinform
                 SqlCommand cmd = new SqlCommand(finalSqlCommand);
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Connection = connection;
-                int i = 0;
+                int index = 0;
                 foreach (string item in extracteTable)
                 {
                     string temp = item.Remove(item.Length - 1);
-                    cmd.Parameters.AddWithValue(temp, data[i]);
+                    cmd.Parameters.AddWithValue(temp, data[index]);
                     
-                    i++;
+                    index++;
                 }
                 connection.Open();
                 cmd.ExecuteNonQuery();

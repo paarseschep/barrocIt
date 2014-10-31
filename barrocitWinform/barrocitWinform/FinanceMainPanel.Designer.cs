@@ -40,7 +40,7 @@
             // lblClock
             // 
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "10:45:47";
+            this.lblClock.Text = "09:29:59";
             // 
             // btnDeleteInvoice
             // 
@@ -51,6 +51,7 @@
             this.btnDeleteInvoice.TabIndex = 8;
             this.btnDeleteInvoice.Text = "Delete invoice";
             this.btnDeleteInvoice.UseVisualStyleBackColor = true;
+            this.btnDeleteInvoice.Click += new System.EventHandler(this.btnDeleteInvoice_Click);
             // 
             // btnViewInvoice
             // 
