@@ -50,7 +50,9 @@ namespace barrocitWinform
                     t.Show();
                     break;
                 case 1:
-                    //development form
+                    DevelopmentMainPanel developmentPanel = new DevelopmentMainPanel(this, tbUsername.Text, true);
+                    developmentPanel.Show();
+                    this.Hide();
                     break;
                 case 2:
                     FinanceMainPanel financePanel = new FinanceMainPanel(this, tbUsername.Text, true);
