@@ -12,6 +12,7 @@ namespace barrocitWinform
 {
     public partial class SalesMainPanelcs : DepartmentPanel
     {
+        ViewPanel viewpanel;
         public SalesMainPanelcs(Form loginPanel, string userName, bool logoutWhenClose)
         {
             InitializeComponent();
@@ -23,8 +24,9 @@ namespace barrocitWinform
 
         private void btnManageProjects_Click(object sender, EventArgs e)
         {
-            ViewPanel manageProject = new ViewPanel(this, userName, "Tbl_Projects", false);
-            manageProject.Show();
+            string name = "";
+            viewpanel = new ViewPanel(this, userName, "Tbl_Projects", true);
+            viewpanel.Show();
         }
 
         private void btnCreateCustomer_Click(object sender, EventArgs e)
@@ -35,15 +37,8 @@ namespace barrocitWinform
 
         private void btnMaganeCustomers_Click(object sender, EventArgs e)
         {
-            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Customers", true);
-            TextBox myText = new TextBox();
-            Button myBut = new Button();
-            myBut.Size = new Size(100, 20);
-            myBut.Location = new Point(120, 2);
-            myBut.Text = "Go!";
-            myText.Location = new Point(12, 2);
-            viewpanel.Controls.Add(myText);
-            viewpanel.Controls.Add(myBut);
+            viewpanel = new ViewPanel(this, userName, "Tbl_Customers", true);
+            
             viewpanel.Show();
         }
     }
