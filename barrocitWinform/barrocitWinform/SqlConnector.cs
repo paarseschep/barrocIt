@@ -13,9 +13,11 @@ namespace barrocitWinform
     static class SqlConnector
     {
         public static SqlConnection connection;
+        public static string connectionString;
         static public bool Connect()
         {
             bool gotConnected = false;
+            connection = new SqlConnection(connectionString);
             try
             {
                 SqlConnector.connection.Open();
@@ -54,43 +56,52 @@ namespace barrocitWinform
             }
             return department;
         }
-        static public void InsertDataIntoDatabase(List<string> data, string colums, string table)
+        static public bool InsertDataIntoDatabase(List<string> data, string colums, string table)
         {
-            List<string> extracteTable = new List<string>();
-
-            foreach (string cur in colums.Split(','))
-            { 
-                string temp = cur.Replace(' ', '@'); 
-                extracteTable.Add(new StringBuilder(temp).Append(",").ToString()); 
-            }
-
-            string[] tableArray = extracteTable.ToArray();
-            string tableStringExtracted = "";
-            foreach (string oneTable in tableArray)
+            bool success = false;
+            try
             {
-                tableStringExtracted += oneTable;
-            }
+                List<string> extracteTable = new List<string>();
 
-            string sqlcommand = "INSERT INTO " + table + " (" +  colums + ") VALUES (" + tableStringExtracted;
-            int lastChar = sqlcommand.Length;
-            string finalSqlCommand = sqlcommand.Remove(lastChar-1)+ ")";
-            
-            using (connection)
-            {
-                SqlCommand cmd = new SqlCommand(finalSqlCommand);
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Connection = connection;
-                int index = 0;
-                foreach (string item in extracteTable)
+                foreach (string cur in colums.Split(','))
                 {
-                    string temp = item.Remove(item.Length - 1);
-                    cmd.Parameters.AddWithValue(temp, data[index]);
-                    
-                    index++;
+                    string temp = cur.Replace(' ', '@');
+                    extracteTable.Add(new StringBuilder(temp).Append(",").ToString());
                 }
-                connection.Open();
-                cmd.ExecuteNonQuery();
+
+                string[] tableArray = extracteTable.ToArray();
+                string tableStringExtracted = "";
+                foreach (string oneTable in tableArray)
+                {
+                    tableStringExtracted += oneTable;
+                }
+
+                string sqlcommand = "INSERT INTO " + table + " (" + colums + ") VALUES (" + tableStringExtracted;
+                int lastChar = sqlcommand.Length;
+                string finalSqlCommand = sqlcommand.Remove(lastChar - 1) + ")";
+
+                using (connection)
+                {
+                    SqlCommand cmd = new SqlCommand(finalSqlCommand);
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.Connection = connection;
+                    int i = 0;
+                    foreach (string item in extracteTable)
+                    {
+                        string temp = item.Remove(item.Length - 1);
+                        cmd.Parameters.AddWithValue(temp, data[i]);
+
+                        i++;
+                    }
+                    cmd.ExecuteNonQuery();
+                }
+                success = true;
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Failed to save data to the server.");
+            }
+            return success;
         }
     }
 }
