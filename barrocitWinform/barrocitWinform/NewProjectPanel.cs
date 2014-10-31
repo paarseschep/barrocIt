@@ -13,24 +13,21 @@ namespace barrocitWinform
 {
     public partial class NewProjectPanel : DepartmentPanel
     {
-        private CustomerBox customerBox;
-        public NewProjectPanel(Form loginPanel, string userName)
+        public NewProjectPanel(Form lastPanel, string userName)
         {
             InitializeComponent();
-            this.lastPanel = loginPanel;
+            this.lastPanel = lastPanel;
             this.userName = userName;
             UpdateGreeting();
-            customerBox = new CustomerBox();
-            SetBackButtonType(true);
-            this.Controls.Add(customerBox);
+            cbCustomer.LoadCustomerList();
         }
 
         private void SaveProject(object sender, EventArgs e)
         {
-            if (customerBox.SelectedIndex != 0 && customerBox.SelectedItem != null && isInt(tbPrice.Text) && CheckFilledTextBoxes())
+            if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && CheckFilledTextBoxes())
             {
 
-                List<string> dataList = AddToList(customerBox.GetSelectedId().ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
+                List<string> dataList = AddToList(cbCustomer.GetSelectedId().ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
 
                 string colums = " Customer_id, name, description, price";
 

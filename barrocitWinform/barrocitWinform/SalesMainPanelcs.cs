@@ -25,12 +25,14 @@ namespace barrocitWinform
         {
             ViewPanel manageProject = new ViewPanel(this, userName, "Tbl_Projects", false);
             manageProject.Show();
+            this.Hide();
         }
 
         private void btnCreateCustomer_Click(object sender, EventArgs e)
         {
             NewCustomerPanel newcustomerpanel = new NewCustomerPanel(this, userName);
             newcustomerpanel.Show();
+            this.Hide();
         }
 
         private void btnMaganeCustomers_Click(object sender, EventArgs e)
@@ -45,6 +47,7 @@ namespace barrocitWinform
             viewpanel.Controls.Add(myText);
             viewpanel.Controls.Add(myBut);
             viewpanel.Show();
+            this.Hide();
         }
     }
 }

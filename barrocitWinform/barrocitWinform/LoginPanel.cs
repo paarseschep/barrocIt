@@ -46,8 +46,6 @@ namespace barrocitWinform
                     AdminPanel adminPanel = new AdminPanel(this, tbUsername.Text);
                     adminPanel.Show();
                     this.Hide();
-                    NewProjectPanel t = new NewProjectPanel(this, tbUsername.Text);
-                    t.Show();
                     break;
                 case 1:
                     DevelopmentMainPanel developmentPanel = new DevelopmentMainPanel(this, tbUsername.Text, true);

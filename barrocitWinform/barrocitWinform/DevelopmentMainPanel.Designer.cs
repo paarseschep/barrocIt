@@ -33,10 +33,14 @@
             this.btnAddInvoice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(499, 327);
+            // 
             // lblClock
             // 
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "14:19:52";
+            this.lblClock.Text = "14:26:09";
             // 
             // btnDeleteInvoice
             // 

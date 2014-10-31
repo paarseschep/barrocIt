@@ -23,7 +23,9 @@ namespace barrocitWinform
 
         private void btnAddInvoice_Click(object sender, EventArgs e)
         {
-
+            NewProjectPanel viewpanel = new NewProjectPanel(this, userName);
+            viewpanel.Show();
+            this.Hide();
         }
 
         private void btnViewInvoice_Click(object sender, EventArgs e)
@@ -38,6 +40,7 @@ namespace barrocitWinform
             viewpanel.Controls.Add(myText);
             viewpanel.Controls.Add(myBut);
             viewpanel.Show();
+            this.Hide();
         }
 
         private void btnDeleteInvoice_Click(object sender, EventArgs e)
