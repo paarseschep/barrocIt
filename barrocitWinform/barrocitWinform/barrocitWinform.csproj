@@ -83,6 +83,7 @@
     <Compile Include="DevelopmentMainPanel.Designer.cs">
       <DependentUpon>DevelopmentMainPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="FieldValidator.cs" />
     <Compile Include="FinanceMainPanel.cs">
       <SubType>Form</SubType>
     </Compile>
