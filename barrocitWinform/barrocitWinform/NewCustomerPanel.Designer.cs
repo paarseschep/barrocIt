@@ -51,18 +51,22 @@
             this.tbCompanyPhone = new System.Windows.Forms.TextBox();
             this.lbCompanyPhone = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
+            this.lbVerzekering = new System.Windows.Forms.Label();
+            this.tbInsurance = new System.Windows.Forms.TextBox();
+            this.tbFaxnumber = new System.Windows.Forms.TextBox();
+            this.lbFaxnumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(531, 323);
+            this.btnBack.Location = new System.Drawing.Point(12, 323);
             this.btnBack.Size = new System.Drawing.Size(78, 23);
             // 
             // lblClock
             // 
             this.lblClock.Location = new System.Drawing.Point(557, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "09:53:50";
+            this.lblClock.Text = "15:32:34";
             // 
             // lblFirstname
             // 
@@ -264,7 +268,7 @@
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(452, 153);
+            this.btnApply.Location = new System.Drawing.Point(452, 304);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(105, 42);
             this.btnApply.TabIndex = 28;
@@ -272,11 +276,51 @@
             this.btnApply.UseVisualStyleBackColor = true;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
+            // lbVerzekering
+            // 
+            this.lbVerzekering.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVerzekering.Location = new System.Drawing.Point(345, 138);
+            this.lbVerzekering.Name = "lbVerzekering";
+            this.lbVerzekering.Size = new System.Drawing.Size(101, 20);
+            this.lbVerzekering.TabIndex = 29;
+            this.lbVerzekering.Text = "Insurance ID";
+            // 
+            // tbInsurance
+            // 
+            this.tbInsurance.Location = new System.Drawing.Point(452, 140);
+            this.tbInsurance.Multiline = true;
+            this.tbInsurance.Name = "tbInsurance";
+            this.tbInsurance.Size = new System.Drawing.Size(105, 20);
+            this.tbInsurance.TabIndex = 30;
+            this.tbInsurance.Click += new System.EventHandler(this.tb_Click);
+            // 
+            // tbFaxnumber
+            // 
+            this.tbFaxnumber.Location = new System.Drawing.Point(452, 201);
+            this.tbFaxnumber.Multiline = true;
+            this.tbFaxnumber.Name = "tbFaxnumber";
+            this.tbFaxnumber.Size = new System.Drawing.Size(105, 20);
+            this.tbFaxnumber.TabIndex = 32;
+            this.tbFaxnumber.Click += new System.EventHandler(this.tb_Click);
+            // 
+            // lbFaxnumber
+            // 
+            this.lbFaxnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFaxnumber.Location = new System.Drawing.Point(345, 199);
+            this.lbFaxnumber.Name = "lbFaxnumber";
+            this.lbFaxnumber.Size = new System.Drawing.Size(101, 20);
+            this.lbFaxnumber.TabIndex = 31;
+            this.lbFaxnumber.Text = "faxnumber";
+            // 
             // NewCustomerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 358);
+            this.Controls.Add(this.tbFaxnumber);
+            this.Controls.Add(this.lbFaxnumber);
+            this.Controls.Add(this.tbInsurance);
+            this.Controls.Add(this.lbVerzekering);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.tbCompanyPhone);
             this.Controls.Add(this.lbCompanyPhone);
@@ -327,6 +371,10 @@
             this.Controls.SetChildIndex(this.lbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.tbCompanyPhone, 0);
             this.Controls.SetChildIndex(this.btnApply, 0);
+            this.Controls.SetChildIndex(this.lbVerzekering, 0);
+            this.Controls.SetChildIndex(this.tbInsurance, 0);
+            this.Controls.SetChildIndex(this.lbFaxnumber, 0);
+            this.Controls.SetChildIndex(this.tbFaxnumber, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,27 +383,31 @@
         #endregion
 
         private System.Windows.Forms.Label lblFirstname;
-        private System.Windows.Forms.TextBox tbFirstname;
-        private System.Windows.Forms.TextBox tbLastname;
         private System.Windows.Forms.Label lblLastname;
-        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.Label lbPhone;
-        private System.Windows.Forms.TextBox tbStreetnumber;
         private System.Windows.Forms.Label lbStreetnumber;
-        private System.Windows.Forms.TextBox tbPostalcode;
         private System.Windows.Forms.Label lbPostalcode;
-        private System.Windows.Forms.TextBox tbCity;
         private System.Windows.Forms.Label lbCity;
-        private System.Windows.Forms.TextBox tbProvince;
         private System.Windows.Forms.Label lbProvince;
-        private System.Windows.Forms.TextBox tbCompany;
         private System.Windows.Forms.Label lbCompany;
-        private System.Windows.Forms.TextBox tbCompanyEmail;
         private System.Windows.Forms.Label lbCompanyMail;
-        private System.Windows.Forms.TextBox tbCompanyPhone;
         private System.Windows.Forms.Label lbCompanyPhone;
         private System.Windows.Forms.Button btnApply;
+        public System.Windows.Forms.TextBox tbFirstname;
+        public System.Windows.Forms.TextBox tbLastname;
+        public System.Windows.Forms.TextBox tbEmail;
+        public System.Windows.Forms.TextBox tbPhone;
+        public System.Windows.Forms.TextBox tbStreetnumber;
+        public System.Windows.Forms.TextBox tbPostalcode;
+        public System.Windows.Forms.TextBox tbCity;
+        public System.Windows.Forms.TextBox tbProvince;
+        public System.Windows.Forms.TextBox tbCompany;
+        public System.Windows.Forms.TextBox tbCompanyEmail;
+        public System.Windows.Forms.TextBox tbCompanyPhone;
+        private System.Windows.Forms.Label lbVerzekering;
+        public System.Windows.Forms.TextBox tbInsurance;
+        public System.Windows.Forms.TextBox tbFaxnumber;
+        private System.Windows.Forms.Label lbFaxnumber;
     }
 }

@@ -39,7 +39,7 @@ namespace barrocitWinform
         private void btnMaganeCustomers_Click(object sender, EventArgs e)
         {
             viewpanel = new ViewPanel(this, userName, "Tbl_Customers", true);
-            
+            ViewPanel.isModifiedCustomer = true;
             viewpanel.Show();
             this.Hide();
         }

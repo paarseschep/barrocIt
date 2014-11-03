@@ -15,6 +15,8 @@ namespace barrocitWinform
     {
         string Table;
         bool IsReadOnly;
+        public static bool isModifiedCustomer = false;
+        public static int currentCustomerId;
         /// <param name="lastPanel"> Always "This."</param>
         /// <param name="userName"> Username.</param>
         /// <param name="table">The string of the table you want to acces.</param>
@@ -75,14 +77,31 @@ namespace barrocitWinform
             dataTables.ReadOnly = IsReadOnly;
         }
 
-        private void dataTables_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataTables_DoubleClick(object sender, EventArgs e)
         {
-            List<string> test = new List<string> ();
-            //List<DataRow> dataRow = dataTables.CurrentRow.
-            //foreach (string item in dataTables.CurrentRow.Cells.)
-            //{
-            //    test.add(item);
-            //} 
+            if (isModifiedCustomer)
+            {
+                int update = dataTables.CurrentRow.Index;
+
+                DataGridViewRow row = dataTables.SelectedRows[0];
+                currentCustomerId = (int)row.Cells[0].Value;
+
+                NewCustomerPanel form = new NewCustomerPanel(this, userName);
+                form.tbFirstname.Text = dataTables.Rows[update].Cells[1].Value.ToString();
+                form.tbLastname.Text = dataTables.Rows[update].Cells[2].Value.ToString();
+                form.tbCompany.Text = dataTables.Rows[update].Cells[3].Value.ToString();
+                form.tbCompanyEmail.Text = dataTables.Rows[update].Cells[4].Value.ToString();
+                form.tbCompanyPhone.Text = dataTables.Rows[update].Cells[5].Value.ToString();
+                form.tbEmail.Text = dataTables.Rows[update].Cells[6].Value.ToString();
+                form.tbPostalcode.Text = dataTables.Rows[update].Cells[7].Value.ToString();
+                form.tbCity.Text = dataTables.Rows[update].Cells[8].Value.ToString();
+                form.tbStreetnumber.Text = dataTables.Rows[update].Cells[9].Value.ToString();
+                form.tbProvince.Text = dataTables.Rows[update].Cells[10].Value.ToString();
+                form.tbPhone.Text = dataTables.Rows[update].Cells[11].Value.ToString();
+                form.tbFaxnumber.Text = dataTables.Rows[update].Cells[12].Value.ToString();
+                form.tbInsurance.Text = dataTables.Rows[update].Cells[13].Value.ToString();
+                form.Show();
+            }
         }
     }
 }

@@ -42,7 +42,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(737, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "15:50:28";
+            this.lblClock.Text = "13:36:27";
             // 
             // dataTables
             // 
@@ -52,9 +52,10 @@
             this.dataTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTables.Location = new System.Drawing.Point(12, 25);
             this.dataTables.Name = "dataTables";
+            this.dataTables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataTables.Size = new System.Drawing.Size(772, 296);
             this.dataTables.TabIndex = 9;
-            this.dataTables.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTables_CellClick);
+            this.dataTables.DoubleClick += new System.EventHandler(this.dataTables_DoubleClick);
             // 
             // btSearch
             // 

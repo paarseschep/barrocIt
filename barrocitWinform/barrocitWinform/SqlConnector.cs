@@ -103,5 +103,52 @@ namespace barrocitWinform
             }
             return success;
         }
+        static public bool modifieDatabase(List<string> data, string colums, string table)
+        {
+            bool success = false;
+            try
+            {
+                List<string> extracteTable = new List<string>();
+
+                foreach (string cur in colums.Split(','))
+                {
+                    string temp = cur.Replace(' ', '@');
+                    extracteTable.Add(new StringBuilder(temp).Append(",").ToString());
+                }
+
+                string[] tableArray = extracteTable.ToArray();
+                string tableStringExtracted = "";
+
+                foreach (string oneTable in tableArray)
+                {
+                    tableStringExtracted += "[" + oneTable.Remove(0, 1).Replace(",", "") + "]" + "=" + oneTable + "";
+                }
+                string tableStringExtractedFinal = tableStringExtracted.Remove(tableStringExtracted.Length-1);
+                string sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + ViewPanel.currentCustomerId.ToString();
+                int lastChar = sqlcommand.Length;
+                using (connection)
+                {
+                    SqlCommand cmd = new SqlCommand(sqlcommand);
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.Connection = connection;
+                    int i = 0;
+                    foreach (string item in extracteTable)
+                    {
+                        string temp = item.Remove(item.Length - 1);
+                        temp = temp.Remove(0, 1);
+                        cmd.Parameters.AddWithValue(temp, data[i]);
+
+                        i++;
+                    }
+                    cmd.ExecuteNonQuery();
+                }
+                success = true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Failed to save data to the server.");
+            }
+            return success;
+        }
     }
 }
