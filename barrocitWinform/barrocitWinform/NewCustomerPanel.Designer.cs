@@ -62,7 +62,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(557, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "09:53:50";
+            this.lblClock.Text = "16:31:31";
             // 
             // lblFirstname
             // 
@@ -80,6 +80,7 @@
             this.tbFirstname.Name = "tbFirstname";
             this.tbFirstname.Size = new System.Drawing.Size(105, 20);
             this.tbFirstname.TabIndex = 2;
+            this.tbFirstname.Text = "FirstName";
             this.tbFirstname.Click += new System.EventHandler(this.tb_Click);
             // 
             // tbLastname
@@ -89,6 +90,7 @@
             this.tbLastname.Name = "tbLastname";
             this.tbLastname.Size = new System.Drawing.Size(105, 20);
             this.tbLastname.TabIndex = 3;
+            this.tbLastname.Text = "LastName";
             this.tbLastname.Click += new System.EventHandler(this.tb_Click);
             // 
             // lblLastname
@@ -107,6 +109,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(105, 20);
             this.tbEmail.TabIndex = 4;
+            this.tbEmail.Text = "e@mail.com";
             this.tbEmail.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbEmail
@@ -125,6 +128,7 @@
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(105, 20);
             this.tbPhone.TabIndex = 5;
+            this.tbPhone.Text = "00 0000000000";
             this.tbPhone.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbPhone
@@ -143,6 +147,7 @@
             this.tbStreetnumber.Name = "tbStreetnumber";
             this.tbStreetnumber.Size = new System.Drawing.Size(105, 20);
             this.tbStreetnumber.TabIndex = 6;
+            this.tbStreetnumber.Text = "11";
             this.tbStreetnumber.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbStreetnumber
@@ -150,7 +155,7 @@
             this.lbStreetnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStreetnumber.Location = new System.Drawing.Point(94, 201);
             this.lbStreetnumber.Name = "lbStreetnumber";
-            this.lbStreetnumber.Size = new System.Drawing.Size(124, 20);
+            this.lbStreetnumber.Size = new System.Drawing.Size(101, 20);
             this.lbStreetnumber.TabIndex = 15;
             this.lbStreetnumber.Text = "Streetnr:";
             // 
@@ -161,6 +166,7 @@
             this.tbPostalcode.Name = "tbPostalcode";
             this.tbPostalcode.Size = new System.Drawing.Size(105, 20);
             this.tbPostalcode.TabIndex = 7;
+            this.tbPostalcode.Text = "1000 aa";
             this.tbPostalcode.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbPostalcode
@@ -179,6 +185,7 @@
             this.tbCity.Name = "tbCity";
             this.tbCity.Size = new System.Drawing.Size(105, 20);
             this.tbCity.TabIndex = 8;
+            this.tbCity.Text = "Cityname";
             this.tbCity.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbCity
@@ -197,6 +204,7 @@
             this.tbProvince.Name = "tbProvince";
             this.tbProvince.Size = new System.Drawing.Size(105, 20);
             this.tbProvince.TabIndex = 9;
+            this.tbProvince.Text = "Province";
             this.tbProvince.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbProvince
@@ -215,6 +223,7 @@
             this.tbCompany.Name = "tbCompany";
             this.tbCompany.Size = new System.Drawing.Size(105, 20);
             this.tbCompany.TabIndex = 10;
+            this.tbCompany.Text = "CompanyName";
             this.tbCompany.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbCompany
@@ -233,6 +242,7 @@
             this.tbCompanyEmail.Name = "tbCompanyEmail";
             this.tbCompanyEmail.Size = new System.Drawing.Size(105, 20);
             this.tbCompanyEmail.TabIndex = 11;
+            this.tbCompanyEmail.Text = "e@mail.com";
             this.tbCompanyEmail.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbCompanyMail
@@ -251,6 +261,7 @@
             this.tbCompanyPhone.Name = "tbCompanyPhone";
             this.tbCompanyPhone.Size = new System.Drawing.Size(105, 20);
             this.tbCompanyPhone.TabIndex = 12;
+            this.tbCompanyPhone.Text = "00 0000000000";
             this.tbCompanyPhone.Click += new System.EventHandler(this.tb_Click);
             // 
             // lbCompanyPhone

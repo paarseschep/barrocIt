@@ -24,7 +24,7 @@ namespace barrocitWinform
 
         private void SaveProject(object sender, EventArgs e)
         {
-            if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && CheckFilledTextBoxes())
+            if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.AreFieldsValid(this))
             {
 
                 List<string> dataList = AddToList(cbCustomer.GetSelectedId().ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
@@ -52,25 +52,7 @@ namespace barrocitWinform
             }
         }
 
-        private bool CheckFilledTextBoxes()
-        {
-            bool isTbFilled = false;
-            foreach (object obj in this.Controls)
-            {
-                if (obj is TextBox)
-                {
-                    if (((TextBox)obj).Text != "")
-                    {
-                        isTbFilled = true;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
-            return isTbFilled;
-        }
+
 
         private List<string> AddToList(params string[] dataList)
         {

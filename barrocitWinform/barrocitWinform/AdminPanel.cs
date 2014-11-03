@@ -47,7 +47,6 @@ namespace barrocitWinform
                     developmentPanel.Show();
                     this.Hide();
                     break;
-                    break;
                 case 2:
                     FinanceMainPanel financePanel = new FinanceMainPanel(this, userName, false);
                     financePanel.Show();
