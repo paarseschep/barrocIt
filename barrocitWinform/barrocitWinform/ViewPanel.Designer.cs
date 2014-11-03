@@ -42,7 +42,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(737, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "15:02:04";
+            this.lblClock.Text = "15:50:28";
             // 
             // dataTables
             // 
@@ -54,6 +54,7 @@
             this.dataTables.Name = "dataTables";
             this.dataTables.Size = new System.Drawing.Size(772, 296);
             this.dataTables.TabIndex = 9;
+            this.dataTables.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTables_CellClick);
             // 
             // btSearch
             // 

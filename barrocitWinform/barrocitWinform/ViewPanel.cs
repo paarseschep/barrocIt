@@ -22,7 +22,8 @@ namespace barrocitWinform
         public ViewPanel(Form lastPanel, string userName, string table, bool isReadOnly)
         {
             InitializeComponent();
-
+            this.userName = userName;
+            UpdateGreeting();
             Table = table;
             IsReadOnly = isReadOnly;
 
@@ -72,6 +73,16 @@ namespace barrocitWinform
 
             dataTables.DataSource = temp;
             dataTables.ReadOnly = IsReadOnly;
+        }
+
+        private void dataTables_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            List<string> test = new List<string> ();
+            //List<DataRow> dataRow = dataTables.CurrentRow.
+            //foreach (string item in dataTables.CurrentRow.Cells.)
+            //{
+            //    test.add(item);
+            //} 
         }
     }
 }
