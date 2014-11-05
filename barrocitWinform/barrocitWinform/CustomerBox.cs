@@ -13,7 +13,15 @@ namespace barrocitWinform
         public void LoadCustomerList()
         {
             this.Items.Add("ID" + " \t" + "First name" + "\t" + "Last Name");
-            SqlCommand command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers", SqlConnector.connection);
+            SqlCommand command;
+            if (ViewPanel.checkModifications == 1)
+            {
+                 command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers WHERE Customer_Id=" + ViewPanel.currentCustomerId.ToString(), SqlConnector.connection);
+            }
+            else
+            {
+                 command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers", SqlConnector.connection);
+            }
             using (SqlDataReader reader = command.ExecuteReader())
             {
                 while (reader.Read())
