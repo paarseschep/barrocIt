@@ -50,7 +50,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(947, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:36:22";
+            this.lblClock.Text = "14:21:47";
             // 
             // tbProjectName
             // 
@@ -206,17 +206,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tbProjectName;
         private System.Windows.Forms.Label lblProject;
         private System.Windows.Forms.Label lblProjectName;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.TextBox tbDescription;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.TextBox tbPrice;
-        private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.CheckBox cbDeadLine;
+        public System.Windows.Forms.TextBox tbProjectName;
+        public System.Windows.Forms.TextBox tbDescription;
+        public System.Windows.Forms.TextBox tbPrice;
+        public System.Windows.Forms.DateTimePicker datePicker;
+        public System.Windows.Forms.CheckBox cbDeadLine;
         private CustomerBox cbCustomer;
 
 

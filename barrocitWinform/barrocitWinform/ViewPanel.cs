@@ -111,7 +111,14 @@ namespace barrocitWinform
                 DataGridViewRow row = dataTables.SelectedRows[0];
                 currentCustomerId = (int)row.Cells[0].Value;
 
-                NewCustomerPanel form = new NewCustomerPanel(this, userName);
+
+                NewProjectPanel form = new NewProjectPanel(this, userName);
+
+                form.tbProjectName.Text = dataTables.Rows[update].Cells[2].Value.ToString();
+                form.tbDescription.Text = dataTables.Rows[update].Cells[3].Value.ToString();
+                form.datePicker.Text = dataTables.Rows[update].Cells[6].Value.ToString();
+                form.tbPrice.Text = dataTables.Rows[update].Cells[7].Value.ToString();
+                form.Show();
             }
         }
     }

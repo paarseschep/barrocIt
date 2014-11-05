@@ -19,7 +19,16 @@ namespace barrocitWinform
             this.lastPanel = lastPanel;
             this.userName = userName;
             UpdateGreeting();
-            cbCustomer.LoadCustomerList();
+            if (ViewPanel.checkModifications == 1)
+            {
+                cbCustomer.Enabled = false;
+                cbCustomer.LoadCustomerList();
+            }
+            else
+            {
+                cbCustomer.Enabled = true;
+                cbCustomer.LoadCustomerList();
+            }
         }
 
         private void SaveProject(object sender, EventArgs e)
