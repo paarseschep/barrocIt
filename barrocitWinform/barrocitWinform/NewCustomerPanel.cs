@@ -28,7 +28,7 @@ namespace barrocitWinform
             {
                 if (FieldValidator.CheckFilledTextBoxes(this) && FieldValidator.AreFieldsValid(this))
                 {
-                    if (!ViewPanel.isModifiedCustomer)
+                    if (ViewPanel.checkModifications == 0)
                     {
                         List<string> AllNewUserData = AddToList(tbFirstname.Text, tbLastname.Text, tbEmail.Text, tbPhone.Text, tbStreetnumber.Text, tbPostalcode.Text, tbCity.Text, tbProvince.Text, tbCompanyEmail.Text, tbCompanyPhone.Text, tbCompany.Text, tbInsurance.Text, tbFaxnumber.Text);
                         string columsInRightOrder = " firstname, lastname, email, phonenumber, homenumber, postalCode1, city1, province, email_company, phonenumber_company, companyName, insurance_id, faxnumber";
@@ -57,7 +57,7 @@ namespace barrocitWinform
             {
                 if (isCustomerAdded)
                 {
-                    if (ViewPanel.isModifiedCustomer)
+                    if (ViewPanel.checkModifications == 0)
                     {
                         MessageBox.Show("You have succesfully modified a customer, this form will close now.");
                         this.Close();

@@ -15,7 +15,7 @@ namespace barrocitWinform
     {
         string Table;
         bool IsReadOnly;
-        public static bool isModifiedCustomer = false;
+        public static int checkModifications = 0;
         public static int currentCustomerId;
         /// <param name="lastPanel"> Always "This."</param>
         /// <param name="userName"> Username.</param>
@@ -81,7 +81,7 @@ namespace barrocitWinform
         {
             SqlConnector.Connect();
             this.Hide();
-            if (isModifiedCustomer)
+            if (checkModifications == 0)
             {
                 int update = dataTables.CurrentRow.Index;
 
@@ -103,6 +103,15 @@ namespace barrocitWinform
                 form.tbFaxnumber.Text = dataTables.Rows[update].Cells[12].Value.ToString();
                 form.tbInsurance.Text = dataTables.Rows[update].Cells[13].Value.ToString();
                 form.Show();
+            }
+            else if (checkModifications == 1)
+            {
+                int update = dataTables.CurrentRow.Index;
+
+                DataGridViewRow row = dataTables.SelectedRows[0];
+                currentCustomerId = (int)row.Cells[0].Value;
+
+                NewCustomerPanel form = new NewCustomerPanel(this, userName);
             }
         }
     }

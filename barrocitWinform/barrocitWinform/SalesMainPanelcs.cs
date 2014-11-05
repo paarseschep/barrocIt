@@ -26,6 +26,7 @@ namespace barrocitWinform
         {
             SqlConnector.Connect();
             viewpanel = new ViewPanel(this, userName, "Tbl_Projects", true);
+            ViewPanel.checkModifications = 1;
             viewpanel.Show();
             this.Hide();
         }
@@ -33,8 +34,8 @@ namespace barrocitWinform
         private void btnCreateCustomer_Click(object sender, EventArgs e)
         {
             SqlConnector.Connect();
-            ViewPanel.isModifiedCustomer = false;
             NewCustomerPanel newcustomerpanel = new NewCustomerPanel(this, userName);
+            ViewPanel.checkModifications = 4;
             newcustomerpanel.Show();
             this.Hide();
         }
@@ -43,13 +44,14 @@ namespace barrocitWinform
         {
             SqlConnector.Connect();
             viewpanel = new ViewPanel(this, userName, "Tbl_Customers", true);
-            ViewPanel.isModifiedCustomer = true;
+            ViewPanel.checkModifications = 0;
             viewpanel.Show();
             this.Hide();
         }
 
         private void btAddProjects_Click(object sender, EventArgs e)
         {
+            SqlConnector.Connect();
             NewProjectPanel projectPanel = new NewProjectPanel(this, userName);
             projectPanel.Show();
             this.Hide();
