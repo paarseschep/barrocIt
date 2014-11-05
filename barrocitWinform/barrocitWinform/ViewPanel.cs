@@ -79,6 +79,8 @@ namespace barrocitWinform
 
         private void dataTables_DoubleClick(object sender, EventArgs e)
         {
+            SqlConnector.Connect();
+            this.Hide();
             if (isModifiedCustomer)
             {
                 int update = dataTables.CurrentRow.Index;

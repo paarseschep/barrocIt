@@ -35,19 +35,21 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(497, 327);
+            this.btnBack.Location = new System.Drawing.Point(869, 660);
+            this.btnBack.Size = new System.Drawing.Size(127, 57);
             // 
             // lblClock
             // 
+            this.lblClock.Location = new System.Drawing.Point(1373, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "09:29:59";
+            this.lblClock.Text = "13:48:07";
             // 
             // btnDeleteInvoice
             // 
             this.btnDeleteInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteInvoice.Location = new System.Drawing.Point(215, 201);
+            this.btnDeleteInvoice.Location = new System.Drawing.Point(282, 503);
             this.btnDeleteInvoice.Name = "btnDeleteInvoice";
-            this.btnDeleteInvoice.Size = new System.Drawing.Size(134, 47);
+            this.btnDeleteInvoice.Size = new System.Drawing.Size(408, 214);
             this.btnDeleteInvoice.TabIndex = 8;
             this.btnDeleteInvoice.Text = "Delete invoice";
             this.btnDeleteInvoice.UseVisualStyleBackColor = true;
@@ -56,9 +58,9 @@
             // btnViewInvoice
             // 
             this.btnViewInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewInvoice.Location = new System.Drawing.Point(215, 148);
+            this.btnViewInvoice.Location = new System.Drawing.Point(282, 272);
             this.btnViewInvoice.Name = "btnViewInvoice";
-            this.btnViewInvoice.Size = new System.Drawing.Size(134, 47);
+            this.btnViewInvoice.Size = new System.Drawing.Size(408, 214);
             this.btnViewInvoice.TabIndex = 7;
             this.btnViewInvoice.Text = "View invoices";
             this.btnViewInvoice.UseVisualStyleBackColor = true;
@@ -67,9 +69,9 @@
             // btnAddInvoice
             // 
             this.btnAddInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddInvoice.Location = new System.Drawing.Point(215, 95);
+            this.btnAddInvoice.Location = new System.Drawing.Point(282, 42);
             this.btnAddInvoice.Name = "btnAddInvoice";
-            this.btnAddInvoice.Size = new System.Drawing.Size(134, 47);
+            this.btnAddInvoice.Size = new System.Drawing.Size(408, 214);
             this.btnAddInvoice.TabIndex = 6;
             this.btnAddInvoice.Text = "Add invoice";
             this.btnAddInvoice.UseVisualStyleBackColor = true;
@@ -78,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 362);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.btnDeleteInvoice);
             this.Controls.Add(this.btnViewInvoice);
             this.Controls.Add(this.btnAddInvoice);

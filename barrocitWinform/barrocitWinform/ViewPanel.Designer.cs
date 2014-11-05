@@ -36,24 +36,28 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(709, 327);
+            this.btnBack.Location = new System.Drawing.Point(855, 659);
+            this.btnBack.Size = new System.Drawing.Size(141, 58);
             // 
             // lblClock
             // 
-            this.lblClock.Location = new System.Drawing.Point(737, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:36:27";
+            this.lblClock.Text = "13:45:50";
             // 
             // dataTables
             // 
+            this.dataTables.AllowUserToAddRows = false;
+            this.dataTables.AllowUserToDeleteRows = false;
+            this.dataTables.AllowUserToResizeColumns = false;
+            this.dataTables.AllowUserToResizeRows = false;
             this.dataTables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTables.Location = new System.Drawing.Point(12, 25);
+            this.dataTables.Location = new System.Drawing.Point(12, 28);
             this.dataTables.Name = "dataTables";
             this.dataTables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataTables.Size = new System.Drawing.Size(772, 296);
+            this.dataTables.Size = new System.Drawing.Size(984, 625);
             this.dataTables.TabIndex = 9;
             this.dataTables.DoubleClick += new System.EventHandler(this.dataTables_DoubleClick);
             // 
@@ -78,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 362);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.btSearch);
             this.Controls.Add(this.dataTables);

@@ -44,17 +44,17 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(232, 242);
+            this.btnBack.Location = new System.Drawing.Point(256, 687);
             // 
             // lblClock
             // 
-            this.lblClock.Location = new System.Drawing.Point(509, 9);
+            this.lblClock.Location = new System.Drawing.Point(947, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:46:25";
+            this.lblClock.Text = "13:36:22";
             // 
             // tbProjectName
             // 
-            this.tbProjectName.Location = new System.Drawing.Point(323, 43);
+            this.tbProjectName.Location = new System.Drawing.Point(513, 252);
             this.tbProjectName.Name = "tbProjectName";
             this.tbProjectName.Size = new System.Drawing.Size(235, 20);
             this.tbProjectName.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.lblProject.AutoSize = true;
             this.lblProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProject.Location = new System.Drawing.Point(364, 20);
+            this.lblProject.Location = new System.Drawing.Point(586, 204);
             this.lblProject.Name = "lblProject";
             this.lblProject.Size = new System.Drawing.Size(58, 20);
             this.lblProject.TabIndex = 10;
@@ -73,7 +73,7 @@
             // 
             this.lblProjectName.AutoSize = true;
             this.lblProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjectName.Location = new System.Drawing.Point(231, 44);
+            this.lblProjectName.Location = new System.Drawing.Point(377, 252);
             this.lblProjectName.Name = "lblProjectName";
             this.lblProjectName.Size = new System.Drawing.Size(87, 16);
             this.lblProjectName.TabIndex = 11;
@@ -83,7 +83,7 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(231, 70);
+            this.lblDescription.Location = new System.Drawing.Point(377, 291);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(76, 16);
             this.lblDescription.TabIndex = 13;
@@ -91,17 +91,17 @@
             // 
             // tbDescription
             // 
-            this.tbDescription.Location = new System.Drawing.Point(323, 69);
+            this.tbDescription.Location = new System.Drawing.Point(513, 290);
             this.tbDescription.Multiline = true;
             this.tbDescription.Name = "tbDescription";
-            this.tbDescription.Size = new System.Drawing.Size(235, 83);
+            this.tbDescription.Size = new System.Drawing.Size(235, 132);
             this.tbDescription.TabIndex = 2;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(231, 159);
+            this.lblPrice.Location = new System.Drawing.Point(377, 428);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(39, 16);
             this.lblPrice.TabIndex = 17;
@@ -109,7 +109,7 @@
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(323, 158);
+            this.tbPrice.Location = new System.Drawing.Point(513, 428);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(235, 20);
             this.tbPrice.TabIndex = 4;
@@ -119,7 +119,7 @@
             this.datePicker.CustomFormat = "yyyy-MM-dd";
             this.datePicker.Enabled = false;
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datePicker.Location = new System.Drawing.Point(323, 184);
+            this.datePicker.Location = new System.Drawing.Point(513, 465);
             this.datePicker.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
             this.datePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.datePicker.Name = "datePicker";
@@ -138,7 +138,7 @@
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(483, 242);
+            this.btnApply.Location = new System.Drawing.Point(921, 687);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 23);
             this.btnApply.TabIndex = 6;
@@ -150,7 +150,7 @@
             // 
             this.cbDeadLine.AutoSize = true;
             this.cbDeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cbDeadLine.Location = new System.Drawing.Point(234, 184);
+            this.cbDeadLine.Location = new System.Drawing.Point(380, 465);
             this.cbDeadLine.Name = "cbDeadLine";
             this.cbDeadLine.Size = new System.Drawing.Size(82, 20);
             this.cbDeadLine.TabIndex = 23;
@@ -163,14 +163,14 @@
             this.cbCustomer.FormattingEnabled = true;
             this.cbCustomer.Location = new System.Drawing.Point(12, 43);
             this.cbCustomer.Name = "cbCustomer";
-            this.cbCustomer.Size = new System.Drawing.Size(216, 225);
+            this.cbCustomer.Size = new System.Drawing.Size(216, 667);
             this.cbCustomer.TabIndex = 24;
             // 
             // NewProjectPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 277);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.cbCustomer);
             this.Controls.Add(this.cbDeadLine);
             this.Controls.Add(this.btnApply);

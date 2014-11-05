@@ -40,17 +40,17 @@
             // 
             this.tbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbUsername.Location = new System.Drawing.Point(119, 90);
+            this.tbUsername.Location = new System.Drawing.Point(334, 268);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(175, 20);
+            this.tbUsername.Size = new System.Drawing.Size(336, 20);
             this.tbUsername.TabIndex = 0;
             // 
             // btnLogin
             // 
             this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.Location = new System.Drawing.Point(292, 275);
+            this.btnLogin.Location = new System.Drawing.Point(831, 638);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(108, 29);
+            this.btnLogin.Size = new System.Drawing.Size(165, 79);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -60,10 +60,10 @@
             // 
             this.tbPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbPassword.Location = new System.Drawing.Point(119, 155);
+            this.tbPassword.Location = new System.Drawing.Point(334, 348);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '•';
-            this.tbPassword.Size = new System.Drawing.Size(175, 20);
+            this.tbPassword.Size = new System.Drawing.Size(336, 20);
             this.tbPassword.TabIndex = 1;
             // 
             // LbUsername
@@ -71,9 +71,10 @@
             this.LbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LbUsername.AutoSize = true;
-            this.LbUsername.Location = new System.Drawing.Point(116, 65);
+            this.LbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.LbUsername.Location = new System.Drawing.Point(328, 234);
             this.LbUsername.Name = "LbUsername";
-            this.LbUsername.Size = new System.Drawing.Size(55, 13);
+            this.LbUsername.Size = new System.Drawing.Size(139, 31);
             this.LbUsername.TabIndex = 4;
             this.LbUsername.Text = "Username";
             // 
@@ -82,18 +83,19 @@
             this.LbPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LbPassword.AutoSize = true;
-            this.LbPassword.Location = new System.Drawing.Point(116, 139);
+            this.LbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.LbPassword.Location = new System.Drawing.Point(328, 314);
             this.LbPassword.Name = "LbPassword";
-            this.LbPassword.Size = new System.Drawing.Size(53, 13);
+            this.LbPassword.Size = new System.Drawing.Size(134, 31);
             this.LbPassword.TabIndex = 5;
             this.LbPassword.Text = "Password";
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(12, 275);
+            this.btnClose.Location = new System.Drawing.Point(12, 685);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(108, 29);
+            this.btnClose.Size = new System.Drawing.Size(104, 32);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -103,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 316);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.LbPassword);
             this.Controls.Add(this.LbUsername);

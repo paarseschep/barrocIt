@@ -32,23 +32,25 @@
             this.btnMaganeCustomers = new System.Windows.Forms.Button();
             this.btnDeactivateCustomers = new System.Windows.Forms.Button();
             this.btnManageProjects = new System.Windows.Forms.Button();
+            this.btAddProjects = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(483, 347);
+            this.btnBack.Location = new System.Drawing.Point(881, 676);
+            this.btnBack.Size = new System.Drawing.Size(115, 41);
             // 
             // lblClock
             // 
-            this.lblClock.Location = new System.Drawing.Point(509, 9);
+            this.lblClock.Location = new System.Drawing.Point(947, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "09:49:22";
+            this.lblClock.Text = "13:55:21";
             // 
             // btnCreateCustomer
             // 
-            this.btnCreateCustomer.Location = new System.Drawing.Point(120, 117);
+            this.btnCreateCustomer.Location = new System.Drawing.Point(117, 89);
             this.btnCreateCustomer.Name = "btnCreateCustomer";
-            this.btnCreateCustomer.Size = new System.Drawing.Size(142, 38);
+            this.btnCreateCustomer.Size = new System.Drawing.Size(322, 148);
             this.btnCreateCustomer.TabIndex = 0;
             this.btnCreateCustomer.Text = "Create customers";
             this.btnCreateCustomer.UseVisualStyleBackColor = true;
@@ -56,9 +58,9 @@
             // 
             // btnMaganeCustomers
             // 
-            this.btnMaganeCustomers.Location = new System.Drawing.Point(120, 161);
+            this.btnMaganeCustomers.Location = new System.Drawing.Point(117, 262);
             this.btnMaganeCustomers.Name = "btnMaganeCustomers";
-            this.btnMaganeCustomers.Size = new System.Drawing.Size(142, 38);
+            this.btnMaganeCustomers.Size = new System.Drawing.Size(322, 148);
             this.btnMaganeCustomers.TabIndex = 1;
             this.btnMaganeCustomers.Text = "Manage customers";
             this.btnMaganeCustomers.UseVisualStyleBackColor = true;
@@ -66,28 +68,39 @@
             // 
             // btnDeactivateCustomers
             // 
-            this.btnDeactivateCustomers.Location = new System.Drawing.Point(120, 205);
+            this.btnDeactivateCustomers.Location = new System.Drawing.Point(117, 439);
             this.btnDeactivateCustomers.Name = "btnDeactivateCustomers";
-            this.btnDeactivateCustomers.Size = new System.Drawing.Size(142, 38);
+            this.btnDeactivateCustomers.Size = new System.Drawing.Size(322, 148);
             this.btnDeactivateCustomers.TabIndex = 2;
             this.btnDeactivateCustomers.Text = "De-activate customers";
             this.btnDeactivateCustomers.UseVisualStyleBackColor = true;
             // 
             // btnManageProjects
             // 
-            this.btnManageProjects.Location = new System.Drawing.Point(350, 117);
+            this.btnManageProjects.Location = new System.Drawing.Point(552, 89);
             this.btnManageProjects.Name = "btnManageProjects";
-            this.btnManageProjects.Size = new System.Drawing.Size(138, 82);
+            this.btnManageProjects.Size = new System.Drawing.Size(322, 148);
             this.btnManageProjects.TabIndex = 3;
             this.btnManageProjects.Text = "Manage projects";
             this.btnManageProjects.UseVisualStyleBackColor = true;
             this.btnManageProjects.Click += new System.EventHandler(this.btnManageProjects_Click);
             // 
+            // btAddProjects
+            // 
+            this.btAddProjects.Location = new System.Drawing.Point(552, 262);
+            this.btAddProjects.Name = "btAddProjects";
+            this.btAddProjects.Size = new System.Drawing.Size(322, 148);
+            this.btAddProjects.TabIndex = 9;
+            this.btAddProjects.Text = "Add projects";
+            this.btAddProjects.UseVisualStyleBackColor = true;
+            this.btAddProjects.Click += new System.EventHandler(this.btAddProjects_Click);
+            // 
             // SalesMainPanelcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 382);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.btAddProjects);
             this.Controls.Add(this.btnManageProjects);
             this.Controls.Add(this.btnDeactivateCustomers);
             this.Controls.Add(this.btnMaganeCustomers);
@@ -100,6 +113,7 @@
             this.Controls.SetChildIndex(this.btnMaganeCustomers, 0);
             this.Controls.SetChildIndex(this.btnDeactivateCustomers, 0);
             this.Controls.SetChildIndex(this.btnManageProjects, 0);
+            this.Controls.SetChildIndex(this.btAddProjects, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +125,6 @@
         private System.Windows.Forms.Button btnMaganeCustomers;
         private System.Windows.Forms.Button btnDeactivateCustomers;
         private System.Windows.Forms.Button btnManageProjects;
+        private System.Windows.Forms.Button btAddProjects;
     }
 }

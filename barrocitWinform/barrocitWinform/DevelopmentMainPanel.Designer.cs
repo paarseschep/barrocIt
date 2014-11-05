@@ -28,68 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDeleteInvoice = new System.Windows.Forms.Button();
-            this.btnViewInvoice = new System.Windows.Forms.Button();
-            this.btnAddInvoice = new System.Windows.Forms.Button();
+            this.btnViewProject = new System.Windows.Forms.Button();
+            this.btEditProject = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(499, 327);
+            this.btnBack.Location = new System.Drawing.Point(878, 680);
+            this.btnBack.Size = new System.Drawing.Size(118, 37);
             // 
             // lblClock
             // 
+            this.lblClock.Location = new System.Drawing.Point(1373, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "14:26:09";
+            this.lblClock.Text = "13:41:57";
             // 
-            // btnDeleteInvoice
+            // btnViewProject
             // 
-            this.btnDeleteInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteInvoice.Location = new System.Drawing.Point(225, 211);
-            this.btnDeleteInvoice.Name = "btnDeleteInvoice";
-            this.btnDeleteInvoice.Size = new System.Drawing.Size(134, 47);
-            this.btnDeleteInvoice.TabIndex = 11;
-            this.btnDeleteInvoice.Text = "Delete project";
-            this.btnDeleteInvoice.UseVisualStyleBackColor = true;
-            this.btnDeleteInvoice.Click += new System.EventHandler(this.btnDeleteInvoice_Click);
+            this.btnViewProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewProject.Location = new System.Drawing.Point(230, 126);
+            this.btnViewProject.Name = "btnViewProject";
+            this.btnViewProject.Size = new System.Drawing.Size(459, 264);
+            this.btnViewProject.TabIndex = 10;
+            this.btnViewProject.Text = "View project";
+            this.btnViewProject.UseVisualStyleBackColor = true;
+            this.btnViewProject.Click += new System.EventHandler(this.btnViewInvoice_Click);
             // 
-            // btnViewInvoice
+            // btEditProject
             // 
-            this.btnViewInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewInvoice.Location = new System.Drawing.Point(225, 158);
-            this.btnViewInvoice.Name = "btnViewInvoice";
-            this.btnViewInvoice.Size = new System.Drawing.Size(134, 47);
-            this.btnViewInvoice.TabIndex = 10;
-            this.btnViewInvoice.Text = "View project";
-            this.btnViewInvoice.UseVisualStyleBackColor = true;
-            this.btnViewInvoice.Click += new System.EventHandler(this.btnViewInvoice_Click);
-            // 
-            // btnAddInvoice
-            // 
-            this.btnAddInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddInvoice.Location = new System.Drawing.Point(225, 105);
-            this.btnAddInvoice.Name = "btnAddInvoice";
-            this.btnAddInvoice.Size = new System.Drawing.Size(134, 47);
-            this.btnAddInvoice.TabIndex = 9;
-            this.btnAddInvoice.Text = "Add project";
-            this.btnAddInvoice.UseVisualStyleBackColor = true;
-            this.btnAddInvoice.Click += new System.EventHandler(this.btnAddInvoice_Click);
+            this.btEditProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btEditProject.Location = new System.Drawing.Point(230, 413);
+            this.btEditProject.Name = "btEditProject";
+            this.btEditProject.Size = new System.Drawing.Size(459, 264);
+            this.btEditProject.TabIndex = 11;
+            this.btEditProject.Text = "Edit project";
+            this.btEditProject.UseVisualStyleBackColor = true;
+            this.btEditProject.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // DevelopmentMainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 362);
-            this.Controls.Add(this.btnDeleteInvoice);
-            this.Controls.Add(this.btnViewInvoice);
-            this.Controls.Add(this.btnAddInvoice);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.btEditProject);
+            this.Controls.Add(this.btnViewProject);
             this.Name = "DevelopmentMainPanel";
             this.Text = "DevelopmentMainPanel";
             this.Controls.SetChildIndex(this.lblClock, 0);
             this.Controls.SetChildIndex(this.btnBack, 0);
-            this.Controls.SetChildIndex(this.btnAddInvoice, 0);
-            this.Controls.SetChildIndex(this.btnViewInvoice, 0);
-            this.Controls.SetChildIndex(this.btnDeleteInvoice, 0);
+            this.Controls.SetChildIndex(this.btnViewProject, 0);
+            this.Controls.SetChildIndex(this.btEditProject, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,8 +85,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDeleteInvoice;
-        private System.Windows.Forms.Button btnViewInvoice;
-        private System.Windows.Forms.Button btnAddInvoice;
+        private System.Windows.Forms.Button btnViewProject;
+        private System.Windows.Forms.Button btEditProject;
     }
 }

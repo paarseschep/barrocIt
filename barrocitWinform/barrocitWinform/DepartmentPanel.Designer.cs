@@ -45,7 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGreeting.AutoSize = true;
-            this.lblGreeting.Location = new System.Drawing.Point(241, 9);
+            this.lblGreeting.Location = new System.Drawing.Point(406, 9);
             this.lblGreeting.Name = "lblGreeting";
             this.lblGreeting.Size = new System.Drawing.Size(58, 13);
             this.lblGreeting.TabIndex = 6;
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 362);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.lblGreeting);
             this.Name = "DepartmentPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -43,7 +43,7 @@ namespace barrocitWinform
             this.Hide();
         }
 
-        private void btnDeleteInvoice_Click(object sender, EventArgs e)
+        private void btEdit_Click(object sender, EventArgs e)
         {
 
         }
