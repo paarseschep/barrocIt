@@ -21,31 +21,16 @@ namespace barrocitWinform
             SetBackButtonType(logoutWhenClose);
         }
 
-        private void btnAddInvoice_Click(object sender, EventArgs e)
-        {
-            NewProjectPanel viewpanel = new NewProjectPanel(this, userName);
-            viewpanel.Show();
-            this.Hide();
-        }
-
-        private void btnViewInvoice_Click(object sender, EventArgs e)
+        private void btnViewProject_Click(object sender, EventArgs e)
         {
             ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Projects", true);
-            TextBox myText = new TextBox();
-            Button myBut = new Button();
-            myBut.Size = new Size(100, 20);
-            myBut.Location = new Point(120, 2);
-            myBut.Text = "Go!";
-            myText.Location = new Point(12, 2);
-            viewpanel.Controls.Add(myText);
-            viewpanel.Controls.Add(myBut);
-            viewpanel.Show();
             this.Hide();
         }
 
-        private void btEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Projects", true);
+            this.Hide();
         }
     }
 }

@@ -63,6 +63,7 @@ namespace barrocitWinform
                         strRegex = @"^([1-9][0-9][0-9][0-9] [a-zA-Z][a-zA-Z])$";
                         if (isRegexValid(((TextBox)obj).Text, strRegex))
                         {
+                            ((TextBox)obj).Text.Remove(5);
                             validFields = true;
                         }
                         else
@@ -74,16 +75,33 @@ namespace barrocitWinform
                 }
                 else if (((Control)obj).Name.Contains("Phone") && ((Control)obj).Name.Contains("tb"))
                 {
-                    //string strRegex = @"^([0-9][0-9] [0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$";
-                    string strRegex = @"^([0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$";
+                    string strRegex = @"^([0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$";
                     if (isRegexValid(((TextBox)obj).Text, strRegex))
                     {
                         validFields = true;
                     }
                     else
                     {
-                        validFields = false;
-                        break;
+                        strRegex = @"^([0-9][0-9] [0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$";
+                        if (isRegexValid(((TextBox)obj).Text, strRegex))
+                        {
+                            ((TextBox)obj).Text.Remove(3);
+                            validFields = true;
+                        }
+                        else
+                        {
+                            strRegex = @"^([0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$";
+                            if (isRegexValid(((TextBox)obj).Text, strRegex))
+                            {
+                                ((TextBox)obj).Text.Remove(3);
+                                validFields = true;
+                            }
+                            else
+                            {
+                                validFields = false;
+                                break;
+                            }
+                        }
                     }
                 }
             }

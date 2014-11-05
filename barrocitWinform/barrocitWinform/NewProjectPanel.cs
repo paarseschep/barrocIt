@@ -33,7 +33,7 @@ namespace barrocitWinform
 
         private void SaveProject(object sender, EventArgs e)
         {
-            if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.AreFieldsValid(this))
+            if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
             {
 
                 List<string> dataList = AddToList(cbCustomer.GetSelectedId().ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);

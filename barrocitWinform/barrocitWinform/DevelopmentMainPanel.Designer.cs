@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnViewProject = new System.Windows.Forms.Button();
-            this.btEditProject = new System.Windows.Forms.Button();
+            this.btnEditProject = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
@@ -41,7 +41,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(1373, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:41:57";
+            this.lblClock.Text = "14:03:18";
             // 
             // btnViewProject
             // 
@@ -52,32 +52,32 @@
             this.btnViewProject.TabIndex = 10;
             this.btnViewProject.Text = "View project";
             this.btnViewProject.UseVisualStyleBackColor = true;
-            this.btnViewProject.Click += new System.EventHandler(this.btnViewInvoice_Click);
+            this.btnViewProject.Click += new System.EventHandler(this.btnViewProject_Click);
             // 
-            // btEditProject
+            // btnEditProject
             // 
-            this.btEditProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btEditProject.Location = new System.Drawing.Point(230, 413);
-            this.btEditProject.Name = "btEditProject";
-            this.btEditProject.Size = new System.Drawing.Size(459, 264);
-            this.btEditProject.TabIndex = 11;
-            this.btEditProject.Text = "Edit project";
-            this.btEditProject.UseVisualStyleBackColor = true;
-            this.btEditProject.Click += new System.EventHandler(this.btEdit_Click);
+            this.btnEditProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditProject.Location = new System.Drawing.Point(230, 413);
+            this.btnEditProject.Name = "btnEditProject";
+            this.btnEditProject.Size = new System.Drawing.Size(459, 264);
+            this.btnEditProject.TabIndex = 11;
+            this.btnEditProject.Text = "Edit project";
+            this.btnEditProject.UseVisualStyleBackColor = true;
+            this.btnEditProject.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // DevelopmentMainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.btEditProject);
+            this.Controls.Add(this.btnEditProject);
             this.Controls.Add(this.btnViewProject);
             this.Name = "DevelopmentMainPanel";
             this.Text = "DevelopmentMainPanel";
             this.Controls.SetChildIndex(this.lblClock, 0);
             this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.btnViewProject, 0);
-            this.Controls.SetChildIndex(this.btEditProject, 0);
+            this.Controls.SetChildIndex(this.btnEditProject, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,6 +86,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnViewProject;
-        private System.Windows.Forms.Button btEditProject;
+        private System.Windows.Forms.Button btnEditProject;
     }
 }
