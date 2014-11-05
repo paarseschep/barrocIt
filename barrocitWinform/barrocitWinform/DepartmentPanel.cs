@@ -46,7 +46,7 @@ namespace barrocitWinform
 
         private void DepartmentPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!ViewPanel.isModifiedCustomer)
+            if (ViewPanel.checkModifications < 3)
             {
                 DialogResult dialogResult = MessageBox.Show(btnBack.closeMessage, "Confirmation", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.No)
