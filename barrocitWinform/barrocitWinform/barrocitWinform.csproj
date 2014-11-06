@@ -68,6 +68,12 @@
     <Compile Include="BackButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ChangeVisibilityPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeVisibilityPanel.Designer.cs">
+      <DependentUpon>ChangeVisibilityPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeVisibilityPanel.resx">
+      <DependentUpon>ChangeVisibilityPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepartmentPanel.resx">
       <DependentUpon>DepartmentPanel.cs</DependentUpon>

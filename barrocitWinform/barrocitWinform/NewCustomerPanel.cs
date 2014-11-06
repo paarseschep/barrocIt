@@ -32,7 +32,7 @@ namespace barrocitWinform
                     {
                         List<string> AllNewUserData = AddToList(tbFirstname.Text, tbLastname.Text, tbCompany.Text, tbCompanyEmail.Text, tbCompanyPhone.Text, tbEmail.Text, tbPostalcode.Text, tbCity.Text, tbStreetnumber.Text, tbProvince.Text, tbPhone.Text, tbFaxnumber.Text, tbInsurance.Text);
                         string columsInRightOrder = " firstname, lastname, companyName, email_company, phonenumber_company, email, postalCode1, city1, homenumber, province, phonenumber, faxnumber, insurance_id";
-                        SqlConnector.modifieDatabase(AllNewUserData, columsInRightOrder, "Tbl_Customers");
+                        SqlConnector.modifyDatabase(AllNewUserData, columsInRightOrder, "Tbl_Customers");
                         isCustomerAdded = true;
                     }
                     else

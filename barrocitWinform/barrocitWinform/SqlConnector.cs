@@ -103,7 +103,7 @@ namespace barrocitWinform
             }
             return success;
         }
-        static public bool modifieDatabase(List<string> data, string colums, string table)
+        static public bool modifyDatabase(List<string> data, string colums, string table)
         {
             bool success = false;
             ViewPanel form = new ViewPanel();
