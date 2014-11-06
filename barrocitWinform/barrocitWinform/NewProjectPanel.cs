@@ -13,34 +13,37 @@ namespace barrocitWinform
 {
     public partial class NewProjectPanel : DepartmentPanel
     {
-        public NewProjectPanel(Form lastPanel, string userName)
+        int checkModifications;
+        public NewProjectPanel(Form lastPanel,int customerId, int checkModifications, string userName)
         {
             InitializeComponent();
             this.lastPanel = lastPanel;
             this.userName = userName;
+            this.checkModifications = checkModifications;
             UpdateGreeting();
-            if (ViewPanel.checkModifications == 1)
+            if (checkModifications == 1)
             {
                 cbCustomer.Enabled = false;
-                cbCustomer.LoadCustomerList();
+                cbCustomer.SetId(customerId);
+                cbCustomer.LoadCustomerList("SELECT Customer_Id, firstname, lastname FROM tbl_Customers WHERE Customer_Id=" + ((ViewPanel)lastPanel).GetCurrentCustomerId().ToString(), checkModifications);
             }
             else
             {
                 cbCustomer.Enabled = true;
-                cbCustomer.LoadCustomerList();
+                cbCustomer.LoadCustomerList("SELECT Customer_Id, firstname, lastname FROM tbl_Customers", checkModifications);
             }
         }
 
         private void SaveProject(object sender, EventArgs e)
         {
-            ViewPanel form = new ViewPanel();
-            int currentCustomerId = form.CurrentCustomerId();
-            if (cbCustomer.SelectedIndex != 0 || currentCustomerId !=0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
+
+            if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
             {
                 SqlConnector.Connect();
                 List<string> dataList;
-                if(ViewPanel.checkModifications == 1)
+                if(checkModifications == 1)
                 {
+                    int currentCustomerId = ((ViewPanel)lastPanel).GetCurrentCustomerId();
                     dataList = AddToList(currentCustomerId.ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
                 }
                 else
@@ -56,7 +59,7 @@ namespace barrocitWinform
                     colums += ", deadline";
                 }
 
-                if (ViewPanel.checkModifications == 1 && SqlConnector.modifyDatabase(dataList, colums, "Tbl_Projects"))
+                if (checkModifications == 1 && SqlConnector.modifyDatabase(dataList,((ViewPanel)lastPanel).GetCurrentCustomerId(), colums, "Tbl_Projects"))
                 {
                     MessageBox.Show("The project has been succesfully submitted to the server.",
                                     "Successfully saved the project.");

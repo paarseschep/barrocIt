@@ -23,13 +23,13 @@ namespace barrocitWinform
 
         private void btnViewProject_Click(object sender, EventArgs e)
         {
-            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Projects", true);
+            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Projects", 4, true);
             this.Hide();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Projects", true);
+            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Projects", 1, true);
             this.Hide();
         }
     }

@@ -103,11 +103,9 @@ namespace barrocitWinform
             }
             return success;
         }
-        static public bool modifyDatabase(List<string> data, string colums, string table)
+        static public bool modifyDatabase(List<string> data, int customerId, string colums, string table)
         {
             bool success = false;
-            ViewPanel form = new ViewPanel();
-            int currentCustomerId = form.CurrentCustomerId();
             try
             {
                 List<string> extracteTable = new List<string>();
@@ -126,7 +124,7 @@ namespace barrocitWinform
                     tableStringExtracted += "[" + oneTable.Remove(0, 1).Replace(",", "") + "]" + "=" + oneTable + "";
                 }
                 string tableStringExtractedFinal = tableStringExtracted.Remove(tableStringExtracted.Length-1);
-                string sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + currentCustomerId;
+                string sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + customerId;
                 int lastChar = sqlcommand.Length;
                 using (connection)
                 {

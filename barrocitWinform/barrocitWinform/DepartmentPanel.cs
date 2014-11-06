@@ -46,13 +46,10 @@ namespace barrocitWinform
 
         private void DepartmentPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (ViewPanel.checkModifications < 3)
+            DialogResult dialogResult = MessageBox.Show(btnBack.closeMessage, "Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
             {
-                DialogResult dialogResult = MessageBox.Show(btnBack.closeMessage, "Confirmation", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
+                e.Cancel = true;
             }
         }
 

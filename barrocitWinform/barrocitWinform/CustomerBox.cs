@@ -10,20 +10,19 @@ namespace barrocitWinform
 {
     class CustomerBox : ListBox
     {
-        public void LoadCustomerList()
+        int customerId;
+        public void LoadCustomerList(string sqlCommand, int checkModifications)
         {
             SqlConnector.Connect();
             this.Items.Add("ID" + " \t" + "First name" + "\t" + "Last Name");
             SqlCommand command;
-            ViewPanel form = new ViewPanel();
-            if (ViewPanel.checkModifications == 1)
+            if (checkModifications == 1)
             {
-                int currentCustomerId = form.CurrentCustomerId();
-                command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers WHERE Customer_Id=" + currentCustomerId, SqlConnector.connection);
+                command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers WHERE Customer_Id=" + customerId, SqlConnector.connection);
             }
             else
             {
-                 command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers", SqlConnector.connection);
+                command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers", SqlConnector.connection);
             }
             using (SqlDataReader reader = command.ExecuteReader())
             {
@@ -36,6 +35,12 @@ namespace barrocitWinform
                 }
             }
         }
+
+        public void SetId(int customerId)
+        {
+            this.customerId = customerId;
+        }
+
         public int GetSelectedId()
         {
             int findId = this.SelectedItem.ToString().IndexOf(" ");

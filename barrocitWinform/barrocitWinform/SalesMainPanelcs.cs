@@ -12,7 +12,6 @@ namespace barrocitWinform
 {
     public partial class SalesMainPanelcs : DepartmentPanel
     {
-        ViewPanel viewpanel;
         public SalesMainPanelcs(Form loginPanel, string userName, bool logoutWhenClose)
         {
             InitializeComponent();
@@ -24,18 +23,17 @@ namespace barrocitWinform
 
         private void btnManageProjects_Click(object sender, EventArgs e)
         {
-            viewpanel = new ViewPanel(this, userName, "Tbl_Projects", true);
+            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Projects", 1, true);
             SqlConnector.Connect();
-            ViewPanel.checkModifications = 1;
             viewpanel.Show();
             this.Hide();
         }
 
         private void btnCreateCustomer_Click(object sender, EventArgs e)
         {
-            NewCustomerPanel newcustomerpanel = new NewCustomerPanel(this, userName);
+            NewCustomerPanel newcustomerpanel = new NewCustomerPanel(this,0, userName);
             SqlConnector.Connect();
-            ViewPanel.checkModifications = 4;
+            //ViewPanel.checkModifications = 4;
             newcustomerpanel.Show();
             this.Hide();
         }
@@ -43,16 +41,15 @@ namespace barrocitWinform
         private void btnMaganeCustomers_Click(object sender, EventArgs e)
         {
             SqlConnector.Connect();
-            viewpanel = new ViewPanel(this, userName, "Tbl_Customers", true);
-            ViewPanel.checkModifications = 0;
+            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Customers", 0, true);
+            //ViewPanel.checkModifications = 0;
             viewpanel.Show();
             this.Hide();
         }
 
         private void btAddProjects_Click(object sender, EventArgs e)
         {
-            ViewPanel.checkModifications = 0;
-            NewProjectPanel projectPanel = new NewProjectPanel(this, userName);
+            NewProjectPanel projectPanel = new NewProjectPanel(this,0, 0, userName);
 
             projectPanel.Show();
             this.Hide();

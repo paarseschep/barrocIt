@@ -15,7 +15,7 @@ namespace barrocitWinform
     {
         string Table;
         bool IsReadOnly;
-        public static int checkModifications = 0;
+        int checkModifications;
         //public static int currentCustomerId;
         /// <param name="lastPanel"> Always "This."</param>
         /// <param name="userName"> Username.</param>
@@ -26,10 +26,11 @@ namespace barrocitWinform
 
 
         }
-        public ViewPanel(Form lastPanel, string userName, string table, bool isReadOnly)
+        public ViewPanel(Form lastPanel, string userName, string table, int checkModifications, bool isReadOnly)
         {
             InitializeComponent();
             this.userName = userName;
+            this.checkModifications = checkModifications;
             UpdateGreeting();
             Table = table;
             IsReadOnly = isReadOnly;
@@ -43,12 +44,12 @@ namespace barrocitWinform
             {
                 dataAdapter.Fill(ds);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
             DataTable temp = ds.Tables[0];
-    
+
             dataTables.DataSource = temp;
             dataTables.ReadOnly = isReadOnly;
         }
@@ -89,10 +90,9 @@ namespace barrocitWinform
             if (checkModifications == 0)
             {
                 int update = dataTables.CurrentRow.Index;
-                ///////
 
-                int currenCustomerId = CurrentCustomerId();
-                NewCustomerPanel form = new NewCustomerPanel(this, userName);
+                int currenCustomerId = GetCurrentCustomerId();
+                NewCustomerPanel form = new NewCustomerPanel(this, 0, userName);
                 form.tbFirstname.Text = dataTables.Rows[update].Cells[1].Value.ToString();
                 form.tbLastname.Text = dataTables.Rows[update].Cells[2].Value.ToString();
                 form.tbCompany.Text = dataTables.Rows[update].Cells[3].Value.ToString();
@@ -111,12 +111,8 @@ namespace barrocitWinform
             else if (checkModifications == 1)
             {
                 int update = dataTables.CurrentRow.Index;
-                ///////
 
-                int currenCustomerId = CurrentCustomerId();
-
-                NewProjectPanel form = new NewProjectPanel(this, userName);
-
+                NewProjectPanel form = new NewProjectPanel(this, GetCurrentCustomerId(), checkModifications, userName);
                 form.tbProjectName.Text = dataTables.Rows[update].Cells[2].Value.ToString();
                 form.tbDescription.Text = dataTables.Rows[update].Cells[3].Value.ToString();
                 form.datePicker.Text = dataTables.Rows[update].Cells[6].Value.ToString();
@@ -124,7 +120,7 @@ namespace barrocitWinform
                 form.Show();
             }
         }
-        public int CurrentCustomerId()
+        public int GetCurrentCustomerId()
         {
             DataGridViewRow row = dataTables.SelectedRows[0];
             int currentCustomerId = (int)row.Cells[0].Value;
