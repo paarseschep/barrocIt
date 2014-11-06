@@ -106,6 +106,8 @@ namespace barrocitWinform
         static public bool modifieDatabase(List<string> data, string colums, string table)
         {
             bool success = false;
+            ViewPanel form = new ViewPanel();
+            int currentCustomerId = form.CurrentCustomerId();
             try
             {
                 List<string> extracteTable = new List<string>();
@@ -124,7 +126,7 @@ namespace barrocitWinform
                     tableStringExtracted += "[" + oneTable.Remove(0, 1).Replace(",", "") + "]" + "=" + oneTable + "";
                 }
                 string tableStringExtractedFinal = tableStringExtracted.Remove(tableStringExtracted.Length-1);
-                string sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + ViewPanel.currentCustomerId.ToString();
+                string sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + currentCustomerId;
                 int lastChar = sqlcommand.Length;
                 using (connection)
                 {

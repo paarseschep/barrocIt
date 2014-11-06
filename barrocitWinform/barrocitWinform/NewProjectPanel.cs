@@ -33,10 +33,20 @@ namespace barrocitWinform
 
         private void SaveProject(object sender, EventArgs e)
         {
-            if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
+            ViewPanel form = new ViewPanel();
+            int currentCustomerId = form.CurrentCustomerId();
+            if (cbCustomer.SelectedIndex != 0 || currentCustomerId !=0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
             {
-
-                List<string> dataList = AddToList(cbCustomer.GetSelectedId().ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
+                SqlConnector.Connect();
+                List<string> dataList;
+                if(ViewPanel.checkModifications == 1)
+                {
+                    dataList = AddToList(currentCustomerId.ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
+                }
+                else
+                {
+                    dataList = AddToList(cbCustomer.GetSelectedId().ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
+                }
 
                 string colums = " Customer_id, name, description, price";
 
@@ -46,7 +56,14 @@ namespace barrocitWinform
                     colums += ", deadline";
                 }
 
-                if (SqlConnector.InsertDataIntoDatabase(dataList, colums, "Tbl_Projects"))
+                if (ViewPanel.checkModifications == 1 && SqlConnector.modifieDatabase(dataList, colums, "Tbl_Projects"))
+                {
+                    MessageBox.Show("The project has been succesfully submitted to the server.",
+                                    "Successfully saved the project.");
+                    SqlConnector.Connect();
+                    Close();
+                }
+                else if(SqlConnector.InsertDataIntoDatabase(dataList, colums, "Tbl_Projects"))
                 {
                     MessageBox.Show("The project has been succesfully submitted to the server.",
                                     "Successfully saved the project.");

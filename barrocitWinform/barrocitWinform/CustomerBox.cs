@@ -12,11 +12,14 @@ namespace barrocitWinform
     {
         public void LoadCustomerList()
         {
+            SqlConnector.Connect();
             this.Items.Add("ID" + " \t" + "First name" + "\t" + "Last Name");
             SqlCommand command;
+            ViewPanel form = new ViewPanel();
             if (ViewPanel.checkModifications == 1)
             {
-                 command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers WHERE Customer_Id=" + ViewPanel.currentCustomerId.ToString(), SqlConnector.connection);
+                int currentCustomerId = form.CurrentCustomerId();
+                command = new SqlCommand("SELECT Customer_Id, firstname, lastname FROM tbl_Customers WHERE Customer_Id=" + currentCustomerId, SqlConnector.connection);
             }
             else
             {

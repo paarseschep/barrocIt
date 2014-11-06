@@ -44,13 +44,14 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(256, 687);
+            this.btnBack.Location = new System.Drawing.Point(247, 639);
+            this.btnBack.Size = new System.Drawing.Size(137, 78);
             // 
             // lblClock
             // 
             this.lblClock.Location = new System.Drawing.Point(947, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "14:21:47";
+            this.lblClock.Text = "14:55:24";
             // 
             // tbProjectName
             // 
@@ -138,9 +139,9 @@
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(921, 687);
+            this.btnApply.Location = new System.Drawing.Point(859, 632);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(75, 23);
+            this.btnApply.Size = new System.Drawing.Size(137, 78);
             this.btnApply.TabIndex = 6;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;

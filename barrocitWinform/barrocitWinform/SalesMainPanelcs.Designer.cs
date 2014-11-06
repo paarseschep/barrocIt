@@ -44,7 +44,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(947, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:55:21";
+            this.lblClock.Text = "16:34:46";
             // 
             // btnCreateCustomer
             // 

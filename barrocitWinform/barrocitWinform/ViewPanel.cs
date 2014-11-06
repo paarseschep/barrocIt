@@ -16,11 +16,16 @@ namespace barrocitWinform
         string Table;
         bool IsReadOnly;
         public static int checkModifications = 0;
-        public static int currentCustomerId;
+        //public static int currentCustomerId;
         /// <param name="lastPanel"> Always "This."</param>
         /// <param name="userName"> Username.</param>
         /// <param name="table">The string of the table you want to acces.</param>
         /// <param name="isReadOnly">True to not edit, false to edit.</param> 
+        public ViewPanel()
+        {
+
+
+        }
         public ViewPanel(Form lastPanel, string userName, string table, bool isReadOnly)
         {
             InitializeComponent();
@@ -84,10 +89,9 @@ namespace barrocitWinform
             if (checkModifications == 0)
             {
                 int update = dataTables.CurrentRow.Index;
+                ///////
 
-                DataGridViewRow row = dataTables.SelectedRows[0];
-                currentCustomerId = (int)row.Cells[0].Value;
-
+                int currenCustomerId = CurrentCustomerId();
                 NewCustomerPanel form = new NewCustomerPanel(this, userName);
                 form.tbFirstname.Text = dataTables.Rows[update].Cells[1].Value.ToString();
                 form.tbLastname.Text = dataTables.Rows[update].Cells[2].Value.ToString();
@@ -107,10 +111,9 @@ namespace barrocitWinform
             else if (checkModifications == 1)
             {
                 int update = dataTables.CurrentRow.Index;
+                ///////
 
-                DataGridViewRow row = dataTables.SelectedRows[0];
-                currentCustomerId = (int)row.Cells[0].Value;
-
+                int currenCustomerId = CurrentCustomerId();
 
                 NewProjectPanel form = new NewProjectPanel(this, userName);
 
@@ -120,6 +123,12 @@ namespace barrocitWinform
                 form.tbPrice.Text = dataTables.Rows[update].Cells[7].Value.ToString();
                 form.Show();
             }
+        }
+        public int CurrentCustomerId()
+        {
+            DataGridViewRow row = dataTables.SelectedRows[0];
+            int currentCustomerId = (int)row.Cells[0].Value;
+            return currentCustomerId;
         }
     }
 }

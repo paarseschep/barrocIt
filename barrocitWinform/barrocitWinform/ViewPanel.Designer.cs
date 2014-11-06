@@ -69,7 +69,6 @@
             this.btSearch.TabIndex = 10;
             this.btSearch.Text = "Search name";
             this.btSearch.UseVisualStyleBackColor = true;
-            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // tbSearch
             // 
