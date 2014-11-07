@@ -31,7 +31,9 @@ namespace barrocitWinform
 
         private void btnDeleteInvoice_Click(object sender, EventArgs e)
         {
-
+            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Invoices", 3);
+            viewpanel.Show();
+            this.Hide();
         }
 
         private void btnAddInvoice_Click(object sender, EventArgs e)

@@ -43,11 +43,12 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(1373, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "12:29:25";
+            this.lblClock.Text = "14:58:33";
             // 
             // btnDeleteInvoice
             // 
             this.btnDeleteInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteInvoice.Enabled = false;
             this.btnDeleteInvoice.Location = new System.Drawing.Point(282, 423);
             this.btnDeleteInvoice.Name = "btnDeleteInvoice";
             this.btnDeleteInvoice.Size = new System.Drawing.Size(408, 108);

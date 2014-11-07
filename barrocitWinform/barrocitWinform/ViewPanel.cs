@@ -110,7 +110,8 @@ namespace barrocitWinform
                 dataName += row.Cells[i].Value.ToString() + "\n";
             }
             bool value = false;
-            if (dataTables.Rows[selectedRow].Cells[cellNumber -1].Value.ToString() == "true")
+
+            if (dataTables.Rows[selectedRow].Cells[cellNumber -1].Value.ToString() == "True")
             {
                 value = true;
             }
