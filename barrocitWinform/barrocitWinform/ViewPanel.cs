@@ -30,7 +30,10 @@ namespace barrocitWinform
             UpdateGreeting();
             Table = table;
             IsReadOnly = isReadOnly;
-
+            if (checkModifications == 6)
+            {
+                dataTables.Enabled = false; 
+            }
             this.lastPanel = lastPanel;
             Btrefresh.PerformClick();
         }
@@ -71,6 +74,13 @@ namespace barrocitWinform
                 form.tbPrice.Text = dataTables.Rows[update].Cells[7].Value.ToString();
                 form.Show();
             }
+            else if (checkModifications == 5)
+            {
+                int update = dataTables.CurrentRow.Index;
+
+                NewInvoicePanel form = new NewInvoicePanel(this, userName);
+
+            }
         }
         /// <summary>
         /// Gets the current selected customer ID.
@@ -88,7 +98,8 @@ namespace barrocitWinform
         {
             string query;
             query = "SELECT * FROM " + Table;
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, SqlConnector.connection);
+            SqlConnector.Connect();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, SqlConnector.connectionString);
             DataSet ds = new DataSet();
             try
             {
