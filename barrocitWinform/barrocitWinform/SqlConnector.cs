@@ -38,8 +38,14 @@ namespace barrocitWinform
         static public int Login(string userName, string password)
         {
             int department = -1;
+
             try
             {
+                if (connection.ConnectionString == "")
+                {
+                    connection.ConnectionString = connectionString;
+                }
+
                 SqlDataReader dataReader;
                 SqlCommand loginCommand = new SqlCommand(
                     @"SELECT * FROM Tbl_Users " +
@@ -144,7 +150,7 @@ namespace barrocitWinform
                 {
                     tableStringExtracted += "[" + oneTable.Remove(0, 1).Replace(",", "") + "]" + "=" + oneTable + "";
                 }
-                string tableStringExtractedFinal = tableStringExtracted.Remove(tableStringExtracted.Length-1);
+                string tableStringExtractedFinal = tableStringExtracted.Remove(tableStringExtracted.Length - 1);
                 string sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + customerId;
                 int lastChar = sqlcommand.Length;
                 using (connection)

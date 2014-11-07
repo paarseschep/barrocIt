@@ -23,7 +23,7 @@ namespace barrocitWinform
 
         private void btnViewInvoice_Click(object sender, EventArgs e)
         {
-            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Invoices", 6, true);
+            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Invoices", 0);
             TextBox myText = new TextBox();
             Button myBut = new Button();
             myBut.Size = new Size(100, 20);
@@ -46,21 +46,6 @@ namespace barrocitWinform
             NewInvoicePanel newinvoicepanel = new NewInvoicePanel(this, userName);
             SqlConnector.Connect();
             newinvoicepanel.Show();
-            this.Hide();
-        }
-
-        private void btEditInvoice_Click(object sender, EventArgs e)
-        {
-            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Invoices", 5, true);
-            TextBox myText = new TextBox();
-            Button myBut = new Button();
-            myBut.Size = new Size(100, 20);
-            myBut.Location = new Point(120, 2);
-            myBut.Text = "Go!";
-            myText.Location = new Point(12, 2);
-            viewpanel.Controls.Add(myText);
-            viewpanel.Controls.Add(myBut);
-            viewpanel.Show();
             this.Hide();
         }
     }

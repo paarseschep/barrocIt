@@ -14,11 +14,13 @@ namespace barrocitWinform
     {
         string table;
         int customerId;
-        public ChangeVisibilityPanel(int customerId, string table)
+        public ChangeVisibilityPanel(Form lastPanel, int customerId, string dataName, string table)
         {
             InitializeComponent();
             this.table = table;
             this.customerId = customerId;
+            lbData.Text = dataName;
+            this.lastPanel = lastPanel;
         }
 
         public void SetSelectedData(string data, bool enabled)
@@ -38,9 +40,9 @@ namespace barrocitWinform
         private void btnApply_Click(object sender, EventArgs e)
         {
             List<string> newDataList = new List<string>();
-            newDataList.Add(Convert.ToInt32(rbSetVisible.Enabled).ToString());
-            string columsInRightOrder = " firstname, lastname, email, phonenumber, homenumber, postalCode1, city1, province, email_company, phonenumber_company, companyName, insurance_id, faxnumber";
-            SqlConnector.modifyDatabase(newDataList,customerId, columsInRightOrder, table);
+            newDataList.Add(Convert.ToInt32(rbSetVisible.Checked).ToString());
+            string columsInRightOrder = " isVisible";
+            SqlConnector.modifyDatabase(newDataList, customerId, columsInRightOrder, table);
         }
     }
 }
