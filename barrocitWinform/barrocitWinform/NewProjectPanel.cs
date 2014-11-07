@@ -21,11 +21,12 @@ namespace barrocitWinform
             this.userName = userName;
             this.checkModifications = checkModifications;
             UpdateGreeting();
+
             if (checkModifications == 1)
             {
                 cbCustomer.Enabled = false;
                 cbCustomer.SetId(customerId);
-                cbCustomer.LoadCustomerList("SELECT Customer_Id, firstname, lastname FROM tbl_Customers WHERE Customer_Id=" + ((ViewPanel)lastPanel).GetCurrentCustomerId().ToString(), checkModifications);
+                cbCustomer.LoadCustomerList("SELECT Customer_Id, firstname, lastname FROM tbl_Customers WHERE Customer_Id=" + ((ViewPanel)lastPanel).GetCurrentCustomerId(1).ToString(), checkModifications);
             }
             else
             {
@@ -37,13 +38,13 @@ namespace barrocitWinform
         private void SaveProject(object sender, EventArgs e)
         {
 
-            if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
-            {
+            //if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
+            //{
                 SqlConnector.Connect();
                 List<string> dataList;
                 if(checkModifications == 1)
                 {
-                    int currentCustomerId = ((ViewPanel)lastPanel).GetCurrentCustomerId();
+                    int currentCustomerId = ((ViewPanel)lastPanel).GetCurrentCustomerId(1);
                     dataList = AddToList(currentCustomerId.ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
                 }
                 else
@@ -59,7 +60,7 @@ namespace barrocitWinform
                     colums += ", deadline";
                 }
 
-                if (checkModifications == 1 && SqlConnector.modifyDatabase(dataList,((ViewPanel)lastPanel).GetCurrentCustomerId(), colums, "Tbl_Projects"))
+                if (checkModifications == 1 && SqlConnector.modifyDatabase(dataList,((ViewPanel)lastPanel).GetCurrentCustomerId(1), colums, "Tbl_Projects"))
                 {
                     MessageBox.Show("The project has been succesfully submitted to the server.",
                                     "Successfully saved the project.");
@@ -73,12 +74,12 @@ namespace barrocitWinform
                     SqlConnector.Connect();
                     Close();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Unable to save project. Are you sure all fields are filled in correctly and are you sure you selected a customer?",
-                                "Error saving Project");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Unable to save project. Are you sure all fields are filled in correctly and are you sure you selected a customer?",
+            //                    "Error saving Project");
+            //}
         }
 
 

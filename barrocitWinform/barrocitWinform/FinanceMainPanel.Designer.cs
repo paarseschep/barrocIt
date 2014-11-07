@@ -42,7 +42,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(1373, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:48:07";
+            this.lblClock.Text = "09:13:20";
             // 
             // btnDeleteInvoice
             // 
@@ -75,6 +75,7 @@
             this.btnAddInvoice.TabIndex = 6;
             this.btnAddInvoice.Text = "Add invoice";
             this.btnAddInvoice.UseVisualStyleBackColor = true;
+            this.btnAddInvoice.Click += new System.EventHandler(this.btnAddInvoice_Click);
             // 
             // FinanceMainPanel
             // 

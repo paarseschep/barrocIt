@@ -29,7 +29,12 @@ namespace barrocitWinform
             }
             return gotConnected;
         }
-
+        /// <summary>
+        /// Gets the department ID and trows an exception when failed.
+        /// </summary>
+        /// <param name="userName">Username from department</param>
+        /// <param name="password">Password for the department</param>
+        /// <returns></returns>
         static public int Login(string userName, string password)
         {
             int department = -1;
@@ -62,6 +67,14 @@ namespace barrocitWinform
             }
             return department;
         }
+
+        /// <summary>
+        /// Inserts data into database.
+        /// </summary>
+        /// <param name="data">List with data you would like to add (same order as colums).</param>
+        /// <param name="colums">The colums you would like to insert data in.</param>
+        /// <param name="table">The table you would like to insert data in.</param>
+        /// <returns></returns>
         static public bool InsertDataIntoDatabase(List<string> data, string colums, string table)
         {
             bool success = false;
@@ -109,6 +122,14 @@ namespace barrocitWinform
             }
             return success;
         }
+        /// <summary>
+        /// Returns "true" if the modification worked if it failed because a reason it will return "false".
+        /// </summary>
+        /// <param name="data">A list needed what data you would like in the colums (same order as colums).</param>
+        /// <param name="customerId">Current customer ID</param>
+        /// <param name="colums">The colums in the right order as they are in the Table.</param>
+        /// <param name="table">The table you would like to modify</param>
+        /// <returns></returns>
         static public bool modifyDatabase(List<string> data, int customerId, string colums, string table)
         {
             bool success = false;

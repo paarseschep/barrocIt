@@ -18,7 +18,6 @@ namespace barrocitWinform
         public LoginPanel()
         {
             InitializeComponent();
-            //Temporary connection string for debugging
             SqlConnector.connectionString = @"Data Source=(LocalDB)\v11.0;
                                                         AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
                                                         Integrated Security=True;
@@ -37,7 +36,11 @@ namespace barrocitWinform
             }
             tbPassword.Text = "";
         }
-
+        /// <summary>
+        /// Switch the departmentnumber.
+        /// </summary>
+        /// <param name="departmentNumber">Departmentnumber from database</param>
+        /// <param name="userName">Current logged in username</param>
         private void OpenUserPanel(int departmentNumber, string userName)
         {
             switch (departmentNumber)
