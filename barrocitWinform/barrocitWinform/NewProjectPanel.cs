@@ -59,7 +59,7 @@ namespace barrocitWinform
                     colums += ", deadline";
                 }
 
-                if (checkModifications == 1 && SqlConnector.modifyDatabase(dataList,((ViewPanel)lastPanel).GetSelectedId(1), colums, "Tbl_Projects"))
+                if (checkModifications == 1 && SqlConnector.modifyDatabase(dataList, ((ViewPanel)lastPanel).GetSelectedId(1), colums, "Tbl_Projects", "project"))
                 {
                     MessageBox.Show("The project has been succesfully submitted to the server.",
                                     "Successfully saved the project.");

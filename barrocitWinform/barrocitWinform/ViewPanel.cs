@@ -86,7 +86,7 @@ namespace barrocitWinform
             {
                 int selectedRow = dataTables.CurrentRow.Index; 
 
-                NewInvoicePanel form = new NewInvoicePanel(this, userName);
+                NewInvoicePanel form = new NewInvoicePanel(this, userName,true);
                 form.tbFactuurbedrag.Text = dataTables.Rows[selectedRow].Cells[2].Value.ToString();
                 form.datePicker.Text = dataTables.Rows[selectedRow].Cells[3].Value.ToString();
                 form.tbGrootboekrekeningnummer.Text = dataTables.Rows[selectedRow].Cells[4].Value.ToString();
