@@ -30,7 +30,7 @@ namespace barrocitWinform
                 int currentCustomerId = customerBox1.GetSelectedId();
                 customerBox1.GetSelectedId();
                 List<string> AllNewUserData = AddToList(currentCustomerId.ToString(), tbFactuurbedrag.Text, datePicker.Text, tbGrootboekrekeningnummer.Text, tbBtwCode.Text);
-                string columns = " Customer_id, factuurBedrag, invoiceDate, grootboekrekeningnummer, BTWCode";
+                string columns = " Customer_Id, factuurBedrag, invoiceDate, grootboekrekeningnummer, BTWCode";
                 SqlConnector.InsertDataIntoDatabase(AllNewUserData, columns, "Tbl_Invoices");
             }
             else

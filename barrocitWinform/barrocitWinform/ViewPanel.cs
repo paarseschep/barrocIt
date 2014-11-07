@@ -30,6 +30,10 @@ namespace barrocitWinform
             UpdateGreeting();
             this.table = table;
             this.lastPanel = lastPanel;
+            if(checkModifications == 6)
+            {
+                dataTables.Enabled = false;
+            }
             RefreshDataGrid();
         }
 
@@ -77,6 +81,17 @@ namespace barrocitWinform
             else if (checkModifications == 4)
             {
                 OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows.Count-1, " completed");
+            }
+            else if (checkModifications == 5)
+            {
+                int selectedRow = dataTables.CurrentRow.Index; 
+
+                NewInvoicePanel form = new NewInvoicePanel(this, userName);
+                form.tbFactuurbedrag.Text = dataTables.Rows[selectedRow].Cells[2].Value.ToString();
+                form.datePicker.Text = dataTables.Rows[selectedRow].Cells[3].Value.ToString();
+                form.tbGrootboekrekeningnummer.Text = dataTables.Rows[selectedRow].Cells[4].Value.ToString();
+                form.tbBtwCode.Text = dataTables.Rows[selectedRow].Cells[5].Value.ToString();
+                form.Show();
             }
         }
         public int GetSelectedId(int cell)
