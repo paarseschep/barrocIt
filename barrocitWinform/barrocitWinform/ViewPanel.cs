@@ -76,11 +76,11 @@ namespace barrocitWinform
             }
             else if (checkModifications == 3)
             {
-                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows[0].Cells.Count, " isVisible");
+                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows[0].Cells.Count, " isVisible", false);
             }
             else if (checkModifications == 0)
             {
-                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows[0].Cells.Count - 1, " completed");
+                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows[0].Cells.Count - 1, " completed", true);
             }
             else if (checkModifications == 5)
             {
@@ -101,7 +101,7 @@ namespace barrocitWinform
             return currentCustomerId;
         }
 
-        private void OpenChangeVisibility(DataGridViewRow row, int cellNumber, string boolToEdit)
+        private void OpenChangeVisibility(DataGridViewRow row, int cellNumber, string boolToEdit, bool isProjectCompletionEdit)
         {
             int selectedRow = dataTables.CurrentRow.Index;
             string dataName = "";
@@ -117,6 +117,10 @@ namespace barrocitWinform
                 
             ChangeVisibilityPanel changeVisibilityPanel = new ChangeVisibilityPanel(this, GetSelectedId(0), dataName, value, table, boolToEdit);
             changeVisibilityPanel.Show();
+            if (isProjectCompletionEdit)
+            {
+                changeVisibilityPanel.SetText("Set to completed", "Set to incomplete");
+            }
             this.Hide();
         }
 
