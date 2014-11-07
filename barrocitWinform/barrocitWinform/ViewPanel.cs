@@ -45,7 +45,7 @@ namespace barrocitWinform
                 int selectedRow = dataTables.CurrentRow.Index;
 
                 int currenCustomerId = GetSelectedId(0);
-                NewCustomerPanel newCustomerPanel = new NewCustomerPanel(this, 0, userName);
+                NewCustomerPanel newCustomerPanel = new NewCustomerPanel(this, 4, userName);
                 newCustomerPanel.tbFirstname.Text = dataTables.Rows[selectedRow].Cells[1].Value.ToString();
                 newCustomerPanel.tbLastname.Text = dataTables.Rows[selectedRow].Cells[2].Value.ToString();
                 newCustomerPanel.tbCompany.Text = dataTables.Rows[selectedRow].Cells[3].Value.ToString();

@@ -56,23 +56,26 @@
             this.tbFaxnumber = new System.Windows.Forms.TextBox();
             this.lbFaxnumber = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.lbpostalcodeex = new System.Windows.Forms.Label();
+            this.LbPhoneEx = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 694);
-            this.btnBack.Size = new System.Drawing.Size(78, 23);
+            this.btnBack.Location = new System.Drawing.Point(12, 668);
+            this.btnBack.Size = new System.Drawing.Size(115, 49);
             // 
             // lblClock
             // 
             this.lblClock.Location = new System.Drawing.Point(944, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "09:32:57";
+            this.lblClock.Text = "14:45:03";
             // 
             // lblFirstname
             // 
             this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstname.Location = new System.Drawing.Point(55, 163);
+            this.lblFirstname.Location = new System.Drawing.Point(55, 156);
             this.lblFirstname.Name = "lblFirstname";
             this.lblFirstname.Size = new System.Drawing.Size(265, 36);
             this.lblFirstname.TabIndex = 7;
@@ -80,7 +83,7 @@
             // 
             // tbFirstname
             // 
-            this.tbFirstname.Location = new System.Drawing.Point(162, 165);
+            this.tbFirstname.Location = new System.Drawing.Point(162, 156);
             this.tbFirstname.Multiline = true;
             this.tbFirstname.Name = "tbFirstname";
             this.tbFirstname.Size = new System.Drawing.Size(281, 31);
@@ -88,7 +91,7 @@
             // 
             // tbLastname
             // 
-            this.tbLastname.Location = new System.Drawing.Point(162, 191);
+            this.tbLastname.Location = new System.Drawing.Point(162, 189);
             this.tbLastname.Multiline = true;
             this.tbLastname.Name = "tbLastname";
             this.tbLastname.Size = new System.Drawing.Size(281, 31);
@@ -97,7 +100,7 @@
             // lblLastname
             // 
             this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastname.Location = new System.Drawing.Point(55, 189);
+            this.lblLastname.Location = new System.Drawing.Point(55, 187);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(277, 31);
             this.lblLastname.TabIndex = 9;
@@ -207,7 +210,7 @@
             // 
             // tbCompany
             // 
-            this.tbCompany.Location = new System.Drawing.Point(667, 163);
+            this.tbCompany.Location = new System.Drawing.Point(667, 154);
             this.tbCompany.Multiline = true;
             this.tbCompany.Name = "tbCompany";
             this.tbCompany.Size = new System.Drawing.Size(281, 31);
@@ -216,7 +219,7 @@
             // lbCompany
             // 
             this.lbCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompany.Location = new System.Drawing.Point(547, 163);
+            this.lbCompany.Location = new System.Drawing.Point(547, 154);
             this.lbCompany.Name = "lbCompany";
             this.lbCompany.Size = new System.Drawing.Size(277, 31);
             this.lbCompany.TabIndex = 23;
@@ -224,7 +227,7 @@
             // 
             // tbCompanyEmail
             // 
-            this.tbCompanyEmail.Location = new System.Drawing.Point(667, 189);
+            this.tbCompanyEmail.Location = new System.Drawing.Point(667, 186);
             this.tbCompanyEmail.Multiline = true;
             this.tbCompanyEmail.Name = "tbCompanyEmail";
             this.tbCompanyEmail.Size = new System.Drawing.Size(281, 31);
@@ -233,7 +236,7 @@
             // lbCompanyMail
             // 
             this.lbCompanyMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompanyMail.Location = new System.Drawing.Point(547, 189);
+            this.lbCompanyMail.Location = new System.Drawing.Point(547, 186);
             this.lbCompanyMail.Name = "lbCompanyMail";
             this.lbCompanyMail.Size = new System.Drawing.Size(277, 31);
             this.lbCompanyMail.TabIndex = 25;
@@ -241,7 +244,7 @@
             // 
             // tbCompanyPhone
             // 
-            this.tbCompanyPhone.Location = new System.Drawing.Point(667, 215);
+            this.tbCompanyPhone.Location = new System.Drawing.Point(667, 217);
             this.tbCompanyPhone.Multiline = true;
             this.tbCompanyPhone.Name = "tbCompanyPhone";
             this.tbCompanyPhone.Size = new System.Drawing.Size(281, 31);
@@ -250,7 +253,7 @@
             // lbCompanyPhone
             // 
             this.lbCompanyPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompanyPhone.Location = new System.Drawing.Point(547, 215);
+            this.lbCompanyPhone.Location = new System.Drawing.Point(547, 217);
             this.lbCompanyPhone.Name = "lbCompanyPhone";
             this.lbCompanyPhone.Size = new System.Drawing.Size(277, 31);
             this.lbCompanyPhone.TabIndex = 27;
@@ -269,7 +272,7 @@
             // lbVerzekering
             // 
             this.lbVerzekering.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVerzekering.Location = new System.Drawing.Point(547, 239);
+            this.lbVerzekering.Location = new System.Drawing.Point(547, 304);
             this.lbVerzekering.Name = "lbVerzekering";
             this.lbVerzekering.Size = new System.Drawing.Size(277, 31);
             this.lbVerzekering.TabIndex = 29;
@@ -277,7 +280,7 @@
             // 
             // tbInsurance
             // 
-            this.tbInsurance.Location = new System.Drawing.Point(667, 241);
+            this.tbInsurance.Location = new System.Drawing.Point(667, 302);
             this.tbInsurance.Multiline = true;
             this.tbInsurance.Name = "tbInsurance";
             this.tbInsurance.Size = new System.Drawing.Size(281, 31);
@@ -285,7 +288,7 @@
             // 
             // tbFaxnumber
             // 
-            this.tbFaxnumber.Location = new System.Drawing.Point(667, 302);
+            this.tbFaxnumber.Location = new System.Drawing.Point(667, 334);
             this.tbFaxnumber.Multiline = true;
             this.tbFaxnumber.Name = "tbFaxnumber";
             this.tbFaxnumber.Size = new System.Drawing.Size(281, 31);
@@ -294,7 +297,7 @@
             // lbFaxnumber
             // 
             this.lbFaxnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFaxnumber.Location = new System.Drawing.Point(547, 300);
+            this.lbFaxnumber.Location = new System.Drawing.Point(547, 332);
             this.lbFaxnumber.Name = "lbFaxnumber";
             this.lbFaxnumber.Size = new System.Drawing.Size(277, 31);
             this.lbFaxnumber.TabIndex = 31;
@@ -308,11 +311,41 @@
             this.menuStrip1.TabIndex = 33;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // lbpostalcodeex
+            // 
+            this.lbpostalcodeex.AutoSize = true;
+            this.lbpostalcodeex.Location = new System.Drawing.Point(449, 335);
+            this.lbpostalcodeex.Name = "lbpostalcodeex";
+            this.lbpostalcodeex.Size = new System.Drawing.Size(94, 13);
+            this.lbpostalcodeex.TabIndex = 34;
+            this.lbpostalcodeex.Text = "Example: 4444 AA";
+            // 
+            // LbPhoneEx
+            // 
+            this.LbPhoneEx.AutoSize = true;
+            this.LbPhoneEx.Location = new System.Drawing.Point(159, 277);
+            this.LbPhoneEx.Name = "LbPhoneEx";
+            this.LbPhoneEx.Size = new System.Drawing.Size(208, 13);
+            this.LbPhoneEx.TabIndex = 35;
+            this.LbPhoneEx.Text = "12 Numbers long Example: 000123456789";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(664, 248);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "12 Numbers long Example: 000123456789";
+            // 
             // NewCustomerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LbPhoneEx);
+            this.Controls.Add(this.lbpostalcodeex);
             this.Controls.Add(this.tbFaxnumber);
             this.Controls.Add(this.lbFaxnumber);
             this.Controls.Add(this.tbInsurance);
@@ -374,6 +407,9 @@
             this.Controls.SetChildIndex(this.tbInsurance, 0);
             this.Controls.SetChildIndex(this.lbFaxnumber, 0);
             this.Controls.SetChildIndex(this.tbFaxnumber, 0);
+            this.Controls.SetChildIndex(this.lbpostalcodeex, 0);
+            this.Controls.SetChildIndex(this.LbPhoneEx, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,5 +445,8 @@
         public System.Windows.Forms.TextBox tbFaxnumber;
         private System.Windows.Forms.Label lbFaxnumber;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label lbpostalcodeex;
+        private System.Windows.Forms.Label LbPhoneEx;
+        private System.Windows.Forms.Label label1;
     }
 }

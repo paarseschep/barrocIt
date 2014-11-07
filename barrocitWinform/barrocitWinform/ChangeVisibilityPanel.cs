@@ -45,6 +45,7 @@ namespace barrocitWinform
             List<string> newDataList = new List<string>();
             newDataList.Add(Convert.ToInt32(rbSetVisible.Checked).ToString());
             SqlConnector.modifyDatabase(newDataList, customerId, boolToEdit, table, "project");
+            MessageBox.Show("You succesfully modified visibility.");
         }
     }
 }
