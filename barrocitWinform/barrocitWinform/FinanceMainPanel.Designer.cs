@@ -87,7 +87,6 @@
             this.btEditInvoice.TabIndex = 9;
             this.btEditInvoice.Text = "Edit invoice";
             this.btEditInvoice.UseVisualStyleBackColor = true;
-            this.btEditInvoice.Click += new System.EventHandler(this.btEditInvoice_Click);
             // 
             // FinanceMainPanel
             // 

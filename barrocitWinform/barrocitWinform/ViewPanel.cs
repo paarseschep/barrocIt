@@ -21,7 +21,7 @@ namespace barrocitWinform
         /// <param name="userName"> Username.</param>
         /// <param name="table">The string of the table you want to acces.</param>
         /// <param name="isReadOnly">True to not edit, false to edit.</param> 
-        public ViewPanel(Form lastPanel, string userName, string table, int checkModifications, bool isReadOnly)
+        public ViewPanel(Form lastPanel, string userName, string table, int checkModifications)
         {
             InitializeComponent();
 
@@ -29,7 +29,7 @@ namespace barrocitWinform
             this.checkModifications = checkModifications;
             UpdateGreeting();
             Table = table;
-            IsReadOnly = isReadOnly;
+
             if (checkModifications == 6)
             {
                 dataTables.Enabled = false; 
