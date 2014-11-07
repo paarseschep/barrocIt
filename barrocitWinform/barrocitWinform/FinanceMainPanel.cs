@@ -23,7 +23,7 @@ namespace barrocitWinform
 
         private void btnViewInvoice_Click(object sender, EventArgs e)
         {
-            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Invoices", 0, true);
+            ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Invoices", 0);
             TextBox myText = new TextBox();
             Button myBut = new Button();
             myBut.Size = new Size(100, 20);
