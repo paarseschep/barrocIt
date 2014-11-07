@@ -12,6 +12,7 @@ namespace barrocitWinform
 {
     public partial class FinanceMainPanel : DepartmentPanel
     {
+        public bool isEdit;
         public FinanceMainPanel(Form loginPanel, string userName, bool logoutWhenClose)
         {
             InitializeComponent();
@@ -35,7 +36,8 @@ namespace barrocitWinform
 
         private void btnAddInvoice_Click(object sender, EventArgs e)
         {
-            NewInvoicePanel newinvoicepanel = new NewInvoicePanel(this, userName);
+            isEdit = false;
+            NewInvoicePanel newinvoicepanel = new NewInvoicePanel(this, userName, isEdit);
             SqlConnector.Connect();
             newinvoicepanel.Show();
             this.Hide();
@@ -43,6 +45,7 @@ namespace barrocitWinform
 
         private void btEditInvoice_Click(object sender, EventArgs e)
         {
+            isEdit = true;
             ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Invoices", 5);
             viewpanel.Show();
             this.Hide();

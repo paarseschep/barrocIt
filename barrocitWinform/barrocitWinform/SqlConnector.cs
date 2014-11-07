@@ -129,8 +129,9 @@ namespace barrocitWinform
         /// <param name="customerId">Current customer ID</param>
         /// <param name="colums">The colums in the right order as they are in the Table.</param>
         /// <param name="table">The table you would like to modify</param>
+        /// <param name="invoiceOrProject">Give invoice if you would like to modify a invoice give project if you want to modify something else.</param>
         /// <returns></returns>
-        static public bool modifyDatabase(List<string> data, int customerId, string colums, string table)
+        static public bool modifyDatabase(List<string> data, int customerId, string colums, string table, string invoiceOrProject)
         {
             bool success = false;
             try
@@ -151,7 +152,19 @@ namespace barrocitWinform
                     tableStringExtracted += "[" + oneTable.Remove(0, 1).Replace(",", "") + "]" + "=" + oneTable + "";
                 }
                 string tableStringExtractedFinal = tableStringExtracted.Remove(tableStringExtracted.Length - 1);
-                string sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + customerId;
+                string sqlcommand = "";
+
+                if (invoiceOrProject == "project")
+                {
+                    sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + customerId;
+                }
+                else if (invoiceOrProject == "invoice")
+                {
+                    string projectId = data[0];
+                    data.RemoveAt(0);
+                    sqlcommand = "UPDATE [" + table + "] SET " + tableStringExtractedFinal + " WHERE Customer_id=" + customerId + " AND Project_id=" + projectId;
+                }
+
                 int lastChar = sqlcommand.Length;
                 using (connection)
                 {
