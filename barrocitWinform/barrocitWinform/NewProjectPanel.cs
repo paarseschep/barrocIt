@@ -37,9 +37,8 @@ namespace barrocitWinform
 
         private void SaveProject(object sender, EventArgs e)
         {
-
-            //if (cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
-            //{
+            if ((!cbCustomer.Enabled || cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null) && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
+            {
                 SqlConnector.Connect();
                 List<string> dataList;
                 if(checkModifications == 1)
@@ -74,12 +73,12 @@ namespace barrocitWinform
                     SqlConnector.Connect();
                     Close();
                 }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Unable to save project. Are you sure all fields are filled in correctly and are you sure you selected a customer?",
-            //                    "Error saving Project");
-            //}
+            }
+            else
+            {
+                MessageBox.Show("Unable to save project. Are you sure all fields are filled in correctly and are you sure you selected a customer?",
+                                "Error saving Project");
+            }
         }
 
 
