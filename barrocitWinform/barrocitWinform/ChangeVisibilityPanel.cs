@@ -39,6 +39,11 @@ namespace barrocitWinform
                 rbSetInvisible.Checked = true;
             }
         }
+        public void SetText (string radioButton1Text, string radioButton2Text)
+        {
+            rbSetVisible.Text = radioButton1Text;
+            rbSetInvisible.Text = radioButton2Text;
+        }
 
         private void btnApply_Click(object sender, EventArgs e)
         {
