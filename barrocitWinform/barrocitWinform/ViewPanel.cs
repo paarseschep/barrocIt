@@ -36,7 +36,7 @@ namespace barrocitWinform
         private void dataTables_DoubleClick(object sender, EventArgs e)
         {
             SqlConnector.Connect();
-            if (checkModifications == 0)
+            if (checkModifications == 4)
             {
                 int selectedRow = dataTables.CurrentRow.Index;
 
