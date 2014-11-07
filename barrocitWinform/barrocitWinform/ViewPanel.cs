@@ -29,73 +29,18 @@ namespace barrocitWinform
             this.checkModifications = checkModifications;
             UpdateGreeting();
             this.table = table;
-
             this.lastPanel = lastPanel;
-            string query;
-            query = "SELECT * FROM " + table;
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, SqlConnector.connection);
-            DataSet ds = new DataSet();
-            try
-            {
-                dataAdapter.Fill(ds);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            DataTable temp = ds.Tables[0];
-
-            dataTables.DataSource = temp;
-            dataTables.ReadOnly = true;
-
-            for (int i = 0; i < dataTables.Rows.Count; i++)
-            {
-                bool test = Convert.ToBoolean(dataTables.Rows[i].Cells[dataTables.Rows[i].Cells.Count -1].Value);
-                if (!test)
-                {
-                    dataTables.Rows[i].Visible = false;
-                }
-            }
-        }
-
-        private void btSearch_Click(object sender, EventArgs e)
-        {
-            dataTables.ClearSelection();
-            string name = tbSearch.Text;
-            string query;
-            if (name == "")
-            {
-                query = "SELECT * FROM " + table;
-            }
-            else
-            {
-                query = "SELECT * FROM " + table + " WHERE firstname = '" + name + "'";
-            }
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, SqlConnector.connection);
-            DataSet ds = new DataSet();
-            try
-            {
-                dataAdapter.Fill(ds);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            DataTable temp = ds.Tables[0];
-
-            dataTables.DataSource = temp;
-            dataTables.ReadOnly = true;
+            RefreshDataGrid();
         }
 
         private void dataTables_DoubleClick(object sender, EventArgs e)
         {
             SqlConnector.Connect();
-            this.Hide();
             if (checkModifications == 0)
             {
                 int selectedRow = dataTables.CurrentRow.Index;
 
-                int currenCustomerId = GetCurrentCustomerId();
+                int currenCustomerId = GetSelectedId(0);
                 NewCustomerPanel newCustomerPanel = new NewCustomerPanel(this, 0, userName);
                 newCustomerPanel.tbFirstname.Text = dataTables.Rows[selectedRow].Cells[1].Value.ToString();
                 newCustomerPanel.tbLastname.Text = dataTables.Rows[selectedRow].Cells[2].Value.ToString();
@@ -111,42 +56,75 @@ namespace barrocitWinform
                 newCustomerPanel.tbFaxnumber.Text = dataTables.Rows[selectedRow].Cells[12].Value.ToString();
                 newCustomerPanel.tbInsurance.Text = dataTables.Rows[selectedRow].Cells[13].Value.ToString();
                 newCustomerPanel.Show();
+                this.Hide();
             }
             else if (checkModifications == 1)
             {
                 int selectedRow = dataTables.CurrentRow.Index;
 
-                NewProjectPanel newProjectPanel = new NewProjectPanel(this, GetCurrentCustomerId(), checkModifications, userName);
+                NewProjectPanel newProjectPanel = new NewProjectPanel(this, GetSelectedId(0), checkModifications, userName);
                 newProjectPanel.tbProjectName.Text = dataTables.Rows[selectedRow].Cells[2].Value.ToString();
                 newProjectPanel.tbDescription.Text = dataTables.Rows[selectedRow].Cells[3].Value.ToString();
                 newProjectPanel.datePicker.Text = dataTables.Rows[selectedRow].Cells[6].Value.ToString();
                 newProjectPanel.tbPrice.Text = dataTables.Rows[selectedRow].Cells[7].Value.ToString();
                 newProjectPanel.Show();
+                this.Hide();
             }
             else if (checkModifications == 3)
             {
-                int selectedRow = dataTables.CurrentRow.Index;
-
-                string data = "";
-
-                for (int i = 0; i < 3; i++)
-                {
-                    data += dataTables.Rows[selectedRow].Cells[i].Value.ToString() + " ";
-                }
-
-                ChangeVisibilityPanel changeVisibilityPanel = new ChangeVisibilityPanel(this, GetCurrentCustomerId(), data, table);
-                changeVisibilityPanel.Show();
+                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows.Count, " isVisible");
             }
-            else if (checkModifications == 5)
+            else if (checkModifications == 4)
             {
-
+                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows.Count-1, " completed");
             }
         }
-        public int GetCurrentCustomerId()
+        public int GetSelectedId(int cell)
         {
             DataGridViewRow row = dataTables.SelectedRows[0];
-            int currentCustomerId = (int)row.Cells[0].Value;
+            int currentCustomerId = (int)row.Cells[cell].Value;
             return currentCustomerId;
+        }
+
+        private void OpenChangeVisibility(DataGridViewRow row, int cellNumber , string boolToEdit)
+        {
+            int selectedRow = dataTables.CurrentRow.Index;
+            string dataName = "";
+            for (int i = 0; i < 3; i++)
+            {
+                dataName += row.Cells[i].Value.ToString() + " ";
+            }
+
+            bool value = Convert.ToBoolean(dataTables.Rows[selectedRow].Cells[cellNumber].Value);
+            ChangeVisibilityPanel changeVisibilityPanel = new ChangeVisibilityPanel(this, GetSelectedId(0), dataName, value, table, boolToEdit);
+            changeVisibilityPanel.Show();
+            this.Hide();
+        }
+
+        private void Btrefresh_Click(object sender, EventArgs e)
+        {
+            RefreshDataGrid();
+        }
+
+        private void RefreshDataGrid()
+        {
+            SqlConnector.Connect();
+            string query;
+            query = "SELECT * FROM " + table + " WHERE isVisible = 1";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, SqlConnector.connection);
+            DataSet ds = new DataSet();
+            try
+            {
+                dataAdapter.Fill(ds);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            DataTable temp = ds.Tables[0];
+
+            dataTables.DataSource = temp;
+            dataTables.ReadOnly = true;
         }
     }
 }
