@@ -42,7 +42,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(1373, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "12:11:52";
+            this.lblClock.Text = "09:13:20";
             // 
             // btnDeleteInvoice
             // 

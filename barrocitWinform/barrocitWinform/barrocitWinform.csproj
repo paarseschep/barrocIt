@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NewInvoicePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewInvoicePanel.Designer.cs">
+      <DependentUpon>NewInvoicePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     <Compile Include="ViewPanel.Designer.cs">
       <DependentUpon>ViewPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="NewInvoicePanel.resx">
+      <DependentUpon>NewInvoicePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
