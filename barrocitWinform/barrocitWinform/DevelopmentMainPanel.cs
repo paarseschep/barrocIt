@@ -24,6 +24,7 @@ namespace barrocitWinform
         private void btnViewProject_Click(object sender, EventArgs e)
         {
             ViewPanel viewpanel = new ViewPanel(this, userName, "Tbl_Projects", 4, true);
+            viewpanel.Show();
             this.Hide();
         }
 

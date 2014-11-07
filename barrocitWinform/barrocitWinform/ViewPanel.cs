@@ -21,14 +21,10 @@ namespace barrocitWinform
         /// <param name="userName"> Username.</param>
         /// <param name="table">The string of the table you want to acces.</param>
         /// <param name="isReadOnly">True to not edit, false to edit.</param> 
-        public ViewPanel()
-        {
-
-
-        }
         public ViewPanel(Form lastPanel, string userName, string table, int checkModifications, bool isReadOnly)
         {
             InitializeComponent();
+
             this.userName = userName;
             this.checkModifications = checkModifications;
             UpdateGreeting();
@@ -36,63 +32,19 @@ namespace barrocitWinform
             IsReadOnly = isReadOnly;
 
             this.lastPanel = lastPanel;
-            string query;
-            query = "SELECT * FROM " + table;
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, SqlConnector.connection);
-            DataSet ds = new DataSet();
-            try
-            {
-                dataAdapter.Fill(ds);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            DataTable temp = ds.Tables[0];
-
-            dataTables.DataSource = temp;
-            dataTables.ReadOnly = isReadOnly;
-        }
-
-        private void btSearch_Click(object sender, EventArgs e)
-        {
-            dataTables.ClearSelection();
-            string name = tbSearch.Text;
-            string query;
-            if (name == "")
-            {
-                query = "SELECT * FROM " + Table;
-            }
-            else
-            {
-                query = "SELECT * FROM " + Table + " WHERE firstname = '" + name + "'";
-            }
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, SqlConnector.connection);
-            DataSet ds = new DataSet();
-            try
-            {
-                dataAdapter.Fill(ds);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            DataTable temp = ds.Tables[0];
-
-            dataTables.DataSource = temp;
-            dataTables.ReadOnly = IsReadOnly;
+            Btrefresh.PerformClick();
         }
 
         private void dataTables_DoubleClick(object sender, EventArgs e)
         {
             SqlConnector.Connect();
             this.Hide();
-            if (checkModifications == 0)
+            if (checkModifications == 4)
             {
                 int update = dataTables.CurrentRow.Index;
 
-                int currenCustomerId = GetCurrentCustomerId();
-                NewCustomerPanel form = new NewCustomerPanel(this, 0, userName);
+                int currenCustomerId = GetCurrentCustomerId(0);
+                NewCustomerPanel form = new NewCustomerPanel(this, 4, userName);
                 form.tbFirstname.Text = dataTables.Rows[update].Cells[1].Value.ToString();
                 form.tbLastname.Text = dataTables.Rows[update].Cells[2].Value.ToString();
                 form.tbCompany.Text = dataTables.Rows[update].Cells[3].Value.ToString();
@@ -112,7 +64,7 @@ namespace barrocitWinform
             {
                 int update = dataTables.CurrentRow.Index;
 
-                NewProjectPanel form = new NewProjectPanel(this, GetCurrentCustomerId(), checkModifications, userName);
+                NewProjectPanel form = new NewProjectPanel(this, GetCurrentCustomerId(1), checkModifications, userName);
                 form.tbProjectName.Text = dataTables.Rows[update].Cells[2].Value.ToString();
                 form.tbDescription.Text = dataTables.Rows[update].Cells[3].Value.ToString();
                 form.datePicker.Text = dataTables.Rows[update].Cells[6].Value.ToString();
@@ -120,11 +72,36 @@ namespace barrocitWinform
                 form.Show();
             }
         }
-        public int GetCurrentCustomerId()
+        /// <summary>
+        /// Gets the current selected customer ID.
+        /// </summary>
+        /// <param name="cell">Make it 0 to modify customer and 1 to modify project.</param>
+        /// <returns></returns>
+        public int GetCurrentCustomerId(int cell)
         {
             DataGridViewRow row = dataTables.SelectedRows[0];
-            int currentCustomerId = (int)row.Cells[0].Value;
+            int currentCustomerId = (int)row.Cells[cell].Value;
             return currentCustomerId;
+        }
+
+        private void Btrefresh_Click(object sender, EventArgs e)
+        {
+            string query;
+            query = "SELECT * FROM " + Table;
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, SqlConnector.connection);
+            DataSet ds = new DataSet();
+            try
+            {
+                dataAdapter.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            DataTable temp = ds.Tables[0];
+
+            dataTables.DataSource = temp;
+            dataTables.ReadOnly = false;
         }
     }
 }

@@ -29,7 +29,11 @@ namespace barrocitWinform
             }
             return isTbFilled;
         }
-
+        /// <summary>
+        /// Check if certain fields are right filled in.
+        /// </summary>
+        /// <param name="form">"This"</param>
+        /// <returns></returns>
         static public bool AreFieldsValid(Form form)
         {
             bool validFields = false;
@@ -107,7 +111,7 @@ namespace barrocitWinform
             }
             return validFields;
         }
-
+        //Returns a bool if all fields are valid.
         static private bool isRegexValid(string data, string regex)
         {
             Regex reg = new Regex(regex);
