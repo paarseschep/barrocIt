@@ -26,6 +26,7 @@ namespace barrocitWinform
 
         private void btnApply_Click(object sender, EventArgs e)
         {
+            SqlConnector.Connect();
             try
             {
                 if (FieldValidator.CheckFilledTextBoxes(this) && FieldValidator.AreFieldsValid(this))

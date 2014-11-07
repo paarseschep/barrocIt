@@ -39,7 +39,7 @@ namespace barrocitWinform
         private void btnAddInvoice_Click(object sender, EventArgs e)
         {
             isEdit = false;
-            NewInvoicePanel newinvoicepanel = new NewInvoicePanel(this, userName, isEdit);
+            NewInvoicePanel newinvoicepanel = new NewInvoicePanel(this, userName, isEdit,"add");
             SqlConnector.Connect();
             newinvoicepanel.Show();
             this.Hide();

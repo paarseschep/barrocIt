@@ -37,6 +37,7 @@ namespace barrocitWinform
 
         private void SaveProject(object sender, EventArgs e)
         {
+            SqlConnector.Connect();
             if ((!cbCustomer.Enabled || cbCustomer.SelectedIndex != 0 && cbCustomer.SelectedItem != null) && isInt(tbPrice.Text) && FieldValidator.CheckFilledTextBoxes(this))
             {
                 SqlConnector.Connect();
@@ -44,7 +45,7 @@ namespace barrocitWinform
                 if(checkModifications == 1)
                 {
                     int currentCustomerId = ((ViewPanel)lastPanel).GetSelectedId(1);
-                    dataList = AddToList(currentCustomerId.ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
+                    dataList = AddToList(((ViewPanel)lastPanel).GetSelectedId(0).ToString(), currentCustomerId.ToString(), tbProjectName.Text, tbDescription.Text, tbPrice.Text);
                 }
                 else
                 {
@@ -59,7 +60,7 @@ namespace barrocitWinform
                     colums += ", deadline";
                 }
 
-                if (checkModifications == 1 && SqlConnector.modifyDatabase(dataList, ((ViewPanel)lastPanel).GetSelectedId(1), colums, "Tbl_Projects", "project"))
+                if (checkModifications == 1 && SqlConnector.modifyDatabase(dataList, ((ViewPanel)lastPanel).GetSelectedId(1), colums, "Tbl_Projects", "invoice"))
                 {
                     MessageBox.Show("The project has been succesfully submitted to the server.",
                                     "Successfully saved the project.");
