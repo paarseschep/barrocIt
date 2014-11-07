@@ -40,5 +40,13 @@ namespace barrocitWinform
         {
 
         }
+
+        private void btnAddInvoice_Click(object sender, EventArgs e)
+        {
+            NewInvoicePanel newinvoicepanel = new NewInvoicePanel(this, userName);
+            SqlConnector.Connect();
+            newinvoicepanel.Show();
+            this.Hide();
+        }
     }
 }

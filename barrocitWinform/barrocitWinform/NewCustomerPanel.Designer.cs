@@ -55,6 +55,7 @@
             this.tbInsurance = new System.Windows.Forms.TextBox();
             this.tbFaxnumber = new System.Windows.Forms.TextBox();
             this.lbFaxnumber = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
             // btnBack
@@ -66,7 +67,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(944, 9);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "13:38:07";
+            this.lblClock.Text = "09:32:57";
             // 
             // lblFirstname
             // 
@@ -299,6 +300,14 @@
             this.lbFaxnumber.TabIndex = 31;
             this.lbFaxnumber.Text = "faxnumber";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
+            this.menuStrip1.TabIndex = 33;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // NewCustomerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,8 +340,11 @@
             this.Controls.Add(this.lblLastname);
             this.Controls.Add(this.tbFirstname);
             this.Controls.Add(this.lblFirstname);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "NewCustomerPanel";
             this.Text = "NewCustomerPanel";
+            this.Controls.SetChildIndex(this.menuStrip1, 0);
             this.Controls.SetChildIndex(this.lblClock, 0);
             this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.lblFirstname, 0);
@@ -396,5 +408,6 @@
         public System.Windows.Forms.TextBox tbInsurance;
         public System.Windows.Forms.TextBox tbFaxnumber;
         private System.Windows.Forms.Label lbFaxnumber;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
