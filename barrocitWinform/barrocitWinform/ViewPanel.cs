@@ -30,7 +30,7 @@ namespace barrocitWinform
             UpdateGreeting();
             this.table = table;
             this.lastPanel = lastPanel;
-            if(checkModifications == 6)
+            if (checkModifications == 6)
             {
                 dataTables.Enabled = false;
             }
@@ -76,15 +76,15 @@ namespace barrocitWinform
             }
             else if (checkModifications == 3)
             {
-                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows.Count, " isVisible");
+                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows[0].Cells.Count, " isVisible");
             }
-            else if (checkModifications == 4)
+            else if (checkModifications == 0)
             {
-                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows.Count-1, " completed");
+                OpenChangeVisibility(dataTables.Rows[dataTables.CurrentRow.Index], dataTables.Rows[0].Cells.Count - 1, " completed");
             }
             else if (checkModifications == 5)
             {
-                int selectedRow = dataTables.CurrentRow.Index; 
+                int selectedRow = dataTables.CurrentRow.Index;
 
                 NewInvoicePanel form = new NewInvoicePanel(this, userName,true);
                 form.tbFactuurbedrag.Text = dataTables.Rows[selectedRow].Cells[2].Value.ToString();
@@ -101,16 +101,20 @@ namespace barrocitWinform
             return currentCustomerId;
         }
 
-        private void OpenChangeVisibility(DataGridViewRow row, int cellNumber , string boolToEdit)
+        private void OpenChangeVisibility(DataGridViewRow row, int cellNumber, string boolToEdit)
         {
             int selectedRow = dataTables.CurrentRow.Index;
             string dataName = "";
             for (int i = 0; i < 3; i++)
             {
-                dataName += row.Cells[i].Value.ToString() + " ";
+                dataName += row.Cells[i].Value.ToString() + "\n";
             }
-
-            bool value = Convert.ToBoolean(dataTables.Rows[selectedRow].Cells[cellNumber].Value);
+            bool value = false;
+            if (dataTables.Rows[selectedRow].Cells[cellNumber -1].Value.ToString() == "true")
+            {
+                value = true;
+            }
+                
             ChangeVisibilityPanel changeVisibilityPanel = new ChangeVisibilityPanel(this, GetSelectedId(0), dataName, value, table, boolToEdit);
             changeVisibilityPanel.Show();
             this.Hide();

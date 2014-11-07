@@ -18,10 +18,18 @@ namespace barrocitWinform
         public LoginPanel()
         {
             InitializeComponent();
+#if Debug
+            //Test connectionString that connects to the database in the Project folder
             SqlConnector.connectionString = @"Data Source=(LocalDB)\v11.0;
                                                         AttachDbFilename=" + Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName) + @"\Database.mdf;
                                                         Integrated Security=True;
                                                         Connect Timeout=30";
+#else
+            SqlConnector.connectionString = @"Data Source=(LocalDB)\v11.0;
+                                                        AttachDbFilename=" + Directory.GetCurrentDirectory() + @"\Database.mdf;
+                                                        Integrated Security=True;
+                                                        Connect Timeout=30";
+#endif
         }
 
         private void BtLogin_Click(object sender, EventArgs e)

@@ -43,7 +43,7 @@
             // 
             this.lblClock.Location = new System.Drawing.Point(854, 11);
             this.lblClock.Size = new System.Drawing.Size(49, 13);
-            this.lblClock.Text = "15:19:53";
+            this.lblClock.Text = "14:00:16";
             // 
             // btnApply
             // 
@@ -83,11 +83,11 @@
             // 
             this.lbData.AutoSize = true;
             this.lbData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbData.Location = new System.Drawing.Point(360, 105);
+            this.lbData.Location = new System.Drawing.Point(391, 78);
             this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(195, 20);
+            this.lbData.Size = new System.Drawing.Size(112, 60);
             this.lbData.TabIndex = 12;
-            this.lbData.Text = "Selected data comes here";
+            this.lbData.Text = "Selected data \r\ncomes \r\nhere\r\n";
             // 
             // ChangeVisibilityPanel
             // 
